@@ -1,0 +1,327 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Exercicios - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercicios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programacao/" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programacao/linguagem/" class="md-nav__link">
+        Linguagem de Programação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Exercicios</h1>
+
+<h2>Exercícios</h2>
+
+<details class="question">
+<summary>Há dois cubos aparentemente idênticos, sendo um um pouco mais leve que o outro. Aplique o pensamento computacional para elaborar uma solução para o problema de, tendo acesso a uma balança digital, encontrar o mais pesado.</summary>
+<p>O processo pode ser decomposto em duas etapas: análise de um cubo e comparação dos resultados da análise. A solução pode ser descrita em 7 passos: 1) por o primeiro cubo na balança, 2) anotar sua massa, 3) por o segundo cubo na balança, 4) anotar sua massa, 5) comparar os valores anotados, 6) identificar qual o de maior massa e 7) apresentação do cubo mais pesado.</p>
+</details>
+<details class="question">
+<summary>Há dois bolos aparentemente idênticos, sendo um pouco mais leve que o outro. Aplique o pensamento computacional para elaborar uma solução para o problema de, tendo acesso a uma balança de dois pratos (que não indica a massa, mas apenas qual dos pratos está com mais peso), encontrar o bolo mais leve.</summary>
+<p>Este é um problema diferente do anterior, mas alguns detalhes podem ser abstraídos: ao invés de bolos ou cubos, considera-se que há objetos a serem pesados; e em vez de um valor específico para a massa de cada objeto, tem-se um mecanismo que fornece o resultado direto da comparação entre eles. Novamente o processo pode ser decomposto em duas etapas: disposição dos objetos na balança e análise da inclinação dos pratos. A solução pode ser descrita em 2 passos: 1) por cada objeto em um prato na balança e 2) apresentar o objeto que estiver no prato mais alto. Isso poderia ser facilmente adaptado para o problema de achar o objeto mais pesado.</p>
+</details>
+<details class="question">
+<summary>Considere 1000 cubos aparentemente idênticos, sendo um deles um pouco mais pesado que os demais. Aplique o pensamento computacional para elaborar uma solução para o problema de encontrar o cubo mais pesado.</summary>
+<p>Uma abordagem é aproveitar o comportamento descrito na questão anterior. Ao comparar dois cubos, se os pratos estiverem desalinhados sabe-se que o que estiver no prato mais baixo é o desejado. Caso contrário, basta descartar um deles e substituí-lo por outro cubo ainda não avaliado. Estes passos são repetidos até que se ache o mais pesado, o que pode levar até 999 comparações na balança.</p>
+<p>Alternativamente, retomando a abstração de que é um "cubo" pode ser considerado como um "objeto", a solução descrita continua aplicável. Pode-se abstrair um pouco mais, considerando que o "objeto" a ser pesado é, na verdade, um conjunto de cubos. É fácil adaptar a solução para identificar qual o conjunto mais pesado, basta posicionar a metade dos cubos em cada prato. Embora isso não forneça ainda qual o cubo mais pesado, permite identificar em qual dos pratos ele está e, portanto, que se descarte o outro conjunto (onde ele <em>não</em> está). Então, tem-se um novo conjunto de cubos que pode ser separado em duas partes iguais para comparação na balança e subsequente descarte da parte mais leve. Esse processo é repetido até que torne possível identificar inequivocadamente o cubo mais pesado. No caso de 1000 cubos, seriam necessárias, no máximo, 10 comparações na balança!</p>
+</details>
+<details class="question">
+<summary>Considere uma quantidade ímpar de cubos aparentemente idênticos, sendo um deles um pouco mais leve que os demais. Como encontrar o cubo mais leve usando uma balança de dois pratos.</summary>
+<p>Pode-se aproveitar a ideia anterior para separá-los em três partes, dois conjuntos com a mesma quantidade de cubos e um cubo a parte. Aos posicionar os conjuntos nos pratos, se não houver desnível, o cubo separado é o mais pesado do conjunto. Se houver, pode-se descartar os cubos do prato mais pesado e também o que foi separado, e repetir o processo com os cubos remanescentes.</p>
+</details>
+<details class="question">
+<summary>Nas soluções anteriores, como é possível verificar que o processo é correto?</summary>
+<p>Há algumas possibilidades. É possível que a objeto mais pesado possa ser identificado de outra forma (por exemplo, com uma marcação invisível a olho nu), portanto o processo o cubo indicado sempre for o marcado. Outra forma é avaliando se cada passo está correto. No caso da balança de dois pratos, sempre que houver pelo menos um objeto, o prato mais baixo indica o que é mais pesado (mesmo que haja dois com o mesmo peso!). Isso também é verdade se forem dois conjuntos de objetos, um em cada prato, ou seja, cada pesagem corretamente indica o conjunto mais pesado. Se este passo é avaliado como correto, diferentes repetições dele também o serão. Ou seja, ao pesar uma vez e descartar o conjunto mais leve, tem-se novamente o problema de achar o objeto mais pesado em um conjunto menor de objetos - uma versão menor do mesmo problema de antes! O processo de comparação e descarte, que é correto, pode ser repetido até que haja somente dois objetos, situação que já foi mostrada que pode ser resolvida corretamente.</p>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

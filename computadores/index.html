@@ -1,0 +1,428 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Computadores - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#computadores" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Computadores
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacao/" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacao/linguagem/" class="md-nav__link">
+        Linguagem de Programação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="computadores">Computadores</h1>
+<div class="admonition quote">
+<p class="admonition-title"><a href="https://www.linkedin.com/in/joesondow">Joe Sondow</a></p>
+<p><em>Um computador é como um gênio travesso. Te dá exatamente o que você pede dele, mas nem sempre o que você quer.</em></p>
+</div>
+<p>A humanidade é engenhosa, e sempre buscou criar e aprimorar ferramentas para auxiliar nas realização de tarefas. Assim como o fogo e a roda, o computador é uma ferramenta que revolucionou o mundo, e hoje em dia é difícil encontrar algum tipo de atividade que não seja (ou possa ser) auxiliada por esta máquina que substituiu pessoas no esforço de processar dados e transformá-los em resultados. A <a href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_computa%C3%A7%C3%A3o">história da computação</a> é antiga e está entrelaçada com as histórias dos <a href="http://pt.wikipedia.org/wiki/N%C3%BAmero#Hist.C3.B3ria_dos_n.C3.BAmeros">números</a>, do <a href="http://pt.wikipedia.org/wiki/Hardware#Hist.C3.B3ria_do_Hardware">hardware</a>, de <a href="http://pt.wikipedia.org/wiki/Algoritmo">algoritmos</a> e <a href="http://pt.wikipedia.org/wiki/L%C3%B3gica_matem%C3%A1tica">lógica</a>, e da <a href="http://pt.wikipedia.org/wiki/Linguagem_de_programa%C3%A7%C3%A3o#Hist.C3.B3ria">programação</a></p>
+<p>De forma simplificada, um computador é uma máquina que:</p>
+<ol>
+<li>realiza cálculos [simples] rapidamente;</li>
+<li>lembra de [muitos] resultados.</li>
+</ol>
+<p>Um "cálculo" é a execução de uma operação primitiva pela máquina, e um "resultado" é uma informação resultante desta operação ou já conhecida. A <em>computação</em>, portanto, lida basicamente com dois elementos, as informações sendo manipuladas (<em>dados</em>) e as regras de manipulação delas (<em>procedimentos</em>)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. São tantas as aplicações e possibilidades que criou-se uma nova área de conhecimento: a <em>Ciência da Computação</em>, que estuda a fundamentação teórica das construções computacionais, bem como suas aplicações em dispositivos tecnológicos e sistemas de computação<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<p>A computação é muito abrangente, envolvendo diversas outras (lógica, matemática, etc.) e, apesar de não ser necessariamente focada nela, está intrinsecamente associada a uma ferramenta: <em>o computador</em>. Ao descrever soluções como procedimentos que manipulam (corretamente) dados, pode-se usar esta máquina para resolver inúmeros problemas.</p>
+<p>A aplicação do pensamento computacional resulta em soluções representadas como etapas computacionais e algoritmos para execução pelo computador, focando nos dois elementos básicos: conhecimento <em>descritivo</em> (o que?) e, principalmente, <em>procedural</em> (como?). Por exemplo, resolver o problema "qual a raiz quadrada de um número <span class="arithmatex">\(n\)</span>?" a solução deve definir um processo que encontre um valor <span class="arithmatex">\(r\)</span> tal que <span class="arithmatex">\(r^2 = n\)</span>, que é um conhecimento descritivo. Uma abordagem é o método babilônico:</p>
+<div class="language-text highlight"><span class="filename">Método Babilônico</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Inicie com um número positivo arbitrário r
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Enquanto r² não for suficientemente próximo a n:
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Atualize o valor de r para a média entre r e n/r.
+</span></code></pre></div>
+<p>Considerando <span class="arithmatex">\(n = 144\)</span>, uma estimativa inicial <span class="arithmatex">\(r = 1\)</span> e que "suficientemente próximo" signifique que <span class="arithmatex">\(|n - r^2| \leq 0,5\)</span>, a aplicação das instruções acima resultam na construção da seguinte sequência de valores para <span class="arithmatex">\(r\)</span>: 1, 72,5, 37,24, 20,55, 13,8 e, finalmente, 12,1. Uma descrição mais precisa destes algoritmo permite que o computador realize este processo mecânico para chegar à solução desejada. Para lidar com problemas diferentes, basta fornecer grupos diferentes de instruções!</p>
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+<p>O computador interpreta as instruções no sentido de recebê-las em uma representação específica e traduzi-las em sua operações primitivas para execução, não no sentido de dar-lhes sentido para obter o resultado desejado. <em>Ele faz o que você manda, não o que você quer</em>.</p>
+</div>
+<p>Entender mais sobre esta máquina e como ela funciona é essencial para usá-la na resolução de problemas. O computador, além de processar e armazenar os dados, também precisa movimentá-los entre os dispositivos e controlar toda essa manipulação. Para tanto, é preciso que diversos componentes elétricos, eletrônicos e eletromecânicos (hardware) trabalhem em conjunto para realizar os processos definidos no algoritmo (software).</p>
+<h2 id="arquitetura-de-computadores">Arquitetura de Computadores</h2>
+<p>A arquitetura do computador busca projetar a máquina de tal forma a maximizar desempenho e eficiência energética dentro das restrições de custo, potência e disponibilidade existentes<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>. A função principal do computador é realizar as computações, ou seja, processar os dados. Isso é feito com as operações básicas de lógica e aritmética que são construídas na máquina. Para viabilizar estas operações, é preciso armazenar os dados, movê-los entre os dispositivos de armazenagem e processamento e gerenciar esta movimentação com o processamento.</p>
+<p>Na arquitetura mais comum, as instruções são vistas como informações que armazenadas, ou seja, conhecimento descritivo, e são tratadas como dados que o computador processa. Este modelo de "computador de programa armazenado", em que as instruções e os dados existem em um mesmo meio físico, é conhecido como Arquitetura de von Neumann<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>, e é a forma mais comum dos computadores modernos. Nela, a solução de um problema é obtida por um ciclo de execução simples: <em>busca</em> (a próxima instrução), <em>decodificação</em> (em instruções primitivas) e <em>execução</em> (das primitivas realizando a computação).</p>
+<pre class="mermaid"><code>flowchart LR
+    I[Entrada]
+    subgraph Computador
+        M[Memória]
+        subgraph Processador
+            UC[Unidade de Controle] --&gt; ULA[Unidade Lógica Aritmética] --&gt; UC
+        end
+    end
+    I[Entrada] --&gt; Computador --&gt; O[Saída]
+    Processador --&gt; M --&gt; Processador</code></pre>
+<p>Este modelo representa os principais componentes necessários para o processo de ler a instrução, interpretá-la e executá-la. A memória armazena as instruções (conhecimento procedural) e os resultados intermediários (conhecimento descritivo). Novos dados podem ser fornecidos ao computador por algum dispositivo de <em>entrada</em> ou obtidos dele por um dispositivo de <em>saída</em>. O processador gerencia quais instruções devem ser realizadas e suas execuções, além de movimentar as informações entre os componentes. Para isso, tem dispositivos que realizam operações de aritmética e lógica, testes simples, e manipulação de dados.</p>
+<p>A implementação física deste modelo necessita de uma parte física que realiza a tarefa, e de uma parte lógica que define como realizá-la. Apesar de nos preocuparmos mais com a parte lógica neste livro, ambas são essenciais para o bom funcionamento.</p>
+<h2 id="hardware">Hardware</h2>
+<p>O hardware é um conjunto de componentes e equipamentos que compõem um sistema computacional, que seguem a arquitetura von Neumann. Os componentes físicos têm diferentes propósitos.</p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Personal_computer,_exploded_5.svg"><img alt="Computador pessoal" src="/img/wikimedia/Personal_computer,_exploded_5.svg" title="Computador pessoal - Imagem de Gustavb" /></a></p>
+<style type="text/css">
+    .circled {
+        border-radius: 75%;
+        border: 2px solid;
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+<ul>
+<li><span class="circled">&nbsp;3&nbsp;</span>, <strong>Unidade Central de Processamento</strong> (UCP) é o dispositivo que interpreta e executa e instruções, lê e escreve a memória. Seus componentes básicos são a <a href="http://pt.wikipedia.org/wiki/Unidade_de_controle">UC</a> (que determina quais operações serão realizadas e em que ordem) e a <a href="http://pt.wikipedia.org/wiki/Unidade_l\%C3\%B3gica_e_aritm\%C3\%A9tica">ULA</a> (que realiza operações aritméticas e lógicas). Os <a href="http://pt.wikipedia.org/wiki/Registrador_%28inform%C3%A1tica%29">registradores</a>, que armazenam os dados sendo processados no momento, também podem ser considerado parte da UCP, mas são conceitualmente parte da memória. O desempenho da UCP era ligado a sua <a href="http://pt.wikipedia.org/wiki/Frequ%C3%AAncia_de_rel%C3%B3gio">velocidade</a>, mas <a href="http://pt.wikipedia.org/wiki/Lei_de_Moore">certos limites</a> já foram alcançados e, atualmente, os esforços são direcionados a outras formas de melhoria.</li>
+<li><span class="circled">&nbsp;4&nbsp;</span>, <span class="circled">&nbsp;8&nbsp;</span> <strong>memória</strong> é o dispositivo que permite armazenar dados em um conjunto ordenado de <em>bits</em>. A armazenagem pode ser <em>volátil</em> (perde seus dados com ausência de energia) ou <em>não voláteis</em>. Além disso, há certa <a href="http://pt.wikipedia.org/wiki/Hierarquia_de_mem%C3%B3ria">hierarquia</a> de tipos, pois o custo é inversamente proporcional a velocidade de acesso. A chamada <em>memória principal</em> contém os dados sendo manipulados na tarefa em execução (na memória volátil), portanto é mais rápida e intermedia o acesso aos dados da <em>memória secundária</em>. Esta serve para armazenamento permanente de dados, tem maior capacidade mas desempenho inferior. A característica mais interessante da memória principal é o <a href="http://pt.wikipedia.org/wiki/Acesso_aleat%C3%B3rio"><em>acesso aleatório</em></a>, em que posições específicas de memória são acessadas diretamente, utilizando uma lógica de endereçamento. Isto, e a velocidade do acesso, contrastam com a memória secundária.</li>
+<li>
+<p><span class="circled">&nbsp;1&nbsp;</span>, <span class="circled">&nbsp;7&nbsp;</span>, <span class="circled">&nbsp;9&nbsp;</span> e <span class="circled">10</span> <strong>Entrada/Saída</strong> os dispositivos de entrada e saída de dados (E/S ou I/O) permitem a comunicação com o computador, de modo que ele possa receber dados para realizar uma tarefa, e fornecer os resultados desta. Existem diversas formas de transmitir os dados:</p>
+<ul>
+<li>Entrada: teclado, mouse, microfone, scanner, leitor de código de barras, câmera, joystick, etc.;</li>
+<li>Saída: monitor, caixas de som, impressora, etc.;</li>
+<li>E/S: disco rígido, monitor sensível a toques, pendrive, etc.</li>
+</ul>
+</li>
+</ul>
+<p>Além destes componentes "básicos" da arquitetura von Neumann, diversos outros são necessários.</p>
+<ul>
+<li><span class="circled">&nbsp;2&nbsp;</span>, <strong>placa mãe</strong> <a href="http://pt.wikipedia.org/wiki/Placa-m%C3%A3e">conecta os componentes do computador</a> de modo que possam funcionar em conjunto, possibilitando a comunicação entre eles e a distribuição de energia.</li>
+<li><span class="circled">&nbsp;5&nbsp;</span>, <strong>placas de expansão</strong> que possibilitam o <a href="https://pt.wikipedia.org/wiki/Placa_de_expans%C3%A3o">uso de outros componentes periféricos</a>, ampliando as aplicações.</li>
+<li><span class="circled">&nbsp;6&nbsp;</span>, <strong>fonte de alimentação</strong> que <a href="http://pt.wikipedia.org/wiki/Fonte_de_alimenta%C3%A7%C3%A3o">regula a distribuição de energia</a> para os componentes.</li>
+<li><strong>barramento</strong> é o <a href="http://pt.wikipedia.org/wiki/Barramento">sistema de comunicação</a> que transfere dados entre os componentes do computador. A taxa de transferência do barramento é o que define seu desempenho. Barramentos: processador, cache, memória, dispositivos de entrada/saída, dados.</li>
+<li><strong>mainFrame/supercomputador</strong> <a href="http://pt.wikipedia.org/wiki/Supercomputador">são computadores</a> <a href="http://pt.wikipedia.org/wiki/Mainframe">grande porte</a>, geralmente dedicados a aplicações específicas que demandam o processamento de grandes volumes de informação.</li>
+<li><strong>a "nuvem"</strong> é o uso de <a href="http://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_em_nuvem">computadores e servidores compartilhados e interligados por meio da Internet</a>, seguindo o princípio da <a href="http://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_em_grelha">computação em grade</a>.</li>
+</ul>
+<p>O funcionamento de um computador ocorre pela manipulação e comunicação de sinais elétricos entre seus componentes, como um processo físico, sendo os sinais mais simples são os sinais "ligado" e "desligado"<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>. Esse estado binário de um sinal pode ser representado por um <em>binary digit</em> (um bit), um valor que pode ser um de dois estados distintos e mutuamente exclusivos<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>:<code>0</code> (desligado) ou <code>1</code> (ligado). Os conjuntos de bits determinam as informações armazenadas, inclusive os programas que determinam o que a máquina deve fazer.</p>
+<h2 id="software">Software</h2>
+<p>O software é a parte lógica do sistema computacional, que define quais instruções devem ser executadas pelo hardware. Pode ser dividido em dois tipos, <em>programas de sistema</em> que possibilitam a interação com o hardware (computador e periféricos) e fornecem uma plataforma para execução das <em>aplicações</em>, que realizam tarefas mais específicas como edição de documentos, organização de dados, entretenimento, educacional, manipulação de mídia, e outros.</p>
+<h3>Programas de Sistema</h3>
+
+<p>O <em><a href="http://pt.wikipedia.org/wiki/Sistema_operativo">sistema operacional</a></em> é o conjunto de programas que gerencia o hardware e fornece serviços comuns às aplicações. Podem ser de <a href="http://pt.wikipedia.org/wiki/Tempo_real">tempo-real</a>, <a href="http://pt.wikipedia.org/wiki/Multiusu%C3%A1rio">multi-usuário</a>, <a href="http://pt.wikipedia.org/wiki/Multitarefa">multi-tarefas</a>, <a href="http://pt.wikipedia.org/wiki/Sistema_embarcado">embarcado</a>, entre outros. Possibilita a comunicação com os componentes de <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">núcleo</a>, que controla execução, interrupções, gerenciamento de memória [virtual], acesso a disco e arquivos, comunicação com dispositivos, etc., bem como de comunicação, segurança, interface gráfica, entre outros.</p>
+<p>Os sistemas mais conhecidos são: Unix (<a href="http://www.bsd.org/">BSD</a>, <a href="http://www.gnu.org/gnu/linux-and-gnu.pt-br.html">GNU-Linux</a>, <a href="https://www.apple.com/br/osx/">OS X</a>), <a href="http://windows.microsoft.com/pt-br/windows/home">Microsoft Windows</a>, <a href="http://plan9.bell-labs.com/plan9/">Plan 9</a>, <a href="https://www.android.com/">Android</a>, etc. É possível ter uma ideia da utilização de cada sistema por sua <a href="https://gs.statcounter.com/os-market-share/desktop/worldwide">fatia de mercado</a>. Atualmente, o Windows domina o mercado de desktops, e o de dispositivos móveis é dividido entre Android e iOS. Mas a <a href="https://www.top500.org">computação de alto desempenho é praticamente toda em Unix</a>.</p>
+<p>Os <em>utilitários</em> são os programas que auxiliam a analisar e configurar o computador, como análise/manutenção de disco, análise de memória, anti-vírus, armazenamento de dados, cifragem, compressão, conectividade com a rede, cópia de segurança, gerenciador de arquivos, monitoração do processador, sincronização de dados/arquivos, entre muitos outros. Alguns exemplos são análise/manutenção de disco, análise de memória, anti-vírus, armazenamento de dados, cifragem, compressão, conectividade com a rede, cópia de segurança, gerenciador de arquivos, monitoração do processador, sincronização de dados/arquivos.</p>
+<p>Os <em>controladores de dispositivos</em>, também conhecidos como <em><a href="http://pt.wikipedia.org/wiki/Driver_de_dispositivo">drivers</a></em> de dispositivos, são os programas que gerenciam um hardware específico do computador, como barramento, impressora, máquinas digitais, placa de rede/áudio/vídeo/aquisição de sinais, scanner, smartphones, etc.</p>
+<p>As <em>interfaces com usuário</em> são programas que interagem com o usuário, geralmente divididos em função do uso via <a href="http://pt.wikipedia.org/wiki/Interpretador_de_comandos">linha de comando</a> ou <a href="http://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador">interface gráfica</a>.</p>
+<p>Os programas de <em>desenvolvimento</em> auxiliam o desenvolvimento de programas, como <a href="http://pt.wikipedia.org/wiki/Compilador">compiladores</a>, <a href="http://pt.wikipedia.org/wiki/Interpretador">interpretadores</a>, <a href="http://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado">IDEs</a>, <a href="http://pt.wikipedia.org/wiki/Assembly#Montador">montadores</a>, <a href="http://pt.wikipedia.org/wiki/Depurador">depuradores</a>, etc.</p>
+<h3>Aplicações</h3>
+
+<p>São os programas com fins específicos, como <a href="http://pt.wikipedia.org/wiki/Navegador_%28inform%C3%A1tica%29">navegadores</a>, <a href="http://pt.wikipedia.org/wiki/Su%C3%ADte_de_escrit%C3%B3rio">programa para escritório</a>, <a href="http://pt.wikipedia.org/wiki/Jogo_de_computador">entretenimento</a>, e muitos, muitos mais.</p>
+<h2>Exercícios</h2>
+
+<details class="question">
+<summary>Descreva os componentes físicos de um computador e suas funcionalidades.</summary>
+<p>A unidade central de processamento é o dispositivo que interpreta e executa e instruções, lê e escreve a memória, tendo como parte integrante os registradores que armazenam os dados sendo processados no momento. Memória permite armazenar dados em um conjunto ordenado de <em>bits</em>.</p>
+<p>Os dispositivos de entrada e saída de dados permitem que humanos e outras máquinas se comunicação com o computador. Exemplos de dispositivos de entrada são: teclado, mouse, microfone, scanner, leitor de código de barras, câmera, joystick, etc. Exemplos de saída são: monitor, caixas de som, impressora, etc. Há dispositivos que fazem ambas: disco rígido, monitor sensível a toques, pendrive, etc.</p>
+<p>O barramento é o sistema de comunicação que transfere dados entre os componentes do computador (a taxa de transferência do barramento é o que define o desempenho da máquina). A fonte de alimentação regula a distribuição de energia para os componentes. A placa mãe conecta os componentes do computador ao barramento e à fonte.</p>
+</details>
+<details class="question">
+<summary>Há uma hierarquia entre os diferentes tipos de memória, descreva-a.</summary>
+<p>A classificação se dá com base em dois conceitos: capacidade de armazenamento e velocidade de acesso. As memórias mais rápidas têm menor capacidade, e vice-versa. O primeiro nível é a memória interna, composta pelos registradores, pequenas unidades extremamente rápidas no processador, e pela <em>cache</em> que serve para intermediar a comunicação ente os registradores e a memória principal. O segundo nível é memória RAM, que é diretamente ligada à UCP para leitura/escrita e já detalhada no texto.</p>
+<p>O próximo nível é a memória secundária (não volátil), que é acessada indiretamente pela UCP uma vez que seu conteúdo é transmitido pelo sistema operacional e componentes de comunicação para a memória principal. A capacidade tende a ser significativamente maior que da primária, e exemplos de dispositivos assim são CDs, SSDs, etc. O último nível é a memória terciária, que envolve a manipulação de informações que são muito raramente utilizadas, tanto que podem ser armazenadas de forma isolada, necessitando a reconexão física à máquina (para copiar os dados para a memória secundária).</p>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Harold Abelson, Gerald Jay Sussman, and Julie Sussman. <em>Structure and Interpretation of Computer Programs</em>. MIT Press, Cambridge, MA, USA, 1985. ISBN 0262010771.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>SBC. Currículo de Referência da SBC para Cursos de Graduação em Bacharelado em Ciência da Computação e Engenharia de Computação. URL: <a href="http://www.sbc.org.br/documentos-da-sbc/category/131-curriculos-de-referencia">http://www.sbc.org.br/documentos-da-sbc/category/131-curriculos-de-referencia</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>John L. Hennessy and David A. Patterson. <em>Computer Architecture, Fifth Edition: A Quantitative Approach</em>. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 5th edition, 2011. ISBN 012383872X.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>M.D. Godfrey and D.F. Hendry. The computer as von Neumann planned it. <em>IEEE Annals of the History of Computing</em>, 15(1):11&ndash;21, 1993. <a href="https://doi.org/10.1109/85.194088">doi:10.1109/85.194088</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>David A. Patterson and John L. Hennessy. <em>Computer Organization and Design</em>. Morgan Kaufmann Publishers, 2nd edition, 1998. ISBN 15-586-0428-6.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Aaron M Tenenbaum, Yedidyah Langsam, and Moshe Augenstein. <em>Estruturas de dados usando C</em>. Pearson Makron Books, São Paulo (SP), 1995. ISBN 8534603480 : 9788534603485.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

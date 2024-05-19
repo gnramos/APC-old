@@ -1,0 +1,389 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Reais - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#numeros-reais" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reais
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linguagem/" class="md-nav__link">
+        Linguagem de Programação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Reais</h1>
+
+<h3 id="numeros-reais">Números Reais</h3>
+<p>Os <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_real">números reais</a> também podem ser representados como binários pelo sistema posicional, basta estender a lógica da notação posicional. Por exemplo, considere o seguinte número decimal:</p>
+<div class="arithmatex">\[13,125 = 1\cdot{10^1} + 3\cdot{10^0} + 1\cdot{10^{-1}} + 2\cdot{10^{-2}} + 5\cdot{10^{-3}}\]</div>
+<p>Este valor pode ser representado com a mesma lógica em 7 bits:</p>
+<div class="arithmatex">\[1\cdot2^3 + 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 0\cdot2^{-2} + 1\cdot2^{-3} = 1101,001_2\]</div>
+<p>Neste caso usamos 4 bits para o valor inteiro e 3 para o valor fracionário.</p>
+<h4>Ponto Fixo</h4>
+
+<p>A representação com <a href="https://en.wikipedia.org/wiki/Fixed-point_arithmetic">ponto fixo</a> define que, dada uma quantidade <span class="arithmatex">\(Q\)</span> de bits para representar o número, há uma quantidade fixa <span class="arithmatex">\(m\)</span> de bits que armazenam a parte inteira e outra quantidade <span class="arithmatex">\(f\)</span> que armazena a parte fracionária do número (tais que <span class="arithmatex">\(Q = m + f\)</span>). Por exemplo, supondo <span class="arithmatex">\(Qm.f = Q5.3\)</span>, o número 13,125 seria representado pelos bits <code>01101001</code> cujo valor é interpretado como <code>01101,001</code>. Supondo <span class="arithmatex">\(Q4.4\)</span>, este mesmo valor é representado por <code>11010010</code>.</p>
+<p>O ponto fixo é uma convenção interessante, mas pouco flexível. Como toda estrutura de dados, a quantidade de bits limita os valores que podem ser armazenado, portanto uma configuração <span class="arithmatex">\(Qm.f\)</span> que pode ser adequada para uma aplicação específica pode ser inadequada para outra. Por exemplo, considerando que <span class="arithmatex">\(Q=8\)</span>, uma representação <span class="arithmatex">\(Q0.7\)</span> é mais interessante para lidar com o tamanho de componentes eletrônicos que a <span class="arithmatex">\(Q5.3\)</span>. Desta forma, fica inviável determinar um padrão para ponto fixo que seja suficiente para a maioria das aplicações.</p>
+<h4>Ponto Flutuante</h4>
+
+<p>Como alternativa mas flexível, temos a representação em <a href="https://pt.wikipedia.org/wiki/Ponto_flutuante">ponto flutuante</a> que se baseia na ideia da <a href="https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_cient%C3%ADfica">notação científica</a> onde qualquer número pode ser representado no mesmo formato em duas componentes, separando valor numérico de sua grandeza. Dada uma <em>mantissa</em> (<span class="arithmatex">\(m\)</span>) composta por algarismos que determinam o valor do número e um <em>expoente</em> (<span class="arithmatex">\(e\)</span>) que determina sua grandeza, um número qualquer na base <span class="arithmatex">\(B\)</span> pode ser representado da seguinte forma:</p>
+<div class="arithmatex">\[m\cdot{B}^{e}\]</div>
+<p>Por exemplo:</p>
+<div class="arithmatex">\[0,13125\cdot10^2 = 13,125_{10} \Longleftrightarrow 1101,001_2 = 0,1101001\cdot2^4\]</div>
+<p>Esta representação oferece maior flexibilidade e alcance de valores. O padrão usado nos computadores modernos é o <a href="https://pt.wikipedia.org/wiki/Instituto_de_Engenheiros_Eletricistas_e_Eletr%C3%B4nicos#IEEE_754">IEEE 754</a>, que define o valor armazenado considerando um conjunto de bits de tamanho fixo em três partes: um bit para determinar o sinal, seguido de <span class="arithmatex">\(e\)</span> bits para o valor do expoente, seguido de <span class="arithmatex">\(m\)</span> bits para a mantissa. Esta abordagem permite que se use quaisquer quantidades de bits mas usualmente temos a precisão simples (32 bits em blocos de 1/8/23) e dupla (64 bits, em blocos de 1/11/52). O valor armazenado pode ser obtido pelo valor numérico simples de cada bloco desta forma:</p>
+<div class="arithmatex">\[(-1)^{s}\cdot1,m\cdot2^{e-offset}\]</div>
+<p>O <em>offset</em> depende da quantidade de bits de <em>e</em>, sendo calculado como <span class="arithmatex">\(2^{e-1}-1\)</span>. Para as precisões simples e dupla, temos os valores 127 e 1023, respectivamente. Por exemplo, para precisão simples temos que:</p>
+<table>
+<thead>
+<tr>
+<th>sinal</th>
+<th>expoente</th>
+<th>mantissa</th>
+<th>fórmula</th>
+<th>valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>01111110</td>
+<td>10000000000000000000000</td>
+<td><span class="arithmatex">\((-1)^{1}\cdot1,1\cdot2^{-1}\)</span></td>
+<td><span class="arithmatex">\(-0,75_{10}\)</span></td>
+</tr>
+<tr>
+<td>0</td>
+<td>10000010</td>
+<td>10100100000000000000000</td>
+<td><span class="arithmatex">\((-1)^{0}\cdot1,101001\cdot2^3\)</span></td>
+<td><span class="arithmatex">\(13,125_{10}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>O uso de ponto flutuante oferece diversas vantagens, principalmente a representação de valores absolutos muito grandes ou pequenos<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, mas há limitações. O conjunto de números reais é infinitamente grande, e não pode ser completamente representado com a quantidade finita de bits disponível na memória, portanto é muito comum que valores em ponto flutuante sejam arredondados ao serem armazenados na quantidade fixa de bits disponível<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<p>Por exemplo, considere a expressão <span class="arithmatex">\(1 / 3 = 0,33333\dots\)</span>. O valor resultante é uma dízima periódica, podemos mostrar matematicamente que <span class="arithmatex">\(0,\overline{3} + 0,\overline{3} + 0,\overline{3} = 1\)</span>. Entretanto, <span class="arithmatex">\(0,\overline{3}\)</span> é uma expressão matemática com mais informação que "apenas" algarismos, ela determina um valor que não pode ser exatamente representado por uma quantidade fixa de algarismos (ou bits na memória). O que se pode fazer é usar toda a capacidade disponível para armazenar o valor mais próximo possível. Considere que só podemos usar 3 algarismos, então a expressão <span class="arithmatex">\(0,\overline{3} + 0,\overline{3} + 0,\overline{3}\)</span> se torna <span class="arithmatex">\(0,33 + 0,33 + 0,33 = 0,99 \neq 1\)</span>.</p>
+<p>Esta <a href="http://pt.stackoverflow.com/a/11328">imprecisão</a> tem implicações interessantes pois, para um programa de computador, a expressão <span class="arithmatex">\(0,1 + 0,1 + 0,1\)</span> não resulta no valor <span class="arithmatex">\(0,3\)</span>! O valor decimal <span class="arithmatex">\(0,1\)</span> é representado em binário como <span class="arithmatex">\(0,1\overline{0011}\)</span> até o limite de bits reservados, que é insuficiente para o valor exato. Abaixo, podemos ver as diferenças escolhendo precisões arbitrárias para mostrar um mesmo valor armazenado de <span class="arithmatex">\(0,1\)</span>, bem como o efeito da propagação desta diferença ao longo de diversas operações:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Valor</label><label for="__tabbed_1_2">Somatório</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p>1 casa de precisão: 0.1</p>
+<p>5 casas de precisão: 0.10000</p>
+<p>15 casas de precisão: 0.100000000000000</p>
+<p>28 casas de precisão: 0.1000000000000000055511151231</p><div class="markdown-exec"></div>
+</p>
+</div>
+<div class="tabbed-block">
+<p><p><span class="arithmatex">\(\sum\limits_{i=1}^{1}0.1 = 0.1000000000000000055511151231\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{3}0.1 = 0.3000000000000000444089209850\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{10}0.1 = 1.0000000000000000000000000000\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{100}0.1 = 10.0000000000000000000000000000\)</span></p><div class="markdown-exec"></div>
+</p>
+</div>
+</div>
+</div>
+<p>Os efeitos da imprecisão tendem a não ser considerados na maioria das aplicações (que não lidem com isso como as de engenharia/finanças/computação científica). Entretanto, deve-se ter atenção especial pois, apesar da diferença para o valor exato ser "pequena", ela existe e pode causar dificuldades se seu programa liga com algo simples como verificar se <span class="arithmatex">\(0,1 + 0,2 = 0,3\)</span> (algo bem provável de ocorrer em muitas aplicações). É papel do programador entender a situação e lidar com ela.</p>
+<p>Algumas abordagens para com isso são trabalhar com inteiros e evitar comparar diretamente variáveis do tpo <code>float</code>. Se necessário, podemos realizar a comparação considerando uma tolerância razoável para a diferença entre os valores: ao invés de <span class="arithmatex">\(a &lt; b\)</span>, usamos <span class="arithmatex">\(|a - b| &lt; \epsilon\)</span>. Também é preciso atentar para acúmulo de imprecisões ao longo de múltiplas computações, pois <a href="https://www-users.cse.umn.edu/~arnold/disasters/disasters.html">podem ser realmente significativos</a>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Aaron M Tenenbaum, Yedidyah Langsam, and Moshe Augenstein. <em>Estruturas de dados usando C</em>. Pearson Makron Books, São Paulo (SP), 1995. ISBN 8534603480 : 9788534603485.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>David Goldberg. What every computer scientist should know about floating-point arithmetic. <em>ACM Comput. Surv.</em>, 23(1):5–48, mar 1991. URL: <a href="https://doi.org/10.1145/103162.103163">https://doi.org/10.1145/103162.103163</a>, <a href="https://doi.org/10.1145/103162.103163">doi:10.1145/103162.103163</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

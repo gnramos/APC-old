@@ -1,0 +1,1699 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Estruturas de Dados - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estruturas-de-dados" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Estruturas de Dados
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linguagem/" class="md-nav__link">
+        Linguagem de Programação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="estruturas-de-dados">Estruturas de Dados</h1>
+<div class="admonition quote">
+<p class="admonition-title"><a href="http://www0.cs.ucl.ac.uk/staff/D.Jones/">David Jones</a></p>
+<p>Acerte as estruturas de dados primeiro, e o resto do programa se escreverá sozinho.</p>
+</div>
+<p>Todo processo no computador gerencia a execução de um programa armazenado, a implementação de um algoritmo computacional nãos sendo, portanto, possível dissociar um algoritmo de dados manipulados - o próprio programa é um conjunto de dados (as instruções). Além disso, praticamente todos os programas manipulas dados fornecidos e gerados no processamento, na forma de variáveis ou constantes, que são os objetos de dados básicos manipulados em um programa<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>O forma como organizamos estes dados tem impacto direto no desempenho do computador. Ao executar um algoritmo computacional, estamos exigindo esforço da máquina para realizar o trabalho de processamento. Este esforço depende da quantidade de instruções sendo executadas, e do custo de cada instruções (podemos ter instruções mais simples e baratas, e instruções mais complexas e caras). A organização dos dados tem impacto direto neste esforço, e buscamos deixá-los organizados de forma a tornar o processo menos custoso. Por exemplo, imagine que seu problema é interpretar números e somá-los, é muito mais fácil<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> fazer isso se lhe forem apresentados os números estruturados como <span class="arithmatex">\(49\)</span> e <span class="arithmatex">\(1\)</span> (com resultado <span class="arithmatex">\(50\)</span>) que se fossem como <span class="arithmatex">\(XLIX\)</span> e <span class="arithmatex">\(I\)</span> (também com resultado <span class="arithmatex">\(L\)</span>).</p>
+<p>A memória do computador é um conjunto ordenado de bits, ou seja, toda informação é armazenada como zeros e uns e há uma ordem posicional entre eles (existe um primeiro bit, que pode ser <code>0/1</code>, um segundo bit que também pode ser <code>0/1</code>, e assim sucessivamente até um último bit). Para facilitar, há uma <a href="http://pt.wikipedia.org/wiki/Byte">nomenclatura específica</a> para lidar com a quantidade de bits sendo 1 byte (8 bits) a unidade mais comum para quantificá-lo. A composição de bits permite representar mais estados; 2 bits são 4 estados (<code>00/01/11/10</code>), 3 bits definem 8 estados, e assim sucessivamente - havendo <span class="arithmatex">\(n\)</span> bits podemos definir <span class="arithmatex">\(2^n\)</span> estados distintos. O significado da informação armazenada depende da forma de interpretar estes bits, um mesmo conjunto de bits tem significados diferentes se for interpretado como um número, um símbolo ou outra coisa. Por exemplo, um byte pode assumir um de 256 valores numéricos diferentes, mas também pode representar inúmeras informações diferentes se mudarmos a forma de interpretá-lo.</p>
+<p><img alt="Diferentes interpretações para 1 byte" src="/img/byte_interpretacao.png" title="Diferentes interpretações para 1 byte" width="75%" /></p>
+<p>A representação do dado é necessariamente binária mas a interpretação dos bits é o que define a informação. Esta interpretação é determinada pelo <em>tipo de dado</em>, e cada tipo tem suas características específicas definidas pela linguagem de programação. Por exemplo, o conjunto de bits <code>01000001001000000000000000000000</code> pode ser interpretado como o valor numérico do tipo inteiro 1092616192, como o valor numérico do tipo real 10.0 ou como um tipo simbólico <code>A</code> (<a href="https://pt.wikipedia.org/wiki/ascii">ASCII</a>). Estes três tipos de dados, entre outros, geralmente estão presentes em qualquer linguagem de programação.</p>
+<div class="admonition note">
+<p class="admonition-title"><span id="Dica">Dica</span></p>
+<p>Como um mesmo conjunto de bits pode ser interpretado de diferentes formas, é preciso saber que tipo de dado foi armazenado na memória para interpretá-lo corretamente.</p>
+</div>
+<p>Um <em><span id="tipo-abstrato-de-dado">tipo abstrato de dado</span></em> (TAD) determina um tipo de dado e as operações definidas sobre ele, delimitando assim a quantidade de informação necessária para manipulação dos valores pelo computador e, consequentemente, facilitando a programação. Por exemplo, o conjunto de números naturais <span class="arithmatex">\(\mathbb{N}\)</span> e suas operações (como <span class="arithmatex">\(+, -, /, *\)</span>) é um TAD.</p>
+<div class="admonition info">
+<p class="admonition-title"><span id="Estrutura-de-Dados">Estrutura de Dados</span></p>
+<p>Forma concreta de se implementar um tipo abstrato de dados em uma linguagem de programação, de modo a organizar os dados na memória para facilitar o acesso e a manipulação destes.</p>
+</div>
+<p>Portanto, para cada linguagem de programação específica, o tipo do dado determina:</p>
+<ol>
+<li>o significado do valor armazenado;</li>
+<li>como o valor é armazenado nos bits;</li>
+<li>quais os possíveis valores que podem ser armazenados; e</li>
+<li>quais as operações podem ser realizadas com o valor.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title"><span id="Dica">Dica</span></p>
+<p>As características de uma estrutura de dados específica são importantes pois determinam o que pode e também o que <strong>não</strong> pode ser feito com ela.</p>
+</div>
+<h2>Números</h2>
+
+<p>Um <em>número</em> é um objeto matemático usado para descrever uma quantidade, e uma <em>base numérica</em> é um conjunto de algarismos utilizados para representar um número. Quais são os símbolos e as regras de como utilizá-los são definidos pelos sistema de numeração usado. O valor de um número é único, mas sua representação pode variar conforme o sistema utilizado - é fácil ilustrar isso comparando o abordagem usamos normalmente, com <a href="https://pt.wikipedia.org/wiki/Algarismos_ar%C3%A1bicos">algarismos arábicos</a> e a <a href="https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_posicional">notação posicional</a>, à abordagem que os <a href="https://pt.wikipedia.org/wiki/Numera%C3%A7%C3%A3o_romana">antigos romanos</a> usavam. Para o valor quarenta e nove, temos as representações <span class="arithmatex">\(49\)</span> e <span class="arithmatex">\(XLIX\)</span>, respectivamente.</p>
+<p>Na notação posicional, o valor representado por um algarismo depende da posição em que ele se encontra no conjunto de símbolos que representa o número, sendo valores a esquerda mais influentes que os a direita. O valor deste número é determinado pela soma dos valores relativos de cada algarismo. Por exemplo: 123 = 100 + 20 + 3, o algarismo mais a esquerda (1) tem uma influência maior que os demais no valor, e é considerado o mais significativo. O algarismo seguinte (2) tem uma influência menor que o anterior, mas maior que o seguinte. Isso se sucede até o último algarismo, o mais a direita, que é chamado de menos significativo. Podemos reescrever a informação da seguinte forma:</p>
+<div class="arithmatex">\[123 = 100 + 20 + 3 = 1·10^2+ 2·10^1+ 3·10^0\]</div>
+<p>Nesta representação, duas coisas se destacam. A primeira é que a influência de cada algarismo é determinada por uma potência de 10, que é a base numérica. A segunda, é que esta potência é uma sequência crescente da posição menos significativa para a mais significativa, iniciando-se por 0. De forma mais genérica, um algarismo <span class="arithmatex">\(A\)</span> tem uma influência proporcional a sua posição <span class="arithmatex">\(i\)</span> para uma base numérica <span class="arithmatex">\(B\)</span>.</p>
+<div class="arithmatex">\[A·{B^i}\]</div>
+<p>No valor 123, na <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_decimal">base decimal</a>, entendemos seu valor pela soma de seus componentes. O algarismo 3 está na posição mais a direita, considerada como posição <span class="arithmatex">\(i = 0\)</span>, portanto seu peso no valor resultante é de 3·10<span class="arithmatex">\(^0\)</span>. A posição seguinte (a esquerda) é i = 1 com o algarismo 2, acrescentando 2·10<span class="arithmatex">\(^1\)</span> ao resultado. O último algarismo (mais a esquerda) é 1 e está na posição 2, acrescentando 1·10<span class="arithmatex">\(^2\)</span>. De forma genérica, o valor de um número em uma base numérica <span class="arithmatex">\(B\)</span> qualquer, representado com <span class="arithmatex">\(n\)</span> algarismos <span class="arithmatex">\(A_i : A \in [0, B), i \in [0, n)\)</span>, é calculado com a seguinte fórmula:</p>
+<div class="arithmatex">\[A_{n-1}A_{n-2}…{A_2}A_1A_0 = \sum\limits_{i=0}^{n - 1}{A_i·{B^i}}\]</div>
+<p>Para representar a informação numérica na memória do computador, ela necessariamente deve ser representada como um conjunto de bits. Isto é relativamente simples, o bit tem dois estados, 0/1 que são os algarismos da <em><a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_bin%C3%A1rio">base numérica binária</a></em>. Portanto, podemos usar esta base na notação posicional para basta representar um valor numérico qualquer como bits na memória. Como também usaremos algarismos arábicos, para diferenciar as bases numéricas acrescentamos um sufixo ao número.</p>
+<div class="arithmatex">\[1101_2 = 1·2^3+ 1·2^2+ 0·2^1+ 1·2^0 = 8 + 4 + 0 + 1 = 13_{10}\]</div>
+<p>Por ser uma base de valor baixo, são poucos os algarismos e, portanto, as representações dos números se tornam extensas. Outras bases de valor mais elevado permitem compactar isso, e as mais úteis são as múltiplas de 2 já que a <a href="https://pt.wikipedia.org/wiki/Convers%C3%A3o_de_base_num%C3%A9rica">conversão</a> delas para a binária é simplificada. A tabela abaixo mostra alguns valores nas bases mais comuns na computação: binária, <a href="https://pt.wikipedia.org/wiki/Sistema_octal">octal</a>, decimal e <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_hexadecimal">hexadecimal</a>. Note que, como a notação posicional utiliza apenas um símbolo por posição, a base hexadecimal define os valores superiores a 9 (o maior algarismo arábico) para letras do alfabeto latino.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>binária</th>
+<th>octal</th>
+<th>decimal</th>
+<th>hexadecimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>11</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>100</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>101</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>110</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>111</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>10</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>11</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>12</td>
+<td>10</td>
+<td>A</td>
+</tr>
+<tr>
+<td>1011</td>
+<td>13</td>
+<td>11</td>
+<td>B</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>14</td>
+<td>12</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>15</td>
+<td>13</td>
+<td>D</td>
+</tr>
+<tr>
+<td>1110</td>
+<td>16</td>
+<td>14</td>
+<td>E</td>
+</tr>
+<tr>
+<td>1111</td>
+<td>17</td>
+<td>15</td>
+<td>F</td>
+</tr>
+<tr>
+<td>101010</td>
+<td>52</td>
+<td>42</td>
+<td>2A</td>
+</tr>
+<tr>
+<td>1111011</td>
+<td>173</td>
+<td>123</td>
+<td>7B</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="numeros-inteiros">Números Inteiros</h3>
+<p>Já vimos a representação dos <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_natural">números naturais</a> em binário. Entretanto, muitas problemas lidam com os <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_inteiro">números inteiros</a>, que podem ter valores negativos. Felizmente, um número só pode ser negativo ou não, ou seja, a informação do sinal é facilmente representada em um bit. A convenção é que o bit mais a esquerda armazena a informação se o número é negativo (ligado/1) ou se é positivo (desligado/0), e os demais bits armazenam a informação do valor do número. Há formas distintas de se interpretar este último conjunto de bits, como listadas a seguir.</p>
+<p><a href="https://pt.wikipedia.org/wiki/Representa%C3%A7%C3%A3o_de_n%C3%BAmeros_com_sinal#M.C3.A9todo_sinal-e-magnitude">Sinal e Magnitude</a>, onde o bit mais significativo indica o sinal e os demais bits determinam o valor diretamente pela notação posicional (como um número natural). Esta abordagem é intuitivamente simples para entendermos.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td><span class="arithmatex">\(-(0·2^1+ 0·2^0)\)</span></td>
+<td>-0</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td><span class="arithmatex">\(-(0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td><span class="arithmatex">\(-(1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td><span class="arithmatex">\(-(1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p><a href="https://pt.wikipedia.org/wiki/Representa%C3%A7%C3%A3o_de_n%C3%BAmeros_com_sinal#Complemento_para_um">Complemento de um</a> também considera o bit mais a esquerda como indicador de sinal e os demais para o valor, conforme o sinal. Se <em>positivo</em>, os bits restantes indicam o valor pela notação posicional (como na abordagem de sinal e magnitude); se <em>negativo</em>, é preciso inverter todos os bits antes de considerar a notação posicional. Esta variação é um pouco mais complexa para entendermos, mas tem vantagens quanto à anterior para algumas operações. Uma delas é que precisa-se de menos esforço para para inverter o sinal de um valor, uma operação muito frequente em problemas computacionais. Usando complemento de um, basta inverter todos os bits.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>inverte?</th>
+<th></th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td>sim</td>
+<td>-11</td>
+<td><span class="arithmatex">\(-(1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td>sim</td>
+<td>-10</td>
+<td><span class="arithmatex">\(-(1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td>sim</td>
+<td>-01</td>
+<td><span class="arithmatex">\(-(0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td>sim</td>
+<td>-00</td>
+<td><span class="arithmatex">\(-(0·2^1+ 0·2^0)\)</span></td>
+<td>-0</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Por fim, a forma mais utilizada é <a href="https://pt.wikipedia.org/wiki/Complemento_para_dois">complemento de dois</a>. Nela, também o bit mais a esquerda define o sinal e os demais determinam o valor conforme o sinal. Se <em>positivo</em>, os bits restantes indicam o valor pela notação posicional; se <em>negativo</em>, é preciso inverter todos os bits e incrementar em 1 o resultado antes de considerar a notação posicional. Embora mais complicada para nós, esta abordagem tem vantagens sobre as demais, como quantidade de valores distintos que se pode armazenar e facilidade na computação de operações aritméticas.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>inverte?</th>
+<th></th>
+<th>+1</th>
+<th></th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td>sim</td>
+<td>-11</td>
+<td>sim</td>
+<td>-100</td>
+<td><span class="arithmatex">\(-(1·2^2+ 0·2^1+ 0·2^0)\)</span></td>
+<td>-4</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td>sim</td>
+<td>-10</td>
+<td>sim</td>
+<td>-011</td>
+<td><span class="arithmatex">\(-(0·2^2+ 1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td>sim</td>
+<td>-01</td>
+<td>sim</td>
+<td>-010</td>
+<td><span class="arithmatex">\(-(0·2^2+ 1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td>sim</td>
+<td>-00</td>
+<td>sim</td>
+<td>-001</td>
+<td><span class="arithmatex">\(-(0·2^2+ 0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Geralmente, valores inteiros são armazenados em um tipo de dado <code>inteiro</code> de 32 ou 64 bits. Considerando o primeiro caso, a estrutura de dados para complemento de dois determina:</p>
+<ol>
+<li>O significado é de um valor numérico inteiro, que pode ser negativo.</li>
+<li>O valor é armazenado como Complemento de 2 nos 32 bits.</li>
+<li>Os possíveis valores armazenados estão no intervalo <span class="arithmatex">\([-2^{31}, 2^{31})\)</span>.</li>
+<li>As operações aritméticas básicas (<span class="arithmatex">\(+, -, \times\ e\ \div\)</span>) estão definidas na linguagem de programação - e possivelmente outras.</li>
+</ol>
+<h3 id="numeros-reais">Números Reais</h3>
+<p>Os <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_real">números reais</a> também podem ser representados como binários pelo sistema posicional, basta estender a lógica da notação posicional. Por exemplo, considere o seguinte número decimal:</p>
+<div class="arithmatex">\[13,125 = 1\cdot{10^1} + 3\cdot{10^0} + 1\cdot{10^{-1}} + 2\cdot{10^{-2}} + 5\cdot{10^{-3}}\]</div>
+<p>Este valor pode ser representado com a mesma lógica em 7 bits:</p>
+<div class="arithmatex">\[1\cdot2^3 + 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 0\cdot2^{-2} + 1\cdot2^{-3} = 1101,001_2\]</div>
+<p>Neste caso usamos 4 bits para o valor inteiro e 3 para o valor fracionário.</p>
+<h4>Ponto Fixo</h4>
+
+<p>A representação com <a href="https://en.wikipedia.org/wiki/Fixed-point_arithmetic">ponto fixo</a> define que, dada uma quantidade <span class="arithmatex">\(Q\)</span> de bits para representar o número, há uma quantidade fixa <span class="arithmatex">\(m\)</span> de bits que armazenam a parte inteira e outra quantidade <span class="arithmatex">\(f\)</span> que armazena a parte fracionária do número (tais que <span class="arithmatex">\(Q = m + f\)</span>). Por exemplo, supondo <span class="arithmatex">\(Qm.f = Q5.3\)</span>, o número 13,125 seria representado pelos bits <code>01101001</code> cujo valor é interpretado como <code>01101,001</code>. Supondo <span class="arithmatex">\(Q4.4\)</span>, este mesmo valor é representado por <code>11010010</code>.</p>
+<p>O ponto fixo é uma convenção interessante, mas pouco flexível. Como toda estrutura de dados, a quantidade de bits limita os valores que podem ser armazenado, portanto uma configuração <span class="arithmatex">\(Qm.f\)</span> que pode ser adequada para uma aplicação específica pode ser inadequada para outra. Por exemplo, considerando que <span class="arithmatex">\(Q=8\)</span>, uma representação <span class="arithmatex">\(Q0.7\)</span> é mais interessante para lidar com o tamanho de componentes eletrônicos que a <span class="arithmatex">\(Q5.3\)</span>. Desta forma, fica inviável determinar um padrão para ponto fixo que seja suficiente para a maioria das aplicações.</p>
+<h4>Ponto Flutuante</h4>
+
+<p>Como alternativa mas flexível, temos a representação em <a href="https://pt.wikipedia.org/wiki/Ponto_flutuante">ponto flutuante</a> que se baseia na ideia da <a href="https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_cient%C3%ADfica">notação científica</a> onde qualquer número pode ser representado no mesmo formato em duas componentes, separando valor numérico de sua grandeza. Dada uma <em>mantissa</em> (<span class="arithmatex">\(m\)</span>) composta por algarismos que determinam o valor do número e um <em>expoente</em> (<span class="arithmatex">\(e\)</span>) que determina sua grandeza, um número qualquer na base <span class="arithmatex">\(B\)</span> pode ser representado da seguinte forma:</p>
+<div class="arithmatex">\[m\cdot{B}^{e}\]</div>
+<p>Por exemplo:</p>
+<div class="arithmatex">\[0,13125\cdot10^2 = 13,125_{10} \Longleftrightarrow 1101,001_2 = 0,1101001\cdot2^4\]</div>
+<p>Esta representação oferece maior flexibilidade e alcance de valores. O padrão usado nos computadores modernos é o <a href="https://pt.wikipedia.org/wiki/Instituto_de_Engenheiros_Eletricistas_e_Eletr%C3%B4nicos#IEEE_754">IEEE 754</a>, que define o valor armazenado considerando um conjunto de bits de tamanho fixo em três partes: um bit para determinar o sinal, seguido de <span class="arithmatex">\(e\)</span> bits para o valor do expoente, seguido de <span class="arithmatex">\(m\)</span> bits para a mantissa. Esta abordagem permite que se use quaisquer quantidades de bits mas usualmente temos a precisão simples (32 bits em blocos de 1/8/23) e dupla (64 bits, em blocos de 1/11/52). O valor armazenado pode ser obtido pelo valor numérico simples de cada bloco desta forma:</p>
+<div class="arithmatex">\[(-1)^{s}\cdot1,m\cdot2^{e-offset}\]</div>
+<p>O <em>offset</em> depende da quantidade de bits de <em>e</em>, sendo calculado como <span class="arithmatex">\(2^{e-1}-1\)</span>. Para as precisões simples e dupla, temos os valores 127 e 1023, respectivamente. Por exemplo, para precisão simples temos que:</p>
+<table>
+<thead>
+<tr>
+<th>sinal</th>
+<th>expoente</th>
+<th>mantissa</th>
+<th>fórmula</th>
+<th>valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>01111110</td>
+<td>10000000000000000000000</td>
+<td><span class="arithmatex">\((-1)^{1}\cdot1,1\cdot2^{-1}\)</span></td>
+<td><span class="arithmatex">\(-0,75_{10}\)</span></td>
+</tr>
+<tr>
+<td>0</td>
+<td>10000010</td>
+<td>10100100000000000000000</td>
+<td><span class="arithmatex">\((-1)^{0}\cdot1,101001\cdot2^3\)</span></td>
+<td><span class="arithmatex">\(13,125_{10}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>O uso de ponto flutuante oferece diversas vantagens, principalmente a representação de valores absolutos muito grandes ou pequenos<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, mas há limitações. O conjunto de números reais é infinitamente grande, e não pode ser completamente representado com a quantidade finita de bits disponível na memória, portanto é muito comum que valores em ponto flutuante sejam arredondados ao serem armazenados na quantidade fixa de bits disponível<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
+<p>Por exemplo, considere a expressão <span class="arithmatex">\(1 / 3 = 0,33333\dots\)</span>. O valor resultante é uma dízima periódica, podemos mostrar matematicamente que <span class="arithmatex">\(0,\overline{3} + 0,\overline{3} + 0,\overline{3} = 1\)</span>. Entretanto, <span class="arithmatex">\(0,\overline{3}\)</span> é uma expressão matemática com mais informação que "apenas" algarismos, ela determina um valor que não pode ser exatamente representado por uma quantidade fixa de algarismos (ou bits na memória). O que se pode fazer é usar toda a capacidade disponível para armazenar o valor mais próximo possível. Considere que só podemos usar 3 algarismos, então a expressão <span class="arithmatex">\(0,\overline{3} + 0,\overline{3} + 0,\overline{3}\)</span> se torna <span class="arithmatex">\(0,33 + 0,33 + 0,33 = 0,99 \neq 1\)</span>.</p>
+<p>Esta <a href="http://pt.stackoverflow.com/a/11328">imprecisão</a> tem implicações interessantes pois, para um programa de computador, a expressão <span class="arithmatex">\(0,1 + 0,1 + 0,1\)</span> não resulta no valor <span class="arithmatex">\(0,3\)</span>! O valor decimal <span class="arithmatex">\(0,1\)</span> é representado em binário como <span class="arithmatex">\(0,1\overline{0011}\)</span> até o limite de bits reservados, que é insuficiente para o valor exato. Abaixo, podemos ver as diferenças escolhendo precisões arbitrárias para mostrar um mesmo valor armazenado de <span class="arithmatex">\(0,1\)</span>, bem como o efeito da propagação desta diferença ao longo de diversas operações:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Valor</label><label for="__tabbed_1_2">Somatório</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p>1 casa de precisão: 0.1</p>
+<p>5 casas de precisão: 0.10000</p>
+<p>15 casas de precisão: 0.100000000000000</p>
+<p>28 casas de precisão: 0.1000000000000000055511151231</p><div class="markdown-exec"></div>
+</p>
+</div>
+<div class="tabbed-block">
+<p><p><span class="arithmatex">\(\sum\limits_{i=1}^{1}0.1 = 0.1000000000000000055511151231\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{3}0.1 = 0.3000000000000000444089209850\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{10}0.1 = 1.0000000000000000000000000000\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{100}0.1 = 10.0000000000000000000000000000\)</span></p><div class="markdown-exec"></div>
+</p>
+</div>
+</div>
+</div>
+<p>Os efeitos da imprecisão tendem a não ser considerados na maioria das aplicações (que não lidem com isso como as de engenharia/finanças/computação científica). Entretanto, deve-se ter atenção especial pois, apesar da diferença para o valor exato ser "pequena", ela existe e pode causar dificuldades se seu programa liga com algo simples como verificar se <span class="arithmatex">\(0,1 + 0,2 = 0,3\)</span> (algo bem provável de ocorrer em muitas aplicações). É papel do programador entender a situação e lidar com ela.</p>
+<p>Algumas abordagens para com isso são trabalhar com inteiros e evitar comparar diretamente variáveis do tpo <code>float</code>. Se necessário, podemos realizar a comparação considerando uma tolerância razoável para a diferença entre os valores: ao invés de <span class="arithmatex">\(a &lt; b\)</span>, usamos <span class="arithmatex">\(|a - b| &lt; \epsilon\)</span>. Também é preciso atentar para acúmulo de imprecisões ao longo de múltiplas computações, pois <a href="https://www-users.cse.umn.edu/~arnold/disasters/disasters.html">podem ser realmente significativos</a>.</p>
+<h3 id="simbolos">Símbolos</h3>
+<p>Símbolos são uma forma extremamente versátil de comunicar informações; o <a href="https://pt.wikipedia.org/wiki/Alfabeto">alfabeto</a> define um pequeno conjunto de símbolos que, juntos, podem expressar <a href="https://pt.wikipedia.org/wiki/Emoticon">quase</a> tudo que se deseja. Símbolos, como toda informação no computador, são representados por bits.</p>
+<h4>ASCII</h4>
+
+<p>O padrão ASCII<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> (<em>American Standard Code for Information Interchange</em>) foi desenvolvido nos anos 60, sendo composto por 95 símbolos gráficos (letras do alfabeto latino, algarismos arábicos, sinais de pontuação e sinais matemáticos) e 33 de controle.</p>
+<p><center></p>
+<h5>Controle</h5>
+
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00</td>
+<td>NUL</td>
+<td>0x08</td>
+<td>BS</td>
+<td>0x10</td>
+<td>DLE</td>
+<td>0x18</td>
+<td>CAN</td>
+</tr>
+<tr>
+<td>0x01</td>
+<td>SOH</td>
+<td>0x09</td>
+<td>HT</td>
+<td>0x11</td>
+<td>DC1</td>
+<td>0x19</td>
+<td>EM</td>
+</tr>
+<tr>
+<td>0x02</td>
+<td>STX</td>
+<td>0x0A</td>
+<td>LF</td>
+<td>0x12</td>
+<td>DC2</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x03</td>
+<td>ETX</td>
+<td>0x0B</td>
+<td>VT</td>
+<td>0x13</td>
+<td>DC3</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>EOT</td>
+<td>0x0C</td>
+<td>FF</td>
+<td>0x14</td>
+<td>DC4</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>ENQ</td>
+<td>0x0D</td>
+<td>CR</td>
+<td>0x15</td>
+<td>NAK</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>ACK</td>
+<td>0x0E</td>
+<td>SO</td>
+<td>0x16</td>
+<td>SYN</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x07</td>
+<td>BEL</td>
+<td>0x0F</td>
+<td>SI</td>
+<td>0x17</td>
+<td>ETB</td>
+<td>0x7F</td>
+<td>DEL</td>
+</tr>
+</tbody>
+</table>
+<h5>Gráficos (Parcial)</h5>
+
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x20</td>
+<td>espaço</td>
+<td>0x30</td>
+<td>0</td>
+<td>0x41</td>
+<td>A</td>
+<td>0x61</td>
+<td>a</td>
+</tr>
+<tr>
+<td>0x21</td>
+<td>!</td>
+<td>0x31</td>
+<td>1</td>
+<td>0x42</td>
+<td>B</td>
+<td>0x62</td>
+<td>b</td>
+</tr>
+<tr>
+<td>0x22</td>
+<td>"</td>
+<td>0x32</td>
+<td>2</td>
+<td>0x43</td>
+<td>C</td>
+<td>0x63</td>
+<td>c</td>
+</tr>
+<tr>
+<td>0x23</td>
+<td>#</td>
+<td>0x33</td>
+<td>3</td>
+<td>0x44</td>
+<td>D</td>
+<td>0x64</td>
+<td>d</td>
+</tr>
+<tr>
+<td>0x24</td>
+<td>$</td>
+<td>0x34</td>
+<td>4</td>
+<td>0x45</td>
+<td>E</td>
+<td>0x65</td>
+<td>e</td>
+</tr>
+<tr>
+<td>0x25</td>
+<td>%</td>
+<td>0x35</td>
+<td>5</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x26</td>
+<td>&amp;</td>
+<td>0x36</td>
+<td>6</td>
+<td>0x57</td>
+<td>W</td>
+<td>0x77</td>
+<td>w</td>
+</tr>
+<tr>
+<td>0x27</td>
+<td>'</td>
+<td>0x37</td>
+<td>7</td>
+<td>0x58</td>
+<td>X</td>
+<td>0x78</td>
+<td>x</td>
+</tr>
+<tr>
+<td>0x28</td>
+<td>(</td>
+<td>0x38</td>
+<td>8</td>
+<td>0x59</td>
+<td>Y</td>
+<td>0x79</td>
+<td>y</td>
+</tr>
+<tr>
+<td>0x29</td>
+<td>)</td>
+<td>0x39</td>
+<td>9</td>
+<td>0x5A</td>
+<td>Z</td>
+<td>0x7A</td>
+<td>z</td>
+</tr>
+<tr>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Cada um dos 128 símbolos é associado à uma sequência arbitrária e única de 7 de bits. É bem comum associar esta sequência a um número inteiro, por exemplo o número 65 ao símbolo 'A' ("um mesmo conjunto de bits pode ser interpretado de diferentes formas"). Além disso, o padrão ASCII tem algumas características interessantes. Os algarismos são listados em ordem de valor, e as letras são organizadas em ordem alfabética, o que facilita os processos de comparação entre eles. As letras minúsculas estão deslocadas em 32 posições em relação às maiúsculas, então a diferença entre os bits que as representam é apenas no sexto bit!</p>
+<p>Por conta de como as máquinas eram construídas, era muito comum usar um byte para armazenar cada símbolo, o que viabilizou definir outros 128 símbolos arbitrários. Entretanto, não houve maior consenso em quais seriam os símbolos, afinal cada grupo tinha seus próprios interesses. No Brasil, o mais comum era o <a href="https://pt.wikipedia.org/wiki/ISO/IEC_8859-1">ISO/IEC 8859-1</a>. Com o avanço da internet, a necessidade de comunicação entre máquinas e grupos distintos forçou a incorporação de um padrão internacional. Entretanto, algumas dificuldades deveriam ser consideradas...</p>
+<p>Uma solução "simples" seria usar mais bits e ampliar o tamanho da tabela, mas isso implicaria que toda informação já representada num padrão como ASCII ocuparia mais memória que o necessário. Por exemplo, supondo que fossem usados 3 bytes (possibilitando mais de 16 milhões de símbolos), uma mensagem com 10 símbolos ASCII passa a ocupar 30 bytes, 200% a mais do que necessário. Também seria necessário lidar com informações armazenadas que usam o símbolo <code>NUL</code> para indicar o término de uma sequência de símbolos - uma sequência de 8 bits com valor 0 não seria rara considerando 3 bytes. Outro ponto relevante era lidar com os documentos existentes, gerar uma cópia de todo arquivo existente com esta nova codificação seria uma tarefa inviável. A solução encontrada foi uma forma elegante de lidar com tudo isso, além de viabilizar a incorporação de quaisquer novos símbolos que possam ser criados.</p>
+<h4>Unicode</h4>
+
+<p>Uma vez estabelecido um padrão de <em>codificação de caracteres</em> (associação [arbitrária] de bits a certos caracteres), pode-se armazenar estes símbolos na memória (e recuperá-los). Há diversar formas de se codificar caracteres: <a href="https://pt.wikipedia.org/wiki/Extended_Binary_Coded_Decimal_Interchange_Code">EBCDIC</a>, <a href="https://pt.wikipedia.org/wiki/Unicode">Unicode</a> (veja <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">isso</a>), ente outros.</p>
+<p>Nesta disciplina, o foco é a representação em <a href="https://pt.wikipedia.org/wiki/ASCII">ASCII</a>, uma forma extremamente compacta e a mais utilizada no padrão ANSI. Neste contexto, um <code>char</code> é um pequeno inteiro, de modo que pode ser livremente usado em expressões aritméticas<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup> (veja \linkFile[../src/exemplos/05_EstruturasDeDados/02_Simbolos]{00-ascii.c} e \linkFile[../src/exemplos/05_EstruturasDeDados/02_Simbolos]{01-ascii.c}).</p>
+<p>A versão 3 da \lP~utiliza outra abordagem, cada caractere é representado como <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">Unicode</a>, mas os valores numéricos/simbólicos podem ser utilizados por intermédio das funções <a href="https://docs.python.org/3.3/library/functions.html#ord"><code>ord</a></code> e <a href="https://docs.python.org/3.3/library/functions.html#chr"><code>chr</a></code>, respectivamente (veja \linkFile[../src/exemplos/05_EstruturasDeDados/02_Simbolos]{00-ascii.py} e \linkFile[../src/exemplos/05_EstruturasDeDados/02_Simbolos]{01-ascii.py}).
+\else%
+\begin{frame}%
+    A <em>codificação de caracteres</em> é a associação de bits a símbolos.
+    \begin{center}\includegraphics[width=.5\textwidth]{misc/LouisBraille}\end{center}
+    \vfill%
+    Por necessidade de diálogos entre os diferentes computadores, foram criados
+    diversos códigos objetivando a padronização.
+\end{frame}%</p>
+<p>\begin{frame}<handout:0>%
+    \framesubtitle{<em>Extended Binary Coded Decimal Interchange Code</em> (EBCDIC)}%
+    \begin{center}\includegraphics[width=.75\textwidth]{computing/programming/EBCDIC}\end{center}
+\end{frame}%</p>
+<p>\begin{frame}<handout:0>%
+    \framesubtitle{<em>American Standard Code for Information Interchange</em> (ASCII)}%
+    \begin{center}\includegraphics[width=.95\textwidth]{computing/programming/ascii}\end{center}
+\end{frame}%</p>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstC[linerange={9-21}]{exemplos/05_EstruturasDeDados/02_Simbolos}{00-ascii.c}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstPython[firstline=12]{exemplos/05_EstruturasDeDados/02_Simbolos}{00-ascii.py}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstC[linerange={9-21}]{exemplos/05_EstruturasDeDados/02_Simbolos}{01-ascii.c}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstPython[firstline=9]{exemplos/05_EstruturasDeDados/02_Simbolos}{01-ascii.py}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=8]{exercicios/05_EstruturasDeDados/02_Simbolos}{00-maior}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=8]{exercicios/05_EstruturasDeDados/02_Simbolos}{01-toupper}%
+\end{frame}\]</div>
+<p>\begin{frame}<handout:0>%
+    \framesubtitle{Unicode}%
+    \vspace{-4em}%
+    \hfill\includegraphics[width=.2\textwidth]{computing/programming/unicode}%
+    \\vspace{-1em}%
+    \begin{itemize}
+    \item Padrão universal de codificação de caracteres
+    \item Fornece um número único para cada caractere, não importando a plataforma (a máquina e/ou sistema operacional em uso), o programa ou o idioma.
+    \item Permite definir caracteres cuja representação interna no computador utiliza mais de um byte (UTF-8), tais como:
+    16 bits (UTF-16) e 32 bits (UTF-32).
+    \item Atualmente, o padrão consiste de mais de 100 mil caracteres e pode ser usado em vários sistemas operacionais, programas e navegadores modernos.
+    \end{itemize}
+\end{frame}%
+\fi%</p>
+<h2 id="objetos-em-python">Objetos em Python</h2>
+<p>\subsection{Ponteiros na \LP}%
+\ifIsArticle%
+A \lP~não utiliza ponteiros diretamente e, por projeto, manipula objetos de forma diferente de C. Em ambas, os <a href="http://stackoverflow.com/a/986145">argumentos são passados por valor</a>, mas dependendo do tipo de objeto (<a href="https://pythonhelp.wordpress.com/2013/02/20/variaveis-valores-e-referencias/">mutável/imutável</a>), a manipulação dentro do escopo de uma função tem ou não efeito em um escopo externo.</p>
+<p>Primeiro, é preciso lembrar alguns <a href="https://wiki.python.org.br/ProgramacaoOrientadaObjetoPython">detalhes da própria linguagem</a>: os objetos (que ficam na memória) têm os seguintes atributos: <em>tipo</em>, que define a informação (e valores) que o objeto pode receber e as operações que podem ser executadas nele; <em>valor</em>, que é o endereço de memória ocupado pelo objeto; <em>nome</em>, que identifica o objeto diferenciando dos demais elementos na memória; e <em>tempo de vida</em>, que é o período de tempo de execução do programa durante o qual o objeto existe. Na \lP{ }lida-se com <a href="https://pythonhelp.wordpress.com/2013/02/20/variaveis-valores-e-referencias/">referências para objetos</a>, as quais desempenham papéis similares a ponteiros.
+\fi%</p>
+<p>\ifIsArticle%
+Os objetos são <em>imutáveis</em> (como \texttt{int}, \texttt{float}, \texttt{str}, etc.) ou <em>mutáveis</em> (como \texttt{lista}, \texttt{dict}, etc.). Toda variável é, na verdade, uma referência para algum objeto da memória. Considerando objetos imutáveis, como ilustrado na figura abaixo, o valor de nome `<em>z</em>' não varia a não ser que você o mude explicitamente, e o operador \texttt{=} não é de <em>atribuição de valor</em> (como na \lC), mas de <em>referência</em>, e o <a href="https://pt.wikipedia.org/wiki/Coletor_de_lixo_(inform%C3%A1tica)">coletor de lixo</a> lida com a informação \texttt{42} ao término de seu tempo de vida.
+\else%
+\begin{frame}[fragile]%
+    %https://pythonhelp.wordpress.com/2013/02/20/variaveis-valores-e-referencias/
+    Python não utiliza ponteiros como tipos de dados, mas lida com referências de forma ``diferente''...%
+    \\pause\vfill%
+    Os objetos em \texttt{Python} são:
+    \begin{description}
+         \item[imutáveis:] \texttt{int}, \texttt{float}, \texttt{str}, <span class="arithmatex">\(\dots\)</span>
+         \item[mutáveis:] \texttt{lista}, <span class="arithmatex">\(\dots\)</span>
+     \end{description}
+\end{frame}</p>
+<p>\begin{frame}%
+    Toda variável em \texttt{Python} é uma referência para algum objeto da memória.
+    \\pause\vfill%
+    Nesta abordagem para lidar com a memória, o valor de nome `<em>a</em>' não varia a não ser que você o mude explicitamente\footnote&lt;2-&gt;{<em>Explícito é melhor que implícito.</em>}.
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \begin{tikzpicture}[start chain=going right, node distance=0pt, mem/.style={inMemory,text width=2em, minimum height=1.7em}]%
+            \node[mem,label={[address,above]0xB1}] (M0) {};%
+            \node[mem,label={[address,above]0xB5}] (M1) {42};%
+            \node[mem,label={[address,above]0xB9}] (M2) {<span class="arithmatex">\(\pi\)</span>};%
+            \node[mem,label={[address,above]0xBD}] (M3) {43};%</p>
+<div class="language-text highlight"><pre><span></span><code>        \node[ptr,below of=M0,yshift=-3em] (a) {\textbf{x}};%
+        \draw[ptr] (a) -| (M1.south);%
+        \node[ptr,below of=a,yshift=-2em] (b) {\textbf{y}};%
+        \draw[ptr] (b) -| (M2.south);%
+        \node[ptr,below of=b,yshift=-2em] (c) {\textbf{z}};%
+        \draw[ptr] (c) -| (M3.south);%
+    \end{tikzpicture}%
+    \caption{\texttt{x, y, z = 42, $\pi$, 43}}
+\end{subfigure}
+\hspace{4em}%
+\begin{subfigure}[b]{0.3\textwidth}
+    \begin{tikzpicture}[start chain=going right, node distance=0pt, mem/.style={inMemory,text width=2em, minimum height=1.7em}]%
+        \node[mem,label={[address,above]0xB1}] (M0) {};%
+        \node[mem,label={[address,above]0xB5}] (M1) {};%
+        \node[mem,label={[address,above]0xB9}] (M2) {$\pi$};%
+        \node[mem,label={[address,above]0xBD}] (M3) {43};%
+
+        \node[ptr,below of=M0,yshift=-3em] (a) {\textbf{x}};%
+        \draw[ptr] (a) -| (M2.south);%
+        \node[ptr,below of=a,yshift=-2em] (b) {\textbf{y}};%
+        \draw[ptr] (b) -| (M3.south);%
+        \node[ptr,below of=b,yshift=-2em] (c) {\textbf{z}};%
+        \draw[ptr] (c) -| (M3.south);%
+    \end{tikzpicture}%
+    \caption{\texttt{x, y = y, z}}
+\end{subfigure}
+</code></pre></div>
+<p>\end{figure}
+\else%
+\begin{frame}[fragile]%
+    %https://pythonhelp.wordpress.com/2013/02/20/variaveis-valores-e-referencias/
+    O operador \texttt{=} não é de <em>atribuição</em>, mas de <em>referência</em>.%
+    \vfill%
+    \begin{columns}
+        \column{.7\textwidth}%
+            \begin{tikzpicture}[start chain=going right, node distance=0pt, mem/.style={inMemory,text width=2em, minimum height=1.7em}]%
+                \node[mem,label={[address,above]0xB1}] (M0) {};%
+                \node[mem,label={[address,above]0xB5}] (M1) {\only&lt;2&gt;{42}};%
+                \node[mem,label={[address,above]0xB9}] (M2) {\only&lt;5-&gt;{<span class="arithmatex">\(\pi\)</span>}};%
+                \node[mem,label={[address,above]0xBD}] (M3) {\only&lt;3-&gt;{43}};%
+                \node[mem,label={[address,above]0xC0}] (M4) {};%</p>
+<div class="language-text highlight"><pre><span></span><code>            \node&lt;2-&gt;[ptr,below of=M0,yshift=-4em] (a) {\textbf{a}};%
+            \draw&lt;2&gt;[ptr] (a) -| (M1.south);%
+            \draw&lt;3-4&gt;[ptr] (a) -| (M3.south);%
+            \node&lt;4-&gt;[ptr,below of=a,yshift=-2em] (b) {\textbf{b}};%
+            \draw&lt;4-&gt;[ptr] (b) -| (M3.south);%
+            \draw&lt;5-&gt;[ptr] (a) -| (M2.south);%
+        \end{tikzpicture}%
+    \column{.2\textwidth}%
+        \pause
+</code></pre></div>
+<p>\begin{lstlisting}[style=CIC-Python]
+a = 42
+\end{lstlisting}%
+\pause\vspace<em -1.1em="-1.1em">{-1.1em}%
+\begin{lstlisting}[style=CIC-Python,firstnumber=2]
+a += 1
+\end{lstlisting}%
+\pause\vspace</em>%
+\begin{lstlisting}[style=CIC-Python,firstnumber=3]
+b = a
+\end{lstlisting}%
+\pause\vspace*{-1.1em}%
+\begin{lstlisting}[style=CIC-Python,firstnumber=4]
+a = 3.14
+\end{lstlisting}%
+    \end{columns}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Na \lP, o conteúdo de uma variável é acessado por seu <em>nome</em>, e não é permitida a manipulação direta da memória por um endereço. Isso tem uma série de vantagens (simplifica o uso e evita ) e desvantagens (desempenho). Internamente, o sistema acumula identificadores próprios para cada objeto enquanto durar o seu <em>tempo de vida</em> (veja \linkFile[../src/exemplos/05_EstruturasDeDados/03_Ponteiros]{00-identificador.py} e \linkFile[../src/exemplos/05_EstruturasDeDados/03_Ponteiros]{01-identificador.py}).
+\else%
+\begin{frame}[fragile]
+    \lstPython[linerange={9-13,15-23}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{00-identificador.py}%
+\end{frame}</p>
+<p>\begin{frame}[fragile]
+    \lstPython[linerange={9-14,25-32}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{01-identificador.py}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+A \lP~tem tipo <a href="https://pt.wikipedia.org/wiki/Tipo_de_dado#Tipo_est%C3%A1tico_e_din%C3%A2mico">dinâmico e forte</a>, portanto ao declarar um objeto se sabe, em tempo de execução, o tipo de dado referenciado e como ele é representado na memória.
+\else%
+\begin{frame}[fragile]%
+    Um tipo é <em>dinâmico e forte</em> (em tempo de execução, sabe-se o tipo de dado referenciado e como ele é representado na memória).
+    \\vfill%
+    \begin{columns}
+        \column{.5\textwidth}%
+            \begin{tikzpicture}[start chain=going right, node distance=0pt, mem/.style={inMemory,text width=2.5em, minimum height=1.7em}]%
+                \node[mem,label={[address,above]0xB1}] (M0) {42};%
+                \node[mem,label={[address,above]0xB5},text width=5em] (M1) {\only&lt;2-&gt;{Lovelace}};%
+                \node[ptr,below of=M0,xshift=-2em,yshift=-3em] (a) {\textbf{x}};%
+                \draw&lt;1&gt;[ptr] (a) -| (M0.south);%
+                \draw&lt;2-&gt;[ptr] (a) -| (M1.south);%
+            \end{tikzpicture}%
+        \column{.5\textwidth}%
+            \begin{lstlisting}[style=CIC-Python]
+x = 42
+\end{lstlisting}%
+            \vspace{-1.1em}\pause%
+            \begin{lstlisting}[style=CIC-Python,firstnumber=2]
+x = 'Lovelace'
+\end{lstlisting}%
+    \end{columns}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+No caso da passagem de informações a funções por argumentos, a \lP~define a variável local como <a href="https://stackoverflow.com/a/986145">referência ao valor passado</a> (similar a passar a referência para o valor armazenado). A diferença ocorre na questão de qual é o objeto dado, se é <em>mutável</em>, a função recebe uma referência para ele e pode alterá-lo (desde que a referência local não seja variada); se é <em>imutável</em>, a função não pode alterá-lo.</p>
+<p>A comunicação de dados entre [sub]algoritmos é feita pela passagem de argumentos e pelo valor de retorno, e a \lP possibilita o retorno de múltiplos valores.</p>
+<p>\noindent%
+\lstPython[linerange={9-9,18-24}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{05-bhaskara.py}%
+\else%
+\begin{frame}[fragile]%
+     É possível retornar de múltiplos valores.
+    \\vfill%
+    \lstPython[linerange={9-9,18-24}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{05-bhaskara.py}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Na \lP, funções também são objetos, e podem ser fornecidas como argumentos para outras funções de forma mais simplificada (comparada a \lC). Um exemplo simples disso é:</p>
+<p>\lstPython[linerange={9-19}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{06-funcao.py}%</p>
+<p>Da mesma forma, pode-se abstrair o método de aproximação de raízes e passar a função do polinômio (\linkFile[../src/exercicios/05_EstruturasDeDados/03_Ponteiros/01-Newton-Raphson]{Newton-Raphson.py}).
+\else%
+\subsection{Funções como Argumentos de Funções}%
+\begin{frame}<handout:0>[fragile]%</p>
+<div class="language-text highlight"><pre><span></span><code>\lstPython[firstline=9]{exemplos/05_EstruturasDeDados/03_Ponteiros}{06-funcao.py}%
+</code></pre></div>
+<p>\end{frame}</p>
+<p>\begin{frame}<handout:0>[fragile]%
+    \vspace{-1em}%
+    \lstPython[linerange={83-83,94-102},morekeywords={valor_inicial,aproxima,erro},escapechar=]{exercicios/05_EstruturasDeDados/03_Ponteiros/01-Newton-Raphson}{Newton-Raphson.py}%
+\end{frame}
+\fi%</p>
+<p>% Os detalhes de ponteiros na \lP{ }não serão aprofundados aqui, mas vale a pena aprender sobre isso.</p>
+<p>%     <a href="https://pt.wikipedia.org/wiki/Estrat%C3%A9gia_de_avalia%C3%A7%C3%A3o#Chamada_por_compartilhamento">chamada por compartilhamento</a></p>
+<p>%     índice negativo
+%     https://docs.python.org/3/faq/programming.html#what-s-a-negative-index</p>
+<p>%     O comportamento de ``passagem por referência'' pode ser obtido de <a href="https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference">outras formas</a>.</p>
+<p>% \begin{frame}%</p>
+<p>% %%%%%%%%%%%%%%%%%%%
+% http://wiki.python.org.br/IntroPython</p>
+<p>% Tipos mutáveis e imutáveis</p>
+<p>% Alguns tipos no Python permitem que elementos que fazem parte de sua estrutura sejam modificados, como as listas e dicionários. Estes tipos são chamados mutáveis.</p>
+<p>% Exemplo:</p>
+<p>% Esconder número das linhas</p>
+<p>%    1 &gt;&gt;&gt; l = ['Nirvana', 'Rush', 'Bauhaus']
+%    2 &gt;&gt;&gt; l[1] = 'Who'
+%    3 &gt;&gt;&gt; l
+%    4 ['Nirvana', 'Who', 'Bauhaus']
+%    5 &gt;&gt;&gt;</p>
+<p>% Outros tipos não permitem isso, como tuplas e strings. Estes são chamados imutáveis.</p>
+<p>% \end{frame}%</p>
+<h2 id="strings">Strings</h2>
+<p>\subsection{Strings}%</p>
+<p>\ifIsArticle%
+Uma <em>palavra</em>/<em>frase</em> é um conjunto finito e ordenado de símbolos. Um <a href="https://pt.wikipedia.org/wiki/Cadeia_de_caracteres">*string</a>* é um vetor de caracteres, a ``melhor'' forma de comunicação com humanos.%</p>
+<p>\lstset{morekeywords={mostra_indices,mostra_n_chars,mostra_ate_char}}%
+\lstC[linerange={10-22}]{exemplos/05_EstruturasDeDados/04_Vetor}{04-string.c}%</p>
+<p>O código acima funciona muito bem, mas tem um comportamento interessante quando se digita uma frase menor que os 50 caracteres definidos. Entretanto, forçar a utilização de frases com tamanho fixo <a href="http://www.3minovacao.com.br/blog/os-irao-dominar-o-mundo">não é uma opção viável</a>. A solução de melhor custo/benefício é obter um vetor ``grande o suficiente'' para a tarefa em questão, de modo que haja um tamanho restringindo a aplicação (por exemplo, <a href="https://pt.wikipedia.org/wiki/Twitter">140 caracteres</a>), e utilizar uma marcação específica para indicar o término dos símbolos de interesse.%</p>
+<p>\noindent%
+\begin{minipage}[t]{.56\textwidth}%
+\lstC[linerange={10-22}]{exemplos/05_EstruturasDeDados/04_Vetor}{05-string.c}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{.44\textwidth}%
+\lstC[linerange={10-19}]{exemplos/05_EstruturasDeDados/04_Vetor}{06-string.c}%
+\end{minipage}%</p>
+<p><code><code>.'&lt;/code&gt; não é uma boa escolha de símbolo terminador (afinal, sempre aparece alguém dizendo ``*Hello World!*''), então escolheu-se o símbolo &lt;code&gt;</code>\textbackslash0'</code> (o primeiro caractere da <a href="https://pt.wikipedia.org/wiki/ASCII">tabela ASCII</a>) como terminador de um string para representação interna<sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Assumindo que <em>todo string segue este padrão</em>, pode-se ignorar o tamanho do vetor e simplesmente percorrê-lo até encontrar o caractere de término.%</p>
+<p>Algumas ideias interessantes para lidar com strings são: contagem do tamanho de uma palavra, de palavras em um texto, comparação de strings, transformação em letras maiúsculas/minúsculas, <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1253">criptografia</a>, etc..</p>
+<p>Considere o código abaixo, e veja se percebe o que está errado:
+\lstC[linerange={12-16}]{exemplos/05_EstruturasDeDados/04_Vetor}{08-memoria.c}%</p>
+<p><code>scanf</code>\ armazena os caracteres digitados no endereço indicado por \var{buffer}. Como a variável não foi inicializada, não é possível dizer qual é este endereço. Se \var{buffer} é o <a href="http://pt.wikipedia.org/wiki/Null_%28programa%C3%A7%C3%A3o%29">caractere nulo</a> (\var{NULL}), então <code>scanf</code>\ tentará armazenar os caracteres em um local proibido e a execução do programa será interrompida. Senão, \var{buffer}\ tem um número (que estava já armazenado na memória por algum motivo) que é interpretado como um endereço de memória onde <code>scanf</code>\ tentará armazenar os caracteres. Embora sintaticamente correto, esta é uma ação perigosa pois tal espaço não foi alocado para seu uso, então o programa estará trabalhando em um local que pode estar sendo usado por outro programa e, portanto, que poderia atrapalhar a execução do seu ou, pior ainda, o seu atrapalhar a execução dele (por exemplo, sobrescrevendo um pedaço do arquivo que contém a declaração do imposto de renda).</p>
+<p>Uma solução é definir \var{buffer}\ como um vetor (digamos, de tamanho 50). Mas esta solução é parcialmente correta, pois <code>scanf</code>\ continuará escrevendo na memória caso o usuário forneça mais caracteres que o vetor pode armazenar. É necessário, então, limitar a quantidade de caracteres que pode ser considerada:%</p>
+<p>\lstC[linerange={33-37}]{exemplos/05_EstruturasDeDados/04_Vetor}{08-memoria.c}%</p>
+<p>É importante considerar este tipo de <a href="http://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_defensiva">programação defensiva</a>, pois nunca se sabe o que o usuário vai fazer (nem <a href="http://www.lume.ufrgs.br/handle/10183/18550">como estas vulnerabilidades podem ser exploradas</a>).</p>
+<p>% \begin{lstlisting}
+% #include <string.h></p>
+<p>% void f(char *bar) {
+%   char c[12];
+%   strncpy(c, bar, strlen(bar));
+% }</p>
+<p>% int main(int argc, char **argv) {
+%   f(argv[1]);
+% }
+% \end{lstlisting}%
+%  Potencialmente muito perigoso
+\fi%</p>
+<h2 id="vetores">Vetores</h2>
+<p>\section{Vetores}</p>
+<p>\ifIsArticle%
+É fácil manipular um dado para resolver um problema:%
+\begin{lstlisting}
+z = min(x, y);
+\end{lstlisting}%</p>
+<p>Mas e <span class="arithmatex">\(n\)</span> problemas?
+\begin{lstlisting}
+z = min(x1, min(x2, min (x3, min(x4, min(x5, /<em> ... </em>/ min(xk, xn)/<em> ... </em>/)))));
+\end{lstlisting}%
+\else%
+\begin{frame}[fragile]%
+É fácil manipular um dado para resolver um problema:\\vfill%
+\begin{lstlisting}
+z = min(x, y);
+\end{lstlisting}%
+\vfill\pause
+Mas e \strikeText{2} \strikeText{3} <span class="arithmatex">\(n\)</span> problemas?\\vfill%
+\small%
+\begin{lstlisting}
+z = min(x1, min(x2, min(x3, /<em> ... </em>/ min(xk,xn)/<em> ... </em>/)));
+\end{lstlisting}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Não é factível <a href="http://vidadeprogramador.com.br/2014/05/12/treinando-o-alonso/">considerar escrever tanto código</a>, nem pensar nas dificuldades de eventuais alterações. Felizmente há uma solução mais eficiente. Suponha que você tenha um ponteiro com o endereço de um caractere na memória, e que saiba que os <span class="arithmatex">\(n\)</span> bytes imediatamente seguintes estão alocados para você armazenar outros caracteres. Você poderia identificá-los como <span class="arithmatex">\(\{c_0, c_1, \cdots, c_{n-1}\}\)</span> e lidar com estes <span class="arithmatex">\(n\)</span> elementos no código, ou, dado que sabe o endereço do primeiro, utilizar aritmética de ponteiros para acessar qualquer outro caractere em função do deslocamento em relação a posição inicial.</p>
+<p>\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}
+printf("c0 = %c\n", c0);
+printf("c1 = %c\n", c1);
+/<em> ... </em>/
+\end{lstlisting}%
+\vspace{-1.1em}%
+\begin{lstlisting}[firstnumber=1000]
+printf("c999 = %c\n", c999); /<em> n==1000 </em>/
+\end{lstlisting}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{.45\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+printf("c%d = %c\n", i, <em class="5em">(c+i));
+\end{lstlisting}%
+\end{minipage}%
+\vspace{1em}%
+\else%
+\begin{frame}[fragile]%
+    Mostrar 1000 caracteres não seria agradável...
+    \only&lt;2-&gt;{Mas suponha eles estão magicamente armazenados sequencialmente, começando em um endereço de memória que você conhece...}
+    \\vfill
+\hspace</em>\small%
+\begin{minipage}[t]{.45\textwidth}%
+\begin{lstlisting}
+printf("c0=%c\n", c0);
+printf("c1=%c\n", c1);
+printf("c2=%c\n", c2);
+printf("c3=%c\n", c3);
+/<em> ... </em>/
+\end{lstlisting}%
+\begin{lstlisting}[firstnumber=997]
+/<em> ... </em>/
+printf("c997=%c\n", c997);
+printf("c998=%c\n", c998);
+printf("c999=%c\n", c999);
+\end{lstlisting}%
+\end{minipage}%
+\pause\pause%
+\begin{minipage}[t]{.55\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+printf("c%d=%c\n", i, *(c+i));
+\end{lstlisting}%
+\end{minipage}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Um <a href="https://pt.wikipedia.org/wiki/Arranjo_%28computa%C3%A7%C3%A3o%29">vetor</a> (\texttt{array}) é um conjunto <a href="https://pt.wikipedia.org/wiki/Conjunto_finito">finito</a> e <a href="https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_%28%C3%A1lgebra_relacional%29">ordenado</a> (em relação a posição) de elementos homogêneos (do mesmo tipo). É um modo particular de organizar dados para facilitar o acesso e manipulação dos dados, caracterizado pelas operações sobre os dados, e não pelo tipo do dado (já que se baseia na aritmética de ponteiros).</p>
+<p>Desta forma, é possível ter um vetor de qualquer tipo de dado. Considerando <span class="arithmatex">\(n\)</span> caracteres, o computador aloca um bloco de memória de <span class="arithmatex">\(n\)</span> bytes (supondo que um <code>char</code> seja armazenado em 1 byte). Analogamente, supondo <span class="arithmatex">\(n\)</span> inteiros (de 4 bytes cada), serão alocados <span class="arithmatex">\(4n\)</span> bytes de memória (que equivalem a <span class="arithmatex">\(n\)</span> unidades [de memória] de inteiros).</p>
+<p>\begin{center}%
+    \tikzinput{memoria/vetor/array}%
+\end{center}%
+\else%
+\begin{frame}%
+    \begin{block}{Vetor (\texttt{array})}%
+        É um conjunto <em>finito</em> e <em>ordenado</em>\footnote[frame]{Em relação a posição.} de elementos <em>homogêneos</em>.
+    \end{block}%
+    \vfill\pause%
+    Quais elementos?%
+    \vfill\pause%
+    O vetor é um modo particular de organizar dados \pause para facilitar o acesso
+    e manipulação dos dados.
+    \vfill%
+    \begin{center}%
+        \tikzinput{memoria/vetor/array}%
+    \end{center}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Portanto, para lidar com um vetor basta saber duas coisas: o endereço do primeiro elemento e quantos são os elementos armazenados. Na \lC, fica fácil declarar um vetor:</p>
+<p>\begin{lstlisting}
+int   inteiros[1000];
+float reais[50];
+char  caracteres[8];
+\end{lstlisting}%</p>
+<p>Considerando o vetor de caracteres, o que acontece na execução é que o computador armazena o ponteiro para caracteres (<span class="arithmatex">\(c\)</span>) (em algum lugar da memória) e um espaço do tamanho desejado (<code>8*<a href="http://www.cprogressivo.net/2013/03/A-funcao-sizeof-e-blocos-vizinhos-de-memoria-em-C.html">sizeof</a>(char)</code>) em outro lugar. O acesso a cada elemento, dado o endereço do primeiro, é direto com aritmética de ponteiros ou com o operador <code>[\ \ ]</code>:</p>
+<p>\noindent%
+\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+    printf("c%d = %c\n", i, *(c+i));
+\end{lstlisting}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{.45\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+    printf("c%d = %c\n", i, c[i]);
+\end{lstlisting}%
+\end{minipage}%</p>
+<p>\begin{center}%
+\tikzinput{memoria/vetor/lovelace}%
+\end{center}%
+\else%
+\begin{frame}[fragile]%
+    Vetor em \texttt{C}: <em>endereço do primeiro elemento</em> e <em>quantidade de elementos</em>.
+    \vfill%
+\begin{lstlisting}
+int    inteiros[1000];
+float     reais[50];
+char caracteres[8];
+\end{lstlisting}%
+\vfill\pause%
+\begin{center}%
+    \scalebox{.8}{\tikzinput{memoria/vetor/lovelace}}%
+\end{center}%
+\vfill\pause%
+\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+printf("c%d=%c\n",i,*(c+i));
+\end{lstlisting}%
+\end{minipage}%
+\pause%
+\begin{minipage}[t]{.48\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+printf("c%d=%c\n",i,c[i]);
+\end{lstlisting}%
+\end{minipage}%
+\vfill\pause
+\begin{center}%
+RAM + indexação <span class="arithmatex">\(\Rightarrow\)</span> \alert{velocidade}%
+\end{center}%
+\end{frame}</p>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=8]{exercicios/05_EstruturasDeDados/04_Vetor}{00-salarios}%
+\end{frame}\]</div>
+<p>\titledImageFrame<handout:0>[height=17\baselineskip]{}{comics/VidaDeProgramador/FOR}%
+\fi%</p>
+<p>\ifIsArticle%
+A \lP~tem uma abordagem diferente, no contexto desta disciplina, usaremos <a href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_08.html">listas</a> como vetores[@Downey2002]. Embora a implementação seja distinta, o funcionamento é bastante similar.</p>
+<p>\begin{lstlisting}[style=CIC-Python]
+inteiros = [0, 1, 2, 3]
+reais = [0.0] * 10
+caracteres = ['L', 'o', 'v', 'e', 'l', 'a', 'c', 'e']
+\end{lstlisting}%
+\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}[style=CIC-Python]
+for i in range(len(inteiros)):
+print(inteiros[i])
+\end{lstlisting}%
+\end{minipage}%
+\pause\hfill%
+\begin{minipage}[t]{.4\textwidth}%
+\begin{lstlisting}[style=CIC-Python]
+for c in caracteres:
+print(c);
+\end{lstlisting}%
+\end{minipage}%
+\else%
+\begin{frame}[fragile]%
+    Em \texttt{Python}, o termo que descreve um conjunto de elementos é coleção, e a mais simples é a lista. O funcionamento é similar ao de um vetor em C, mas com uma série de facilidades.
+    \vfill%
+\begin{lstlisting}[style=CIC-Python]
+inteiros = [0, 1, 2, 3]
+reais = [0.0] * 10
+caracteres = ['L', 'o', 'v', 'e', 'l', 'a', 'c', 'e']
+\end{lstlisting}%
+\vfill\pause%
+\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}[style=CIC-Python]
+for i in range(len(inteiros)):
+print(inteiros[i])
+\end{lstlisting}%
+\end{minipage}%
+\pause\hfill%
+\begin{minipage}[t]{.4\textwidth}%
+\begin{lstlisting}[style=CIC-Python]
+for c in caracteres:
+print(c);
+\end{lstlisting}%
+\end{minipage}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+O <a href="http://xkcd.com/163/">acesso aos elementos</a> depende da posição deles em relação ao endereço de início. Dependendo da linguagem, o primeiro elemento tem <a href="http://exple.tive.org/blarg/2013/10/22/citation-needed/">índice 0</a> (como em C, Java, Python, e Lisp) ou 1 (Fortran, COBOL, e Lua), mas por uma questão de simplicidade e facilidade de uso, a numeração deveria começar em zero[@Dijkstra1982].</p>
+<p>O acesso correto aos elementos depende também do tamanho do vetor. Na \lC, os <span class="arithmatex">\(n\)</span> elementos do vetor estão localizados em um bloco contínuo de bytes (com deslocamento em <span class="arithmatex">\([0, n)\)</span>, mas a aritmética de ponteiros permite que se acesse outras posições [talvez inválidas] de memória. Por exemplo, considerando a figura, a expressão <code>*(c-1)</code> (equivalente a  <code>c[-1]</code>) é uma expressão sintaticamente correta, e resulta em endereço de memória válido (pois existe), mas é semanticamente incorreta pois acessa um bloco de memória que não foi alocado para o vetor em questão.</p>
+<p>\lstC[linerange={10-24}]{exemplos/05_EstruturasDeDados/04_Vetor}{00-vetor.c}%</p>
+<p>Na \lP, os <span class="arithmatex">\(n\)</span> elementos sus podem ser acessados pelo índice correto: <span class="arithmatex">\([0, n)\)</span>, mas - obviamente - não há aritmética de ponteiros. Entretanto, há certas variações que facilitam a vida. Por exemplo, o uso da função <a href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_08.html#comprimento-da-lista">\fn(len)</a> e o uso de índices negativos para acessar os elementos em ordem inversa. No caso,</p>
+<p>\begin{lstlisting}[style=CIC-Python]
+lista = [x for x in range(1, 10)]  # lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+<p>len(lista)        # 10
+lsita.append(10)  # lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</p>
+<p>lista[0]   # 1
+lista[-0]  # 1
+lista[-1]  # 10
+lista[1:3] # [2, 3]∈</p>
+<p>for i in range(1, len(lista) + 1):
+print(lista[-i], end=' ')  # Ordem inversa: 10 9 8 7 6 5 4 3 2 1
+\end{lstlisting}%
+\else%
+\begin{frame}%
+  Considerações para vetores:
+  \begin{itemize}%
+  \item <em>Muito cuidado com os índices utilizados</em>, use somente <span class="arithmatex">\(i\in[0,n)\)</span>.
+  \item Pode não ser preciso ocupar todas as posições do vetor, usar um vetor maior que o necessário muitas vezes facilita a vida...\pause%
+  \item Em \lC: <em>alocação estática de memória</em>.
+  \item Em \lP: <em>alocação ``dinâmica'' de memória</em>.
+  \end{itemize}%
+\end{frame}%</p>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=6]{exercicios/05_EstruturasDeDados/04_Vetor}{01-medias}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=8]{exercicios/05_EstruturasDeDados/04_Vetor}{02-intercalados}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=6]{exercicios/05_EstruturasDeDados/04_Vetor}{03-funcoes}%
+\end{frame}\]</div>
+<p>\begin{frame}<handout:0>[fragile]%
+    \lstREADME[lastline=6]{exercicios/05_EstruturasDeDados/04_Vetor}{04-mais_funcoes}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+<a href="http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c">Vetores não são ponteiros</a>, mas na \lC~eles são <a href="http://c-faq.com/aryptr/aryptrequiv.html">praticamente equivalentes</a>, e a relação é tão forte que eles devem ser discutidos juntos<sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. O vetor é conjunto contíguo de elementos homogêneos pré-alocados com posição e tamanho fixos, já o ponteiro é uma referência para um [tipo específico de] dado qualquer. Um ponteiro é uma variável, então <code>a = p</code> e <code>p++</code> são operações válidas; já um vetor não é uma variável, então <code>a = v</code> e <code>v++</code> <em>não</em> são válidas[@VanDerLinden1994].</p>
+<p>\lstC[linerange={10-24}]{exemplos/05_EstruturasDeDados/04_Vetor}{01-vetor.c}%</p>
+<p>\begin{center}%
+\tikzinput{memoria/vetor_ptr}%
+\end{center}%
+\else%
+\begin{frame}%
+    \framesubtitle{\LC}%
+    Vetores <em>não são ponteiros</em>.
+    \\vfill
+    \begin{center}%
+    \tikzinput{memoria/vetor_ptr}%
+    \end{center}%
+\end{frame}</p>
+<p>\begin{frame}<handout:0>[fragile]%
+    \lstC[linerange={10-24}]{exemplos/05_EstruturasDeDados/04_Vetor}{01-vetor.c}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Na \lP, listas são objetos <em>mutáveis</em>, portanto uma função pode alterar os elementos de uma lista dada como argumento:
+\begin{lstlisting}[style=CIC-Python]
+def troca_primeiros(lista):
+lista[0], lista[1] = lista[1], lista[0]</p>
+<p>lista = [x for x in range(1, 10)]
+troca_primeiros(lista)
+lista  # [2, 1, 3, 4, 5, 6, 7, 8, 9]
+\end{lstlisting}%</p>
+<p>Na \lC, muito cuidado ao utilizá-los como argumento de funções - a situação de ``equivalência'' pode gerar uma série de problemas.</p>
+<p>\noindent%
+\begin{minipage}[t]{.5\textwidth}%
+\lstC[linerange={14-21}]{exemplos/05_EstruturasDeDados/04_Vetor}{apc_vetor.h}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{.5\textwidth}%
+\lstC[linerange={11-21}]{exemplos/05_EstruturasDeDados/04_Vetor}{02-vetor.c}%
+\end{minipage}%</p>
+<p>Certas aplicações interessantes de vetores exigem que seus elementos estejam <a href="https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_%28computa%C3%A7%C3%A3o%29">ordenados</a> (em relação ao conteúdo). Existem diversas formas de se fazer isso (consegue elaborar um algoritmo de ordenação?), cada uma com certas características. Por exemplo, para ordenar em ordem crescente, pode-se considerar o primeiro elemento e compará-lo com todos os demais, sempre que o primeiro for menor que o comparado, troca-se os conteúdos de posição. Desta forma, ao final de todas as comparações, o elemento na primeira posição será o menor de todos. Então basta repetir este procedimento para cada posição subsequente e, ao final da execução, tem-se o vetor ordenado.%</p>
+<p>\begin{lstlisting}[style=CIC-Python]
+for i in range(len(vetor) - 1):
+for j in range(i + 1, len(vetor)):
+    if(vetor[i] &gt; vetor[j])
+        vetor[i], vetor[j] = vetor[j], vetor[i]
+\end{lstlisting}%</p>
+<p>Este simples algoritmo pode ser facilmente adaptado para ordenar o vetor em ordem decrescente. Na verdade, é possível abstrair ainda mais este procedimento com uma função de comparação, que indica uma ordem entre dois elementos. Então, supondo uma função <code>em_ordem</code>\ que indica se os elementos estão ordenados, o algoritmo pode ser redefinido como:%</p>
+<p>\lstC[linerange={16-25}]{exemplos/05_EstruturasDeDados/04_Vetor}{03-vetor.c}%</p>
+<p>Assim o algoritmo abstrai a função de comparação, e pode ser usado para realizar ordenações diferentes:</p>
+<p>\lstC[linerange={13-14,26-27,33-33,37-37    ,40-42},morekeywords={ordena}]{exemplos/05_EstruturasDeDados/04_Vetor}{03-vetor.c}%</p>
+<p>Por fim, a \lC~tem ``declarações complicadas'' (seção 5.12 de \cite{Kernighan1989}), é melhor entender o funcionamento que [tentar] adivinhar o tipo. Por exemplo:</p>
+<p>\begin{lstlisting}[style=CIC-C]
+char <em><em>argv
+/</em> argv: ponteiro para ponteiro para char </em>/</p>
+<p>int (<em> tabdia)[13]
+/</em> tabdia: ponteiro para vetor[13] de int */</p>
+<p>int * tabdia[13]
+/<em> tabdia: vetor[13] de ponteiro para int </em>/</p>
+<p>void <em>comp()
+/</em> comp: função retornando ponteiro para void */</p>
+<p>void (<em> comp)()
+/</em> comp: ponteiro para função retornando void */</p>
+<p>char (<em>(</em>x())[])()
+/<em> x: função retornando ponteiro para vetor[] de ponteiro para função retornando char </em>/</p>
+<p>char (<em>(</em>x[3])<a href=""></a>)[5]
+/<em> x: vetor[3] de ponteiro para função retornando ponteiro para vetor[5] de char </em>/
+\end{lstlisting}%
+\fi%</p>
+<h2>Exercícios</h2>
+
+<details class="question">
+<summary>Considerando 4 bits para armazenar um número real como ponto fixo, determine qual a representação do valor <span class="arithmatex">\(1,25_{10}\)</span> como <span class="arithmatex">\(Q1.3\)</span>, <span class="arithmatex">\(Q2.2\)</span> e <span class="arithmatex">\(Q3.1\)</span>. </summary>
+<ul>
+<li><span class="arithmatex">\(Q1.3 \Rightarrow 1,25_{10} = 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} + 0\cdot2^{-3} = 1010_2\)</span></li>
+<li><span class="arithmatex">\(Q2.2 \Rightarrow 1,25_{10} = 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} = 0101_2\)</span></li>
+<li><span class="arithmatex">\(Q3.1\)</span> não é adequado para este valor. Tem-se duas possibilidades:<ul>
+<li><span class="arithmatex">\(1,25_{10} \approx 0\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} = 0001_2 (=1,5_{10})\)</span></li>
+<li><span class="arithmatex">\(1,25_{10} \approx 0\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 0\cdot2^{-2} = 0010_2 (=1,0_{10})\)</span></li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="booleanos">Booleanos</h2>
+<h2>Exercícios</h2>
+
+<details class="question">
+<summary>Dado um número não negativo qualquer na base hexadecimal, descreva o algoritmos para transformá-lo em um número binário.</summary>
+<p>Como a base 16 é múltipla de 2, o processo manual é bem simples. Cada algarismo hexadecimal pode ser diretamente mapeado para seu valor binário de 4 bits, na mesma ordem. Por exemplo, para <span class="arithmatex">\(2A_{16}\)</span> temos que <span class="arithmatex">\(2_{16} \rightarrow 0010_2\)</span> e <span class="arithmatex">\(A_{16} \rightarrow 1010_2\)</span>, portanto <span class="arithmatex">\(2A_{16}\rightarrow 00101010_2\)</span>.</p>
+</details>
+<details class="question">
+<summary>Dado um número não negativo qualquer na base hexadecimal, descreva o algoritmos para transformá-lo em um número binário.</summary>
+<p>Como a base 16 é múltipla de 2, o processo manual é bem simples. Cada algarismo hexadecimal pode ser diretamente mapeado para seu valor binário de 4 bits, na mesma ordem. Por exemplo, para <span class="arithmatex">\(2A_{16}\)</span> temos que <span class="arithmatex">\(2_{16} \rightarrow 0010_2\)</span> e <span class="arithmatex">\(A_{16} \rightarrow 1010_2\)</span>, portanto <span class="arithmatex">\(2A_{16}\rightarrow 00101010_2\)</span>.</p>
+</details>
+<details class="question">
+<summary>Dado um número não negativo qualquer na base decimal, descreva o algoritmos para transformá-lo em um número binário.</summary>
+<p>Como a base 10 não é múltipla de 2, o processo manual é mais complicado que com as bases hexadecimal ou octal. Uma das abordagens é a de <a href="https://pt.wikipedia.org/wiki/Convers%C3%A3o_de_base_num%C3%A9rica#Convers%C3%A3o_de_decimal_para_bin%C3%A1rio">divisões sucessivas</a>, onde se divide o número por 2, anotando o valor do resto (necessariamente um algarismo binário). Esse processo é repetido para o resultado inteiro da divisão, até que haja um resultado da divisão que seja zero. Neste ponto, juntam-se os valores dos restos anotados e inverte-se a ordem deles - o resultado será representação do número decimal na base binária. Por exemplo: <span class="arithmatex">\(13_{10} / 2 = 6\)</span> (resto 1); <span class="arithmatex">\(6_{10} / 2 = 3\)</span> (resto 0); <span class="arithmatex">\(3_{10} / 2 = 1\)</span> (resto 1); <span class="arithmatex">\(1_{10} / 2 = 0\)</span> (resto 1). A sequência de restos é <span class="arithmatex">\(1011\)</span>, invertida se torna <span class="arithmatex">\(1101_2 = 1·2\)</span>^3<span class="arithmatex">\(+ 1·2\)</span>^2<span class="arithmatex">\(+ 1·2\)</span>^0<span class="arithmatex">\(= 8 + 4 + 1\)</span>.</p>
+</details>
+<details class="question">
+<summary>Dados os bits <code>11</code>, qual o valor inteiro armazenado considerando apenas o sistema posicional, sinal e magnitude, complemento de 1 e complemento de 2?</summary>
+<ul>
+<li>Sistema posicional: <span class="arithmatex">\(11_2 = 1·2\)</span>^1<span class="arithmatex">\(+ 1·2\)</span>^0<span class="arithmatex">\(= 2 + 1 = 3_{10}\)</span></li>
+<li>Sinal e magnitude:  <span class="arithmatex">\(11_2 = -1_2 = -1·2\)</span>^0<span class="arithmatex">\(= -1_{10}\)</span></li>
+<li>Complemento de um:  <span class="arithmatex">\(11_2 = -1_2 \overset{inv}{\rightarrow} -0_2 = -0·2\)</span>^0<span class="arithmatex">\(= -0_{10}\)</span></li>
+<li>Complemento de dois:  <span class="arithmatex">\(11_2 = -1_2 \overset{inv}{\rightarrow} -0_2 \overset{+1}{\rightarrow} -1_2 = -1·2\)</span>^0<span class="arithmatex">\(= -1_{10}\)</span></li>
+</ul>
+</details>
+<details class="question">
+<summary>Quais os 4 pontos principais definidos quando consideramos 8 bits para armazenar uma estrutura de dados do tipo <code>inteiro</code>?</summary>
+<ol>
+<li>O significado é de um valor numérico inteiro, que pode ser negativo.</li>
+<li>O valor é armazenado como Complemento de 2 nos 8 bits.</li>
+<li>Os possíveis valores armazenados estão no intervalo <span class="arithmatex">\([-2^7, 2^7) \equiv [-128, 128)\)</span>.</li>
+<li>As operações aritméticas básicas (<span class="arithmatex">\(+, -, \times e \div\)</span>) estão definidas na linguagem de programação - e possivelmente outras.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Considerando 4 bits para armazenar um valor inteiro como complemento de 2, o que acontece computar a operação <span class="arithmatex">\(5 + 4\)</span>?</summary>
+<p>Supondo 4 bits, os valores possíveis de serem armazenados são [-8, 7). Ao somar 4 (<code>0101</code>) e 4 (<code>0100</code>), o resultado seria 9 (<code>1001</code>). Entretanto, como a representação é de complemento de 2, <code>1001</code> é interpretado como -7, um resultado incorreto. O valor calculado ultrapassa a capacidade da representação (<em>overflow</em>), e o resultado não é o esperado.</p>
+</details>
+<details class="question">
+<summary>Considerando 4 bits para armazenar um número real como ponto fixo, determine qual a representação do valor <span class="arithmatex">\(1,25_{10}\)</span> como <span class="arithmatex">\(Q1.3\)</span>, <span class="arithmatex">\(Q2.2\)</span> e <span class="arithmatex">\(Q3.1\)</span>. </summary>
+<ul>
+<li><span class="arithmatex">\(Q1.3 \Rightarrow 1,25_{10} = 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} + 0\cdot2^{-3} = 1010_2\)</span></li>
+<li><span class="arithmatex">\(Q2.2 \Rightarrow 1,25_{10} = 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} = 0101_2\)</span></li>
+<li><span class="arithmatex">\(Q3.1\)</span> não é adequado para este valor. Tem-se duas possibilidades:<ul>
+<li><span class="arithmatex">\(1,25_{10} \approx 0\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} = 0001_2 (=1,5_{10})\)</span></li>
+<li><span class="arithmatex">\(1,25_{10} \approx 0\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 0\cdot2^{-2} = 0010_2 (=1,0_{10})\)</span></li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="question">
+<summary>Se todo número inteiro também é um número real, por que as linguagens de programação oferecem o tipo de dado <code>int</code> quando existe o tipo de dado <code>float</code>?</summary>
+<p>A manipulação de um <code>float</code> é mais complexa que a de um <code>int</code>, e nos computadores antigos essa complexidade implicava em uma grande diferença de desempenho nas operações, principalmente aritméticas - era bem mais eficiente usar <code>int</code>. Nos computadores modernos, a situação é bem mais difusa e muito dependente dos detalhes de uso tanto do algoritmo quanto da linguagem de programação quanto do hardware.</p>
+</details>
+<details class="question">
+<summary>Se todo número inteiro também é um número real, por que as linguagens de programação oferecem o tipo de dado <code>int</code> quando existe o tipo de dado <code>float</code>?</summary>
+<p>A manipulação de um <code>float</code></p>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Brian W. Kernighan and Dennis M. Ritchie. <em>C: a linguagem de programação padrão ANSI</em>. Campus, Rio de Janeiro, 1989. ISBN 8570015860 9788570015860.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Aaron M Tenenbaum, Yedidyah Langsam, and Moshe Augenstein. <em>Estruturas de dados usando C</em>. Pearson Makron Books, São Paulo (SP), 1995. ISBN 8534603480 : 9788534603485.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>David Goldberg. What every computer scientist should know about floating-point arithmetic. <em>ACM Comput. Surv.</em>, 23(1):5–48, mar 1991. URL: <a href="https://doi.org/10.1145/103162.103163">https://doi.org/10.1145/103162.103163</a>, <a href="https://doi.org/10.1145/103162.103163">doi:10.1145/103162.103163</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>American National Standards Institute. American National Standard for Information Systems — Coded Character Sets — 7-Bit American National Standard Code for Information Interchange (7-Bit ASCII), ANSI X3.4-1986. Technical Report, American National Standards Institute, 1896. URL: <a href="http://sliderule.mraiow.com/w/images/7/73/ASCII.pdf">http://sliderule.mraiow.com/w/images/7/73/ASCII.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

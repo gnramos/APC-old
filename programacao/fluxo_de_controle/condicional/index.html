@@ -1,0 +1,586 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Condicional - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#condicional" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Condicional
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linguagem/" class="md-nav__link">
+        Linguagem de Programação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="condicional">Condicional</h1>
+<p>exemplo do imc (implicações matemáticas de se não é &lt; x, necessariamente é &gt;= x)</p>
+<div class="language-python highlight"><span class="filename">Índice de Massa Corporal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">avalia_imc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">imc</span> <span class="o">=</span> <span class="n">calcula_imc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">if</span> <span class="n">imc</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação de magreza!&#39;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">elif</span> <span class="n">imc</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação normal.&#39;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">elif</span> <span class="n">imc</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação de sobrepeso.&#39;</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">elif</span> <span class="n">imc</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação de obesidade!&#39;</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação de obesidade grave!!&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>https://realpython.com/python-conditional-statements/#introduction-to-the-if-statement</p>
+<p>https://realpython.com/python-boolean/</p>
+<p>Working With Boolean Logic in Python
+Back in 1854, George Boole authored The Laws of Thought, which contains what’s known as Boolean algebra. This algebra relies on two values: true and false. It also defines a set of Boolean operations, also known as logical operations, denoted by the generic operators AND, OR, and NOT.</p>
+<p>These Boolean values and operators are pretty helpful in programming. For example, you can construct arbitrarily complex Boolean expressions with the operators and determine their resulting truth value as true or false. You can use the truth value of Boolean expressions to decide the course of action of your programs.</p>
+<p>In Python, the Boolean type bool is a subclass of int and can take the values True or False:</p>
+<p>Using Python’s and Operator in Boolean Contexts
+Like all of Python’s Boolean operators, the and operator is especially useful in Boolean contexts. Boolean contexts are where you’ll find most of the real-world use cases of Boolean operators.</p>
+<p>Two main structures define Boolean contexts in Python:</p>
+<p>if statements let you perform conditional execution and take different courses of action based on the result of some initial conditions.
+while loops let you perform conditional iteration and run repetitive tasks while a given condition is true.
+These two structures are part of what you’d call control flow statements. They help you decide your programs’ execution path.</p>
+<p>You can use Python’s and operator to construct compound Boolean expressions in both if statements and while loops.</p>
+<p>if Statements
+Boolean expressions are commonly known as conditions because they typically imply the need for meeting a given requirement. They’re pretty useful in the context of conditional statements. In Python, this type of statement starts with the if keyword and continues with a condition. A conditional statement can additionally include elif and else clauses.</p>
+<p>Python conditional statements follow the logic of conditionals in English grammar. If the condition is true, then the if code block executes. Otherwise, the execution jumps to a different code block:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>a = -8</p>
+<p>if a &lt; 0:
+...     print("a is negative")
+... elif a &gt; 0:
+...     print("a is positive")
+... else:
+...     print("a is equal to 0")
+...
+a is negative
+Since a holds a negative number, the condition a &lt; 0 is true. The if code block runs, and you get the message a is negative printed on your screen. If you change the value of a to a positive number, however, then the elif block runs and Python prints a is positive. Finally, if you set a to zero, then the else code block executes. Go ahead and play with a to see what happens!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Now say you want to make sure that two conditions are met—meaning that they’re both true—before running a certain piece of code. To try this out, suppose you need to get the age of a user running your script, process that information, and display to the user their current life stage.</p>
+<p>Fire up your favorite code editor or IDE and create the following script:</p>
+<h1 id="agepy">age.py</h1>
+<p>age = int(input("Enter your age: "))</p>
+<p>if age &gt;= 0 and age &lt;= 9:
+    print("You are a child!")
+elif age &gt; 9 and age &lt;= 18:
+    print("You are an adolescent!")
+elif age &gt; 18 and age &lt;= 65:
+    print("You are an adult!")
+elif age &gt; 65:
+    print("Golden ages!")
+Here, you get the user’s age using input() and then convert it to an integer number with int(). The if clause checks if age is greater than or equal to 0. In the same clause, it checks if age is less than or equal to 9. To do this, you build an and compound Boolean expression.</p>
+<p>The three elif clauses check other intervals to determine the life stage associated with the user’s age.</p>
+<p>If you run this script from your command line, then you get something like this:</p>
+<p>$ python age.py
+Enter your age: 25
+You are an adult!
+Depending on the age you enter at the command line, the script takes one course of action or another. In this specific example, you provide an age of 25 years and get the message You are an adult! printed to your screen.</p>
+<p>sing Python’s and Operator in Non-Boolean Contexts
+The fact that and can return objects besides just True and False is an interesting feature. For example, this feature allows you to use the and operator for conditional execution. Say you need to update a flag variable if the first item in a given list is equal to a certain expected value. For this situation, you can use a conditional statement:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>a_list = ["expected value", "other value"]
+flag = False</p>
+<p>if len(a_list) &gt; 0 and a_list[0] == "expected value":
+...     flag = True
+...</p>
+<p>flag
+True
+Here, the conditional checks if the list has at least one item. If so, it checks if the first item in the list is equal to the "expected value" string. If both checks pass, then flag changes to True. You can simplify this code by taking advantage of the and operator:</p>
+<p>a_list = ["expected value", "other value"]
+flag = False</p>
+<p>flag = len(a_list) &gt; 0 and a_list[0] == "expected value"</p>
+<p>flag
+True
+In this example, the highlighted line does all the work. It checks both conditions and makes the corresponding assignment in one go. This expression takes the and operator out of the if statement you used in the previous example, which means that you’re not working in a Boolean context any longer.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>The code in the example above is more concise than the equivalent conditional statement you saw before, but it’s less readable. To properly understand this expression, you’d need to be aware of how the and operator works internally.</p>
+<p>Putting Python’s and Operator Into Action
+So far, you’ve learned how to use Python’s and operator for creating compound Boolean expressions and non-Boolean expressions. You’ve also learned how to use this logical operator in Boolean contexts like if statements and while loops.</p>
+<p>In this section, you’ll build a few practical examples that’ll help you decide when to use the and operator. With these examples, you’ll learn how to take advantage of and for writing better and more Pythonic code.</p>
+<p>Flattening Nested if Statements
+One principle from the Zen of Python states that “Flat is better than nested.” For example, while code that has two levels of nested if statements is normal and totally okay, your code really starts to look messy and complicated when you have more than two levels of nesting.</p>
+<p>Say you need to test if a given number is positive. Then, once you confirm that it’s positive, you need to check if the number is lower than a given positive value. If it is, you can proceed with a specific calculation using the number at hand:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>number = 7</p>
+<p>if number &gt; 0:
+...     if number &lt; 10:
+...         # Do some calculation with number...
+...         print("Calculation done!")
+...
+Calculation done!
+Cool! These two nested if statements solve your problem. You first check if the number is positive and then check if it’s lower than 10. In this small example, the call to print() is a placeholder for your specific calculation, which runs only if both conditions are true.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Even though the code works, it’d be nice to make it more Pythonic by removing the nested if. How can you do that? Well, you can use the and operator to combine both conditions in a single compound condition:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>number = 7</p>
+<p>if number &gt; 0 and number &lt; 10:
+...     # Do some calculation with number...
+...     print("Calculation done!")
+...
+Calculation done!
+Logical operators like the and operator often provide an effective way to improve your code by removing nested conditional statements. Take advantage of them whenever possible.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>In this specific example, you use and to create a compound expression that checks if a number is in a given range or interval. Python provides an even better way to perform this check by chaining expressions. For example, you can write the condition above as 0 &lt; number &lt; 10. That’s a topic for the following section.</p>
+<p>Checking Numeric Ranges
+With a close look at the example in the section below, you can conclude that Python’s and operator is a convenient tool for checking if a specific numeric value is inside a given interval or range. For example, the following expressions check if a number x is between 0 and 10, both inclusive:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>x = 5
+x &gt;= 0 and x &lt;= 10
+True</p>
+<p>x = 20
+x &gt;= 0 and x &lt;= 10
+False
+In the first expression, the and operator first checks if x is greater than or equal to 0. Since the condition is true, the and operator checks if x is lower than or equal to 10. The final result is true because the second condition is also true. This means that the number is within the desired interval.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>In the second example, the first condition is true, but the second is false. The general result is false, which means the number isn’t in the target interval.</p>
+<p>You can enclose this logic in a function and make it reusable:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>def is_between(number, start=0, end=10):
+...     return number &gt;= start and number &lt;= end
+...</p>
+<p>is_between(5)
+True
+is_between(20)
+False</p>
+<p>is_between(20, 10, 40)
+True
+In this example, is_between() takes number as an argument. It also takes start and end, which define the target interval. Note that these arguments have default argument values, which means they’re optional arguments.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Your is_between() function returns the result of evaluating an and expression that checks if number is between start and end, both inclusive.</p>
+<p>Note: Unintentionally writing and expressions that always return False is a common mistake. Suppose you want to write an expression that excludes values between 0 and 10 from a given computation.</p>
+<p>To achieve this result, you start with two Boolean expressions:</p>
+<p>number &lt; 0
+number &gt; 10
+With these two expressions as a starting point, you think of using and to combine them in a single compound expression. However, no number is lower than 0 and greater than 10 at the same time, so you end up with an always-false condition:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>for number in range(-100, 100):
+...     included = number &lt; 0 and number &gt; 10
+...     print(f"Is {number} included?", included)
+...
+Is -100 included? False
+Is -99 included? False</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>...</p>
+<p>Is 0 included? False
+Is 1 included? False</p>
+<p>...</p>
+<p>Is 98 included? False
+Is 99 included? False
+In this case, and is the wrong logical operator to approach the problem at hand. You should use the or operator instead. Go ahead and give it a try!</p>
+<p>Even though using the and operator allows you to check gracefully if a number is within a given interval, there’s a more Pythonic technique to approach the same problem. In mathematics, you can write 0 &lt; x &lt; 10 to denote that x is between 0 and 10.</p>
+<p>In most programming languages, this expression doesn’t make sense. In Python, however, the expression works like a charm:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>x = 5
+0 &lt; x &lt; 10
+True</p>
+<p>x = 20
+0 &lt; x &lt; 10
+False
+In a different programming language, this expression would start by evaluating 0 &lt; x, which is true. The next step would be to compare the true Boolean with 10, which doesn’t make much sense, so the expression fails. In Python, something different happens.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Python internally rewrites this type of expression to an equivalent and expression, such as x &gt; 0 and x &lt; 10. It then performs the actual evaluation. That’s why you get the correct result in the example above.</p>
+<p>Just like you can chain several subexpressions with multiple and operators, you can also chain them without explicitly using any and operators:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>x = 5
+y = 15</p>
+<p>0 &lt; x &lt; 10 &lt; y &lt; 20
+True</p>
+<h1 id="equivalent-and-expression">Equivalent and expression</h1>
+<p>0 &lt; x and x &lt; 10 and 10 &lt; y and y &lt; 20
+True
+You can also use this Python trick to check if several values are equal:</p>
+<p>x = 10
+y = 10
+z = 10</p>
+<p>x == y == z
+True</p>
+<h1 id="equivalent-and-expression_1">Equivalent and expression</h1>
+<p>x == y and y == z
+True
+Chained comparison expressions are a nice feature, and you can write them in various ways. However, you should be careful. In some cases, the final expression can be challenging to read and understand, especially for programmers coming from languages in which this feature isn’t available.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Python’s and operator allows you to construct compound Boolean expressions that you can use to decide the course of action of your programs. You can use the and operator to solve several problems both in Boolean or non-Boolean contexts. Learning about how to use the and operator properly can help you write more Pythonic code.</p>
+<p>In this tutorial, you learned how to:</p>
+<p>Work with Python’s and operator
+Build Boolean and non-Boolean expressions with Python’s and operator
+Decide the course of action of your programs using the and operator in Boolean contexts
+Make your code more concise using the and operator in non-Boolean contexts
+Going through the practical examples in this tutorial can help you get a general idea of how to use the and operator to make decisions in your Python code.</p>
+<p>O uso de condicionais é baseado no valores booleanos <span class="arithmatex">\(verdadeiro\)</span> e <span class="arithmatex">\(falso\)</span>. Estes são os valores verdade da lógica matemática, e indicam o grau de verdade de uma proposição. Por exemplo, considerando os números inteiros 42 e 100, podemos a propor que <span class="arithmatex">\(42 &lt; 100\)</span> e verificar que isto é verdadeiro.
+As linguagens de programação podem oferecer um tipo de dado específico para estes valores ou interpretar outros tipos de dados como um dos dois resultados possíveis. Por exemplo, a linguagem C não tem um tipo primitivo e interpreta o valor numérico zero como o valor booleano <span class="arithmatex">\(falso\)</span>, e qualquer valor diferente disso como <span class="arithmatex">\(verdadeiro\)</span>. Já Python tem o tipo <a href="https://docs.python.org/pt-br/3/c-api/bool.html">bool</a>, mas também interpreta uma série de outros tipos de dados.</p>
+<p><code>&lt;expr&gt;</code> é uma expressão cujo valor resultante tem um significado booleano, ou seja, é <strong>verdadeiro</strong> ou <strong>falso</strong>.</p>
+<p>https://realpython.com/python-boolean/
+ Logical Operators in the Operators and Expressions in Python tutorial.
+<statement> is a valid Python statement, which must be indented. (You will see why very soon.)
+If <expr> is true (evaluates to a value that is “truthy”), then <statement> is executed. If <expr> is false, then <statement> is skipped over and not executed.</p>
+<p>Note that the colon (:) following <expr> is required. Some programming languages require <expr> to be enclosed in parentheses, but Python does not.</p>
+<p>Here are several examples of this type of if statement:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Estrutura condicional</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">if</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="o">&lt;</span><span class="n">instr</span><span class="o">&gt;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-C highlight"><span class="filename">Estrutura condicional</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">instr</span><span class="o">&gt;</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2>Exercícios</h2>
+
+<p>https://realpython.com/quizzes/python-conditional-statements/viewer/</p>
+<p>In a Python program, a control structure:</p>
+<p>Defines program-specific data structures
+Manages the input and output of control characters
+Dictates what happens before the program starts and after it terminates
+* Directs the order of execution of the statements in the program</p>
+<p>Control structures determine which statements in the program will be executed and in what order, allowing for statements to be skipped over or executed repeatedly.</p>
+<p>if, if/else, and if/elif/else statements are all examples of control structures that allow for statements to be skipped over or executed conditionally:</p>
+<p>if <expr>:
+    <statement></p>
+<p>if <expr>:
+    <statement(s)>
+else:
+    <statement(s)></p>
+<p>if <expr>:
+    <statement(s)>
+elif <expr>:
+    <statement(s)>
+elif <expr>:
+    <statement(s)>
+    ...
+else:
+    <statement(s)>
+The order of execution of statements in a program is called control flow.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,529 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+      <link rel="icon" href="../../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Linguagem de Programação - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linguagem-de-programacao" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linguagem de Programação
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linguagem de Programação
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Linguagem de Programação
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linguagem-de-programacao" class="md-nav__link">
+    Linguagem de Programação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceitos-basicos" class="md-nav__link">
+    Conceitos Básicos
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h2 id="linguagem-de-programacao">Linguagem de Programação</h2>
+<div class="admonition info">
+<p class="admonition-title"><span id="Programação-/-Linguagem-de-programação">Programação / Linguagem de programação</span></p>
+<p>Programação é o processo de transformar o algoritmo em instruções em uma linguagem de programação, que permite a formulação de instruções a um computador. A linguagem de programação é um conjunto de termos (vocabulário) e regras (sintaxe) que permite a formulação de instruções para um computador.</p>
+</div>
+<p>Toda linguagem de programação é baseada em instruções <em>primitivas</em>, as entidades mais simples que ela trata; em <em>formas de combinação</em> destes elementos simples, e em <em>formas de abstração</em> destas combinações de modo que possam também ser consideradas como primitivas<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Por exemplo, pode-se combinar muitas instruções primitivas necessárias para exibir uma mensagem na saída padrão de tal forma que este processo seja fácil e intuitivamente obtido por uma nova primitiva: <code>print</code>.</p>
+<p><a href="http://pt.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> mostrou que 6 primitivas são suficientes para computar qualquer coisa [computável]. Assim, uma linguagem de programação [<a href="http://pt.wikipedia.org/wiki/Turing_completude"><em>Turing-completa</em></a>] define tanto a <a href="http://pt.wikipedia.org/wiki/Sintaxe_%28l%C3%B3gica%29">sintaxe</a> quanto a <a href="http://pt.wikipedia.org/wiki/Sem%C3%A2ntica">semântica</a> necessárias para traduzir o pensamento computacional em passos que um computador pode executar.</p>
+<p>As linguagens modernas têm um conjunto maior e mais conveniente de primitivas que as 6 de Turing, e permitem que você as agrupe para elaborar programas mais complexos. Estas novas abstrações também podem ser agrupadas, e assim sucessivamente. Por exemplo, as primitivas mais comuns são: números (<span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(-2\)</span>, <span class="arithmatex">\(3.14\)</span>), símbolos ("@", "Alan M. Turing", ":)"), e operações simples (<span class="arithmatex">\(+\)</span>, <span class="arithmatex">\(-\)</span>, <span class="arithmatex">\(\times\)</span>, <span class="arithmatex">\(\div\)</span>).</p>
+<p>A sintaxe da linguagem indica quais expressões são simbolicamente corretas (<code>1 + 1</code>), ou não (<code>João ÷</code>). A semântica lida com o significado associado a uma expressão sintaticamente correta, que pode ser logicamente correto (<code>dois = 1 + 1</code>) ou não (<code>area_do_quadrado = lado + lado</code>). Erros sintáticos são relativamente fáceis de se encontrar, mas o mesmo não pode ser dito sobre erros semânticos.</p>
+<p>A <strong>linguagem de máquina</strong> é a que o hardware [específico] entende (código binário). A vantagem é que não é preciso gastar esforços traduzindo instruções, mas é praticamente incompreensível para humanos [normais].</p>
+<p>Uma <strong>linguagem de baixo nível</strong> usa <a href="http://pt.wikipedia.org/wiki/Assembly">instruções mnemônicas</a> para tentar facilitar a programação. A vantagem é ser muito mais inteligível que a de máquina, mas também é pouco amigável e, dependendo do hardware utilizado, precisa ser traduzida para linguagem de máquina.</p>
+<p>Já uma <strong>linguagem de alto nível</strong> usa um vocabulário mais rico para facilitar programação. É "facilmente" aprendida e independente do hardware, mas precisa ser traduzida para linguagem de máquina. As linguagens de alto nível claramente possibilitam programas mais breves e legíveis, mas o fazem pela composição e abstração das primitivas da máquina. Conhecendo uma linguagem de programação, pode-se elaborar programas bem interessantes.</p>
+<p>O exemplo tradicional é o "<a href="http://pt.wikipedia.org/wiki/Programa_Ol%C3%A1_Mundo">Olá mundo!</a>".</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">Rust</label><label for="__tabbed_1_3">C</label><label for="__tabbed_1_4">Assembly</label><label for="__tabbed_1_5">Código Binário</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ola mundo!&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-Rust highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Ola mundo!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>section .data
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>msg     db      &#39;Ola mundo!&#39;, 0AH
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>len     equ     $-msg
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>section .text
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>global  _start
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>_start: mov     edx, len
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        mov     ecx, msg
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        mov     ebx, 1
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        mov     eax, 4
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        int     80h
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        mov     ebx, 0
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        mov     eax, 1
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        int     80h
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>0111 1111 0100 0101 0100 1100 0100 0110
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>0000 0010 0000 0001 0000 0001 0000 0000
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>0000 0000 0000 0000 0000 0000 0000 0000
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>0000 0000 0000 0000 0000 0000 0000 0000
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>0000 0010 0000 0000 0011 1110 0000 0000
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>0000 0001 0000 0000 0000 0000 0000 0000
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>0100 0000 0000 0100 0100 0000 0000 0000
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>0000 0000 0000 0000 0000 0000 0000 0000
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>(continua por mais 2120 linhas)
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title"><span id="Dica">Dica</span></p>
+<p>Compreender os fundamentos e técnicas de programação é mais importante que dominar uma linguagem específica.</p>
+</div>
+<p>Havendo um programa sintaticamente correto, é preciso traduzi-lo da linguagem de alto nível para a linguagem de máquina para que haja instruções que o computador usado consiga interpretar (cada dispositivo fala sua própria linguagem). Neste processo, o código fonte é <em>verificado</em> para garantir que não contém erros sintáticos. Dependendo da implementação da linguagem, este código é <em>compilado</em>, gerando um <em><a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_objeto">objeto</a></em> (a versão das instruções originais em binário) que, por sua vez, é interpretado por um programa gerando um arquivo que pode ser executado.</p>
+<p>Qualquer linguagem de programação pode ser interpretada ou compilada, estas são formas de <em>implementação</em> (e não características da linguagem) que não são, necessariamente, exclusivas. A <em>interpretação</em> é realizada por um programa específico (o interpretador) que realiza as instruções pelo programa sendo interpretado de modo que este seja executado. Imagine que, a cada passo, uma instrução é interpretada e executada. Já a <em>compilação</em> (realizada pelo programa compilador) traduz completamente o programa original em código objeto que pode ser executado pela máquina.</p>
+<p>A interpretação tende a ser mais portátil, e tem a "vantagem" de realizar um passo de cada vez, já a compilação pode a gerar código otimizado e que não precisa ser interpretado a cada instrução. Outra diferença é que interpretadores são mais simples de se construir que compiladores.</p>
+<p>Existem diversas ferramentas para realizar este processo, como o compilador <a href="http://pt.wikipedia.org/wiki/GNU_Compiler_Collection">GCC</a> para linguagem C ou o interpretador Python 3. No caso do exemplo abaixo, supondo que se esteja no diretório do arquivo com código fonte, bastaria executar na linha de comando:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Python</label><label for="__tabbed_2_2">C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>python<span class="w"> </span>ola_mundo.py
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>gcc<span class="w"> </span>ola_mundo.c<span class="w"> </span>-o<span class="w"> </span>ola_mundo
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$<span class="w"> </span>./ola_mundo
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h1 id="conceitos-basicos">Conceitos Básicos</h1>
+<p>A execução do programa passa pela interpretação das instruções apresentadas. Uma <em>instrução</em> <code>&lt;instr&gt;</code> é um comando sintaticamente correto que pode ser diretamente executado. Já uma <em>expressão</em> <code>&lt;expr&gt;</code> é uma instrução que precisa ser interpretada e que produz um resultado (que pode ser armazenado). Por exemplo, ao interagir com um agente humano como executor do algoritmo, ele entende a instrução <code>&lt;Levante&gt;</code> e a realiza, mas não há uma informação produzida como resultado disto. Em seguida, podemos passar a expressão <code>&lt;Fale seu nome&gt;</code>, cujos termos precisam ser analisados e interpretados no contexto para que o agente possa reconhecer quem deve executar (o próprio agente), qual a ação  a ser executada (falar) e sobre o que ela deve executar (o nome) - só então ele pode executar o que foi solicitado e produzir uma nova informação (o nome falado), que se pode ser armazenado (ou não) para uma necessidade futura.</p>
+<p>Uma expressão pode ser composta por apenas um valor, como <code>&lt;Pedro&gt;</code> ou <code>&lt;42&gt;</code>, e também por diferentes valores e operadores. A expressão <code>2 + 3</code> produz o resultado 5 ao ser executada.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Instruções</label><label for="__tabbed_3_2">Expressões</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">pass</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">21</span> <span class="o">*</span> <span class="mi">2</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="mi">42</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">20</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="mi">7</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span> <span class="o">*</span> <span class="mf">2.5</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="o">-</span><span class="mf">9.5</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2>Tipo de Dado</h2>
+
+<p>Todo processo no computador gerencia a execução de um programa armazenado, a implementação de um algoritmo computacional nãos sendo, portanto, possível dissociar um algoritmo de dados manipulados - o próprio programa é um conjunto de dados (as instruções). Além disso, praticamente todos os programas manipulam dados fornecidos e gerados no processamento, na forma de variáveis ou constantes, que são os objetos de dados básicos manipulados em um programa<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<p>Ao executar um algoritmo computacional, estamos exigindo esforço da máquina para realizar o trabalho de processamento. Este esforço depende da quantidade de instruções sendo executadas, e do custo de cada instruções (podemos ter instruções mais simples e baratas, e instruções mais complexas e caras). A organização dos dados tem impacto direto neste esforço, e buscamos deixá-los organizados de forma a tornar o processo menos custoso. Por exemplo, imagine que seu problema é interpretar números e somá-los, é muito mais fácil<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> fazer isso se lhe forem apresentados os números estruturados como <span class="arithmatex">\(49\)</span> e <span class="arithmatex">\(1\)</span> (com resultado <span class="arithmatex">\(50\)</span>) que se fossem como <span class="arithmatex">\(XLIX\)</span> e <span class="arithmatex">\(I\)</span> (também com resultado <span class="arithmatex">\(L\)</span>).</p>
+<p>A memória do computador é um conjunto ordenado de bits, ou seja, toda informação é armazenada como zeros e uns e há uma ordem posicional entre eles (existe um primeiro bit, que pode ser <code>0/1</code>, um segundo bit que também pode ser <code>0/1</code>, e assim sucessivamente até um último bit). Para facilitar, há uma <a href="http://pt.wikipedia.org/wiki/Byte">nomenclatura específica</a> para lidar com a quantidade de bits sendo 1 byte (8 bits) a unidade mais comum para quantificá-lo. A composição de bits permite representar mais estados; 2 bits são 4 estados (<code>00/01/11/10</code>), 3 bits definem 8 estados, e assim sucessivamente - havendo <span class="arithmatex">\(n\)</span> bits podemos definir <span class="arithmatex">\(2^n\)</span> estados distintos. O significado da informação armazenada depende da forma de interpretar estes bits, um mesmo conjunto de bits tem significados diferentes se for interpretado como um número, um símbolo ou outra coisa. Por exemplo, um byte pode assumir um de 256 valores numéricos diferentes, mas também pode representar inúmeras informações diferentes se mudarmos a forma de interpretá-lo.</p>
+<p><img alt="Diferentes interpretações para 1 byte" src="../../img/byte_interpretacao.png" title="Diferentes interpretações para 1 byte" width="75%" /></p>
+<p>A representação do dado é necessariamente binária mas a interpretação dos bits é o que define a informação. Esta interpretação é determinada pelo <em>tipo de dado</em>, e cada tipo tem suas características específicas definidas pela linguagem de programação. Por exemplo, o conjunto de bits <code>01000001001000000000000000000000</code> pode ser interpretado como o valor numérico do tipo inteiro 1092616192, como o valor numérico do tipo real 10.0 ou como um tipo simbólico <code>A</code> (<a href="https://pt.wikipedia.org/wiki/ascii">ASCII</a>). Estes três tipos de dados, entre outros, geralmente estão presentes em qualquer linguagem de programação.</p>
+<div class="admonition note">
+<p class="admonition-title"><span id="Dica">Dica</span></p>
+<p>Como um mesmo conjunto de bits pode ser interpretado de diferentes formas, é necessário saber que tipo de dado foi armazenado na memória para interpretá-lo corretamente.</p>
+</div>
+<p>Um <em>tipo abstrato de dado</em> (TAD) determina um tipo de dado e as operações definidas sobre ele, delimitando assim a quantidade de informação necessária para manipulação dos valores pelo computador e, consequentemente, facilitando a programação. Um exemplo de TAD é o conjunto de números naturais <span class="arithmatex">\(\mathbb{N}\)</span> e suas operações aritméticas <span class="arithmatex">\(+, -, /, *\)</span>).</p>
+<div class="admonition info">
+<p class="admonition-title"><span id="Estrutura-de-Dados">Estrutura de Dados</span></p>
+<p>Forma concreta de se implementar um tipo abstrato de dados em uma linguagem de programação, de modo a organizar os dados na memória para facilitar o acesso e a manipulação destes.</p>
+</div>
+<p>Portanto, para cada linguagem de programação específica, o tipo do dado determina:</p>
+<ol>
+<li>o significado do valor armazenado;</li>
+<li>como o valor é armazenado nos bits;</li>
+<li>quais os possíveis valores que podem ser armazenados; e</li>
+<li>quais as operações podem ser realizadas com o valor.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title"><span id="Dica">Dica</span></p>
+<p>As características de uma estrutura de dados específica são importantes pois determinam o que pode e também o que <strong>não</strong> pode ser feito com ela.</p>
+</div>
+<h2>Exercícios</h2>
+
+<details class="question">
+<summary>Dado um número não negativo qualquer na base hexadecimal, descreva o algoritmos para transformá-lo em um número binário.</summary>
+<p>Como a base 16 é múltipla de 2, o processo manual é bem simples. Cada algarismo hexadecimal pode ser diretamente mapeado para seu valor binário de 4 bits, na mesma ordem. Por exemplo, para <span class="arithmatex">\(2A_{16}\)</span> temos que <span class="arithmatex">\(2_{16} \rightarrow 0010_2\)</span> e <span class="arithmatex">\(A_{16} \rightarrow 1010_2\)</span>, portanto <span class="arithmatex">\(2A_{16}\rightarrow 00101010_2\)</span>.</p>
+</details>
+<div class="admonition info">
+<p class="admonition-title"><span id="Constante">Constante</span></p>
+<p>Uma <em>constante</em> <code>&lt;C&gt;</code> é um valor armazenado que não é alterado no decorrer do processamento.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><span id="Variável">Variável</span></p>
+<p>Uma <em>variável</em> <code>&lt;v&gt;</code> é um valor armazenado que pode ser alterado no decorrer do processamento.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Constantes</label><label for="__tabbed_4_2">Variáveis</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="mf">3.141592653589793</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">13</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">123</span>  <span class="c1"># o valor de x não foi alterado, mas o de y sim.</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Variáveis e constantes exigem um pouco mais de</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Harold Abelson, Gerald Jay Sussman, and Julie Sussman. <em>Structure and Interpretation of Computer Programs</em>. MIT Press, Cambridge, MA, USA, 1985. ISBN 0262010771.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Brian W. Kernighan and Dennis M. Ritchie. <em>C: a linguagem de programação padrão ANSI</em>. Campus, Rio de Janeiro, 1989. ISBN 8570015860 9788570015860.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

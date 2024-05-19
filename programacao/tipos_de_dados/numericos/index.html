@@ -1,0 +1,696 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Numericos - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#numeros-inteiros" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Numericos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linguagem/" class="md-nav__link">
+        Linguagem de Programação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Numericos</h1>
+
+<h2>Números</h2>
+
+<p>Um <em>número</em> é um objeto matemático usado para descrever uma quantidade, e uma <em>base numérica</em> é um conjunto de algarismos utilizados para representar um número. Quais são os símbolos e as regras de como utilizá-los são definidos pelos sistema de numeração usado. O valor de um número é único, mas sua representação pode variar conforme o sistema utilizado - é fácil ilustrar isso comparando o abordagem usamos normalmente, com <a href="https://pt.wikipedia.org/wiki/Algarismos_ar%C3%A1bicos">algarismos arábicos</a> e a <a href="https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_posicional">notação posicional</a>, à abordagem que os <a href="https://pt.wikipedia.org/wiki/Numera%C3%A7%C3%A3o_romana">antigos romanos</a> usavam. Para o valor quarenta e nove, temos as representações <span class="arithmatex">\(49\)</span> e <span class="arithmatex">\(XLIX\)</span>, respectivamente.</p>
+<p>Na notação posicional, o valor representado por um algarismo depende da posição em que ele se encontra no conjunto de símbolos que representa o número, sendo valores a esquerda mais influentes que os a direita. O valor deste número é determinado pela soma dos valores relativos de cada algarismo. Por exemplo: 123 = 100 + 20 + 3, o algarismo mais a esquerda (1) tem uma influência maior que os demais no valor, e é considerado o mais significativo. O algarismo seguinte (2) tem uma influência menor que o anterior, mas maior que o seguinte. Isso se sucede até o último algarismo, o mais a direita, que é chamado de menos significativo. Podemos reescrever a informação da seguinte forma:</p>
+<div class="arithmatex">\[123 = 100 + 20 + 3 = 1·10^2+ 2·10^1+ 3·10^0\]</div>
+<p>Nesta representação, duas coisas se destacam. A primeira é que a influência de cada algarismo é determinada por uma potência de 10, que é a base numérica. A segunda, é que esta potência é uma sequência crescente da posição menos significativa para a mais significativa, iniciando-se por 0. De forma mais genérica, um algarismo <span class="arithmatex">\(A\)</span> tem uma influência proporcional a sua posição <span class="arithmatex">\(i\)</span> para uma base numérica <span class="arithmatex">\(B\)</span>.</p>
+<div class="arithmatex">\[A·{B^i}\]</div>
+<p>No valor 123, na <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_decimal">base decimal</a>, entendemos seu valor pela soma de seus componentes. O algarismo 3 está na posição mais a direita, considerada como posição <span class="arithmatex">\(i = 0\)</span>, portanto seu peso no valor resultante é de 3·10<span class="arithmatex">\(^0\)</span>. A posição seguinte (a esquerda) é i = 1 com o algarismo 2, acrescentando 2·10<span class="arithmatex">\(^1\)</span> ao resultado. O último algarismo (mais a esquerda) é 1 e está na posição 2, acrescentando 1·10<span class="arithmatex">\(^2\)</span>. De forma genérica, o valor de um número em uma base numérica <span class="arithmatex">\(B\)</span> qualquer, representado com <span class="arithmatex">\(n\)</span> algarismos <span class="arithmatex">\(A_i : A \in [0, B), i \in [0, n)\)</span>, é calculado com a seguinte fórmula:</p>
+<div class="arithmatex">\[A_{n-1}A_{n-2}…{A_2}A_1A_0 = \sum\limits_{i=0}^{n - 1}{A_i·{B^i}}\]</div>
+<p>Para representar a informação numérica na memória do computador, ela necessariamente deve ser representada como um conjunto de bits. Isto é relativamente simples, o bit tem dois estados, 0/1 que são os algarismos da <em><a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_bin%C3%A1rio">base numérica binária</a></em>. Portanto, podemos usar esta base na notação posicional para basta representar um valor numérico qualquer como bits na memória. Como também usaremos algarismos arábicos, para diferenciar as bases numéricas acrescentamos um sufixo ao número.</p>
+<div class="arithmatex">\[1101_2 = 1·2^3+ 1·2^2+ 0·2^1+ 1·2^0 = 8 + 4 + 0 + 1 = 13_{10}\]</div>
+<p>Por ser uma base de valor baixo, são poucos os algarismos e, portanto, as representações dos números se tornam extensas. Outras bases de valor mais elevado permitem compactar isso, e as mais úteis são as múltiplas de 2 já que a <a href="https://pt.wikipedia.org/wiki/Convers%C3%A3o_de_base_num%C3%A9rica">conversão</a> delas para a binária é simplificada. A tabela abaixo mostra alguns valores nas bases mais comuns na computação: binária, <a href="https://pt.wikipedia.org/wiki/Sistema_octal">octal</a>, decimal e <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_hexadecimal">hexadecimal</a>. Note que, como a notação posicional utiliza apenas um símbolo por posição, a base hexadecimal define os valores superiores a 9 (o maior algarismo arábico) para letras do alfabeto latino.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>binária</th>
+<th>octal</th>
+<th>decimal</th>
+<th>hexadecimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>11</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>100</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>101</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>110</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>111</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>10</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>11</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>12</td>
+<td>10</td>
+<td>A</td>
+</tr>
+<tr>
+<td>1011</td>
+<td>13</td>
+<td>11</td>
+<td>B</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>14</td>
+<td>12</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>15</td>
+<td>13</td>
+<td>D</td>
+</tr>
+<tr>
+<td>1110</td>
+<td>16</td>
+<td>14</td>
+<td>E</td>
+</tr>
+<tr>
+<td>1111</td>
+<td>17</td>
+<td>15</td>
+<td>F</td>
+</tr>
+<tr>
+<td>101010</td>
+<td>52</td>
+<td>42</td>
+<td>2A</td>
+</tr>
+<tr>
+<td>1111011</td>
+<td>173</td>
+<td>123</td>
+<td>7B</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="numeros-inteiros">Números Inteiros</h3>
+<p>Já vimos a representação dos <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_natural">números naturais</a> em binário. Entretanto, muitas problemas lidam com os <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_inteiro">números inteiros</a>, que podem ter valores negativos. Felizmente, um número só pode ser negativo ou não, ou seja, a informação do sinal é facilmente representada em um bit. A convenção é que o bit mais a esquerda armazena a informação se o número é negativo (ligado/1) ou se é positivo (desligado/0), e os demais bits armazenam a informação do valor do número. Há formas distintas de se interpretar este último conjunto de bits, como listadas a seguir.</p>
+<p><a href="https://pt.wikipedia.org/wiki/Representa%C3%A7%C3%A3o_de_n%C3%BAmeros_com_sinal#M.C3.A9todo_sinal-e-magnitude">Sinal e Magnitude</a>, onde o bit mais significativo indica o sinal e os demais bits determinam o valor diretamente pela notação posicional (como um número natural). Esta abordagem é intuitivamente simples para entendermos.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td><span class="arithmatex">\(-(0·2^1+ 0·2^0)\)</span></td>
+<td>-0</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td><span class="arithmatex">\(-(0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td><span class="arithmatex">\(-(1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td><span class="arithmatex">\(-(1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p><a href="https://pt.wikipedia.org/wiki/Representa%C3%A7%C3%A3o_de_n%C3%BAmeros_com_sinal#Complemento_para_um">Complemento de um</a> também considera o bit mais a esquerda como indicador de sinal e os demais para o valor, conforme o sinal. Se <em>positivo</em>, os bits restantes indicam o valor pela notação posicional (como na abordagem de sinal e magnitude); se <em>negativo</em>, é preciso inverter todos os bits antes de considerar a notação posicional. Esta variação é um pouco mais complexa para entendermos, mas tem vantagens quanto à anterior para algumas operações. Uma delas é que precisa-se de menos esforço para para inverter o sinal de um valor, uma operação muito frequente em problemas computacionais. Usando complemento de um, basta inverter todos os bits.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>inverte?</th>
+<th></th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td>sim</td>
+<td>-11</td>
+<td><span class="arithmatex">\(-(1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td>sim</td>
+<td>-10</td>
+<td><span class="arithmatex">\(-(1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td>sim</td>
+<td>-01</td>
+<td><span class="arithmatex">\(-(0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td>sim</td>
+<td>-00</td>
+<td><span class="arithmatex">\(-(0·2^1+ 0·2^0)\)</span></td>
+<td>-0</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Por fim, a forma mais utilizada é <a href="https://pt.wikipedia.org/wiki/Complemento_para_dois">complemento de dois</a>. Nela, também o bit mais a esquerda define o sinal e os demais determinam o valor conforme o sinal. Se <em>positivo</em>, os bits restantes indicam o valor pela notação posicional; se <em>negativo</em>, é preciso inverter todos os bits e incrementar em 1 o resultado antes de considerar a notação posicional. Embora mais complicada para nós, esta abordagem tem vantagens sobre as demais, como quantidade de valores distintos que se pode armazenar e facilidade na computação de operações aritméticas.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>inverte?</th>
+<th></th>
+<th>+1</th>
+<th></th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td>sim</td>
+<td>-11</td>
+<td>sim</td>
+<td>-100</td>
+<td><span class="arithmatex">\(-(1·2^2+ 0·2^1+ 0·2^0)\)</span></td>
+<td>-4</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td>sim</td>
+<td>-10</td>
+<td>sim</td>
+<td>-011</td>
+<td><span class="arithmatex">\(-(0·2^2+ 1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td>sim</td>
+<td>-01</td>
+<td>sim</td>
+<td>-010</td>
+<td><span class="arithmatex">\(-(0·2^2+ 1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td>sim</td>
+<td>-00</td>
+<td>sim</td>
+<td>-001</td>
+<td><span class="arithmatex">\(-(0·2^2+ 0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Geralmente, valores inteiros são armazenados em um tipo de dado <code>inteiro</code> de 32 ou 64 bits. Considerando o primeiro caso, a estrutura de dados para complemento de dois determina:</p>
+<ol>
+<li>O significado é de um valor numérico inteiro, que pode ser negativo.</li>
+<li>O valor é armazenado como Complemento de 2 nos 32 bits.</li>
+<li>Os possíveis valores armazenados estão no intervalo <span class="arithmatex">\([-2^{31}, 2^{31})\)</span>.</li>
+<li>As operações aritméticas básicas (<span class="arithmatex">\(+, -, \times\ e\ \div\)</span>) estão definidas na linguagem de programação - e possivelmente outras.</li>
+</ol>
+<p>{! programacao/tipos_de_dados/reais.md !}</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

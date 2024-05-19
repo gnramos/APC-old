@@ -1,0 +1,355 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Ciencia da computacao - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ciencia-da-computacao" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ciencia da computacao
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacao/" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacao/linguagem/" class="md-nav__link">
+        Linguagem de Programação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Ciencia da computacao</h1>
+
+<h2 id="ciencia-da-computacao">Ciência da Computação</h2>
+<p>A tecnologia permeia todas as atividades humanas nos dias de hoje, principalmente alavancada pela disponibilidade e acessibilidade a ferramentas computacionais. Neste contexto, a <em>Ciência da Computação</em> torna-se uma área cada vez mais relevante.</p>
+<div class="admonition quote">
+<p class="admonition-title"><a href="http://en.wikiquote.org/wiki/Dennis_Ritchie">Dennis Ritchie</a></p>
+<p>Ciência da Computação é diferente das disciplinas tradicionais. Filosoficamente, difere das ciências físicas porque não busca descobrir, explicar, ou explorar o mundo natural, mas estudar as propriedades de máquinas criadas por humanos. Nisso é análoga a Matemática, e de fato a parte de "ciência" da Ciência da Computação tem o espírito matemático em sua maior parte. Mas um aspecto inevitável da Ciência da Computação é a criação de programas de computadores: objetos que, apesar de intangíveis, estão sujeitos ao comércio.</p>
+</div>
+<p>A Ciência da Computação não é "ciência" por definição (matemática? engenharia? arte? esporte?), nem sobre computadores (como ferramenta). A área pode ser considerada como uma tentativa de formalizar certos processos, definindo uma forma precisa de se falar sobre <em>como</em> realizar algo, em contraste a <em>o que</em> é algo.</p>
+<p><em><a href="http://pt.wikipedia.org/wiki/Ci\%C3\%AAncia">Ciência</a> (do Latim </em>scientia*, "conhecimento") é uma forma sistemática de produzir conhecimento (via <a href="http://pt.wikipedia.org/wiki/M%C3%A9todo_cient%C3%ADfico">método científico</a>), ou o nome dado a estrutura organizada do conhecimento obtido. O método científico é um conjunto de regras básicas de como proceder para produzir conhecimento, criando algo novo ou corrigindo/incrementando conhecimentos pré-existentes[@Newton1729]. Esta metodologia pode - e deve - ser aplicada a experimentos computacionais, mas a Ciência da Computação não tem este foco.</p>
+<p>O <a href="http://pt.wikipedia.org/wiki/Computador">computador</a> também não é o objetivo da Ciência da Computação. A ideia é que, uma vez formalizados os processos para realização de uma tarefa, alguém (ou algo) possa executá-los corretamente. O computador interpreta e executa rapidamente instruções muito simples, sendo uma das máquinas mais versáteis para realizar os processos.</p>
+<div class="admonition quote">
+<p class="admonition-title"><a href="http://pt.wikipedia.org/wiki/Edsger_Dijkstra">Edsger H. Dijkstra</a></p>
+<p>Ciência da Computação está tão relacionada aos computadores quanto a Astronomia aos telescópios, Biologia aos microscópios, ou Química aos tubos de ensaio. A Ciência não estuda ferramentas. Ela estuda como nós as utilizamos, e o que descobrimos com elas.}%</p>
+</div>
+<p>O computador executa diversas tarefas por meio de seus processos, e para tanto lida com dois <a href="http://pt.wikipedia.org/wiki/Conhecimento#Tipos_de_conhecimento">tipos de conhecimento</a>. O primeiro deles é o <em>conhecimento declarativo</em> que é uma descrição de fato(s). Por exemplo, "a raiz quadrada de <span class="arithmatex">\(n\)</span> é o número <span class="arithmatex">\(r\)</span> tal que <span class="arithmatex">\(r^2 = n\)</span>". Embora interessante, esta informação serve apenas para verificar se <span class="arithmatex">\(r\)</span> é ou não raiz de <span class="arithmatex">\(n\)</span>, não resolve um problema relativamente comum de, dado o número <span class="arithmatex">\(n\)</span>, descobrir <em>qual é <span class="arithmatex">\(r\)</span></em> tal que satisfaça a definição.</p>
+<p>A <a href="http://pt.wikipedia.org/wiki/Ci\%C3\%AAncia_da_computa\%C3\%A7\%C3\%A3o">Ciência da Computação</a> está interessada no segundo tipo, o <em>conhecimento procedural</em> que especifica processos, indicando como [melhor] realizar algo. Por exemplo, para aproximar o valor <span class="arithmatex">\(r\)</span>, pode-se começar com <span class="arithmatex">\(r = 0\)</span> e incrementar seu valor até que <span class="arithmatex">\(r^2 \geq n\)</span>. Esta estratégia de <a href="http://pt.wikipedia.org/wiki/For%C3%A7a_bruta">busca exaustiva</a> pode ser apresentada de forma um pouco mais estruturada:</p>
+<ol>
+<li>Defina <span class="arithmatex">\(r = 0\)</span> e <span class="arithmatex">\(n \in \mathbb{N}\)</span>.</li>
+<li>Adicione 1 a <span class="arithmatex">\(r\)</span>.</li>
+<li>Se <span class="arithmatex">\(r^2 \geq n\)</span>, então pare (<span class="arithmatex">\(r \approx \sqrt{n}\)</span>). Senão, vá para o passo 2.</li>
+</ol>
+<p>Uma vez estabelecido o processo de calcular a raiz, este pode ser passado ao computador para que execute as etapas. A versatilidade desta máquina permite que ela possa executar diversos tipos de processos com fins diferentes (ou não), desde que adequadamente definidos.</p>
+<p>A Ciência da Computação tenta formalizar este conhecimento procedural, e juntar seus blocos em sistemas grandes e complexos que podem ser [re]utilizados nas mais diversas áreas. Por exemplo, supondo as diversas <a href="http://pt.wikipedia.org/wiki/Leis_de_Newton">Leis da Física</a>, pode-se elaborar diversos procedimentos para definir posições e forças, e juntar estes resultados para <a href="https://gabrielecirulli.github.io/2048/">entretenimento</a>, <a href="http://pt.wikipedia.org/wiki/Ve%C3%ADculo_aut%C3%B4nomo">progresso</a>, ou [praticamente] qualquer outra <a href="http://pt.wikipedia.org/wiki/Rosetta">coisa que se possa imaginar</a>.</p>
+<p>Esta "mágica" ocorre via <em><a href="http://pt.wikipedia.org/wiki/Thread_%28ci%C3%AAncia_da_computa%C3%A7%C3%A3o%29">processos computacionais</a></em>, que são entidades abstratas que existem nos computadores. A medida que evolui, o processo manipula <em>dados</em> (outras entidades abstratas), e esta evolução é dirigida por regras definidas em um <em>programa</em> (composto por expressões simbólicas em uma <em>linguagens de programação</em>)<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup>.</p>
+<p>Programação é a atividade de escrever os passos do processo de modo que o computador possa entendê-los e executá-los. Programação é uma forma de <a href="http://www.paulgraham.com/knuth.html">arte</a>, mas também é uma <a href="http://pihisall.wordpress.com/2007/03/15/aprenda-a-programar-em-dez-anos/">habilidade que pode ser desenvolvida</a>. E <a href="http://www.youtube.com/watch?v=xfBWk4nw440">você deveria aprender a programar</a>, afinal:</p>
+<div class="admonition quote">
+<p class="admonition-title"><a href="http://pt.wikipedia.org/wiki/Donald_Knuth]">Donald Knuth</a></p>
+<p>É preciso ver um algoritmo para crer nele.</p>
+</div>
+<p>No contexto acadêmico, a Ciência da Computação segue as diretrizes curriculares do <a href="http://portal.mec.gov.br/">Ministério da Educação</a>[@MEC2005], e os esforços para incentivar a pesquisa e o ensino são guiados pela <a href="http://www.sbc.org.br">Sociedade Brasileira de Computação</a>.  O Projeto Pedagógico do Curso de Bacharelado em Ciência da Computação[@ppcBCC2015] diz que o egresso deve possuir conhecimentos para encontrar soluções computacionais para várias áreas de conhecimento e estar preparado para a investigação, desenvolvimento, análise, modelagem, projeto, e implementação de sistemas computacionais, bem como para desenvolver pesquisa científica e tecnológica. Portanto, o profissional deveria ser capaz de resolver qualquer problema lógico em qualquer área, desde que a solução possa ser implementada em um computador.%</p>
+<p>Segundo o Currículo de Referência da SBC para Cursos de Graduação<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">2</a></sup>, a atuação profissional dos egressos pode ter características da área de computação em três componentes, englobando aspectos gerais, técnicos e ético-sociais. A regulamentação da profissão de informática está em processo de aprovação[@Bigonha2013], mas a SBC consolidou sua posição institucional na formulação dos seguintes princípios, que devem ser observados[@SBC2013]:</p>
+<ol>
+<li>exercício da profissão de Informática deve ser livre e independer de diploma ou comprovação de educação formal;</li>
+<li>nenhum conselho de profissão pode criar qualquer impedimento ou restrição ao princípio acima;</li>
+<li>a área deve ser Auto-Regulada.</li>
+</ol>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:2">
+<p>Harold Abelson, Gerald Jay Sussman, and Julie Sussman. <em>Structure and Interpretation of Computer Programs</em>. MIT Press, Cambridge, MA, USA, 1985. ISBN 0262010771.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>SBC. Currículo de Referência da SBC para Cursos de Graduação em Bacharelado em Ciência da Computação e Engenharia de Computação. URL: <a href="http://www.sbc.org.br/documentos-da-sbc/category/131-curriculos-de-referencia">http://www.sbc.org.br/documentos-da-sbc/category/131-curriculos-de-referencia</a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

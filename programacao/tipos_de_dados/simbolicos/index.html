@@ -1,0 +1,1153 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/freebsb.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Simbolicos - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#simbolos" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Simbolicos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../../../assets/freebsb.svg" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linguagem/" class="md-nav__link">
+        Linguagem de Programação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Simbolicos</h1>
+
+<h3 id="simbolos">Símbolos</h3>
+<p>Símbolos são uma forma extremamente versátil de comunicar informações; o <a href="https://pt.wikipedia.org/wiki/Alfabeto">alfabeto</a> define um pequeno conjunto de símbolos que, juntos, podem expressar <a href="https://pt.wikipedia.org/wiki/Emoticon">quase</a> tudo que se deseja. Símbolos, como toda informação no computador, são representados por bits.</p>
+<h4>ASCII</h4>
+
+<p>O padrão ASCII<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> (<em>American Standard Code for Information Interchange</em>) foi desenvolvido nos anos 60, sendo composto por 95 símbolos gráficos (letras do alfabeto latino, algarismos arábicos, sinais de pontuação e sinais matemáticos) e 33 de controle.</p>
+<p><center></p>
+<h5>Controle</h5>
+
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00</td>
+<td>NUL</td>
+<td>0x08</td>
+<td>BS</td>
+<td>0x10</td>
+<td>DLE</td>
+<td>0x18</td>
+<td>CAN</td>
+</tr>
+<tr>
+<td>0x01</td>
+<td>SOH</td>
+<td>0x09</td>
+<td>HT</td>
+<td>0x11</td>
+<td>DC1</td>
+<td>0x19</td>
+<td>EM</td>
+</tr>
+<tr>
+<td>0x02</td>
+<td>STX</td>
+<td>0x0A</td>
+<td>LF</td>
+<td>0x12</td>
+<td>DC2</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x03</td>
+<td>ETX</td>
+<td>0x0B</td>
+<td>VT</td>
+<td>0x13</td>
+<td>DC3</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>EOT</td>
+<td>0x0C</td>
+<td>FF</td>
+<td>0x14</td>
+<td>DC4</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>ENQ</td>
+<td>0x0D</td>
+<td>CR</td>
+<td>0x15</td>
+<td>NAK</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>ACK</td>
+<td>0x0E</td>
+<td>SO</td>
+<td>0x16</td>
+<td>SYN</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x07</td>
+<td>BEL</td>
+<td>0x0F</td>
+<td>SI</td>
+<td>0x17</td>
+<td>ETB</td>
+<td>0x7F</td>
+<td>DEL</td>
+</tr>
+</tbody>
+</table>
+<h5>Gráficos (Parcial)</h5>
+
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x20</td>
+<td>espaço</td>
+<td>0x30</td>
+<td>0</td>
+<td>0x41</td>
+<td>A</td>
+<td>0x61</td>
+<td>a</td>
+</tr>
+<tr>
+<td>0x21</td>
+<td>!</td>
+<td>0x31</td>
+<td>1</td>
+<td>0x42</td>
+<td>B</td>
+<td>0x62</td>
+<td>b</td>
+</tr>
+<tr>
+<td>0x22</td>
+<td>"</td>
+<td>0x32</td>
+<td>2</td>
+<td>0x43</td>
+<td>C</td>
+<td>0x63</td>
+<td>c</td>
+</tr>
+<tr>
+<td>0x23</td>
+<td>#</td>
+<td>0x33</td>
+<td>3</td>
+<td>0x44</td>
+<td>D</td>
+<td>0x64</td>
+<td>d</td>
+</tr>
+<tr>
+<td>0x24</td>
+<td>$</td>
+<td>0x34</td>
+<td>4</td>
+<td>0x45</td>
+<td>E</td>
+<td>0x65</td>
+<td>e</td>
+</tr>
+<tr>
+<td>0x25</td>
+<td>%</td>
+<td>0x35</td>
+<td>5</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x26</td>
+<td>&amp;</td>
+<td>0x36</td>
+<td>6</td>
+<td>0x57</td>
+<td>W</td>
+<td>0x77</td>
+<td>w</td>
+</tr>
+<tr>
+<td>0x27</td>
+<td>'</td>
+<td>0x37</td>
+<td>7</td>
+<td>0x58</td>
+<td>X</td>
+<td>0x78</td>
+<td>x</td>
+</tr>
+<tr>
+<td>0x28</td>
+<td>(</td>
+<td>0x38</td>
+<td>8</td>
+<td>0x59</td>
+<td>Y</td>
+<td>0x79</td>
+<td>y</td>
+</tr>
+<tr>
+<td>0x29</td>
+<td>)</td>
+<td>0x39</td>
+<td>9</td>
+<td>0x5A</td>
+<td>Z</td>
+<td>0x7A</td>
+<td>z</td>
+</tr>
+<tr>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Cada um dos 128 símbolos é associado à uma sequência arbitrária e única de 7 de bits. É bem comum associar esta sequência a um número inteiro, por exemplo o número 65 ao símbolo 'A' ("um mesmo conjunto de bits pode ser interpretado de diferentes formas"). Além disso, o padrão ASCII tem algumas características interessantes. Os algarismos são listados em ordem de valor, e as letras são organizadas em ordem alfabética, o que facilita os processos de comparação entre eles. As letras minúsculas estão deslocadas em 32 posições em relação às maiúsculas, então a diferença entre os bits que as representam é apenas no sexto bit!</p>
+<p>Por conta de como as máquinas eram construídas, era muito comum usar um byte para armazenar cada símbolo, o que viabilizou definir outros 128 símbolos arbitrários. Entretanto, não houve maior consenso em quais seriam os símbolos, afinal cada grupo tinha seus próprios interesses. No Brasil, o mais comum era o <a href="https://pt.wikipedia.org/wiki/ISO/IEC_8859-1">ISO/IEC 8859-1</a>. Com o avanço da internet, a necessidade de comunicação entre máquinas e grupos distintos forçou a incorporação de um padrão internacional. Entretanto, algumas dificuldades deveriam ser consideradas...</p>
+<p>Uma solução "simples" seria usar mais bits e ampliar o tamanho da tabela, mas isso implicaria que toda informação já representada num padrão como ASCII ocuparia mais memória que o necessário. Por exemplo, supondo que fossem usados 3 bytes (possibilitando mais de 16 milhões de símbolos), uma mensagem com 10 símbolos ASCII passa a ocupar 30 bytes, 200% a mais do que necessário. Também seria necessário lidar com informações armazenadas que usam o símbolo <code>NUL</code> para indicar o término de uma sequência de símbolos - uma sequência de 8 bits com valor 0 não seria rara considerando 3 bytes. Outro ponto relevante era lidar com os documentos existentes, gerar uma cópia de todo arquivo existente com esta nova codificação seria uma tarefa inviável. A solução encontrada foi uma forma elegante de lidar com tudo isso, além de viabilizar a incorporação de quaisquer novos símbolos que possam ser criados.</p>
+<h4>Unicode</h4>
+
+<p>Uma vez estabelecido um padrão de <em>codificação de caracteres</em> (associação [arbitrária] de bits a certos caracteres), pode-se armazenar estes símbolos na memória (e recuperá-los). Há diversar formas de se codificar caracteres: <a href="https://pt.wikipedia.org/wiki/Extended_Binary_Coded_Decimal_Interchange_Code">EBCDIC</a>, <a href="https://pt.wikipedia.org/wiki/Unicode">Unicode</a> (veja <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">isso</a>), ente outros.</p>
+<p>Nesta disciplina, o foco é a representação em <a href="https://pt.wikipedia.org/wiki/ASCII">ASCII</a>, uma forma extremamente compacta e a mais utilizada no padrão ANSI. Neste contexto, um <code>char</code> é um pequeno inteiro, de modo que pode ser livremente usado em expressões aritméticas<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> (veja \linkFile[../src/exemplos/05_EstruturasDeDados/02_Simbolos]{00-ascii.c} e \linkFile[../src/exemplos/05_EstruturasDeDados/02_Simbolos]{01-ascii.c}).</p>
+<p>A versão 3 da \lP~utiliza outra abordagem, cada caractere é representado como <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">Unicode</a>, mas os valores numéricos/simbólicos podem ser utilizados por intermédio das funções <a href="https://docs.python.org/3.3/library/functions.html#ord"><code>ord</a></code> e <a href="https://docs.python.org/3.3/library/functions.html#chr"><code>chr</a></code>, respectivamente (veja \linkFile[../src/exemplos/05_EstruturasDeDados/02_Simbolos]{00-ascii.py} e \linkFile[../src/exemplos/05_EstruturasDeDados/02_Simbolos]{01-ascii.py}).
+\else%
+\begin{frame}%
+    A <em>codificação de caracteres</em> é a associação de bits a símbolos.
+    \begin{center}\includegraphics[width=.5\textwidth]{misc/LouisBraille}\end{center}
+    \vfill%
+    Por necessidade de diálogos entre os diferentes computadores, foram criados
+    diversos códigos objetivando a padronização.
+\end{frame}%</p>
+<p>\begin{frame}<handout:0>%
+    \framesubtitle{<em>Extended Binary Coded Decimal Interchange Code</em> (EBCDIC)}%
+    \begin{center}\includegraphics[width=.75\textwidth]{computing/programming/EBCDIC}\end{center}
+\end{frame}%</p>
+<p>\begin{frame}<handout:0>%
+    \framesubtitle{<em>American Standard Code for Information Interchange</em> (ASCII)}%
+    \begin{center}\includegraphics[width=.95\textwidth]{computing/programming/ascii}\end{center}
+\end{frame}%</p>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstC[linerange={9-21}]{exemplos/05_EstruturasDeDados/02_Simbolos}{00-ascii.c}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstPython[firstline=12]{exemplos/05_EstruturasDeDados/02_Simbolos}{00-ascii.py}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstC[linerange={9-21}]{exemplos/05_EstruturasDeDados/02_Simbolos}{01-ascii.c}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstPython[firstline=9]{exemplos/05_EstruturasDeDados/02_Simbolos}{01-ascii.py}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=8]{exercicios/05_EstruturasDeDados/02_Simbolos}{00-maior}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=8]{exercicios/05_EstruturasDeDados/02_Simbolos}{01-toupper}%
+\end{frame}\]</div>
+<p>\begin{frame}<handout:0>%
+    \framesubtitle{Unicode}%
+    \vspace{-4em}%
+    \hfill\includegraphics[width=.2\textwidth]{computing/programming/unicode}%
+    \\vspace{-1em}%
+    \begin{itemize}
+    \item Padrão universal de codificação de caracteres
+    \item Fornece um número único para cada caractere, não importando a plataforma (a máquina e/ou sistema operacional em uso), o programa ou o idioma.
+    \item Permite definir caracteres cuja representação interna no computador utiliza mais de um byte (UTF-8), tais como:
+    16 bits (UTF-16) e 32 bits (UTF-32).
+    \item Atualmente, o padrão consiste de mais de 100 mil caracteres e pode ser usado em vários sistemas operacionais, programas e navegadores modernos.
+    \end{itemize}
+\end{frame}%
+\fi%</p>
+<h2 id="objetos-em-python">Objetos em Python</h2>
+<p>\subsection{Ponteiros na \LP}%
+\ifIsArticle%
+A \lP~não utiliza ponteiros diretamente e, por projeto, manipula objetos de forma diferente de C. Em ambas, os <a href="http://stackoverflow.com/a/986145">argumentos são passados por valor</a>, mas dependendo do tipo de objeto (<a href="https://pythonhelp.wordpress.com/2013/02/20/variaveis-valores-e-referencias/">mutável/imutável</a>), a manipulação dentro do escopo de uma função tem ou não efeito em um escopo externo.</p>
+<p>Primeiro, é preciso lembrar alguns <a href="https://wiki.python.org.br/ProgramacaoOrientadaObjetoPython">detalhes da própria linguagem</a>: os objetos (que ficam na memória) têm os seguintes atributos: <em>tipo</em>, que define a informação (e valores) que o objeto pode receber e as operações que podem ser executadas nele; <em>valor</em>, que é o endereço de memória ocupado pelo objeto; <em>nome</em>, que identifica o objeto diferenciando dos demais elementos na memória; e <em>tempo de vida</em>, que é o período de tempo de execução do programa durante o qual o objeto existe. Na \lP{ }lida-se com <a href="https://pythonhelp.wordpress.com/2013/02/20/variaveis-valores-e-referencias/">referências para objetos</a>, as quais desempenham papéis similares a ponteiros.
+\fi%</p>
+<p>\ifIsArticle%
+Os objetos são <em>imutáveis</em> (como \texttt{int}, \texttt{float}, \texttt{str}, etc.) ou <em>mutáveis</em> (como \texttt{lista}, \texttt{dict}, etc.). Toda variável é, na verdade, uma referência para algum objeto da memória. Considerando objetos imutáveis, como ilustrado na figura abaixo, o valor de nome `<em>z</em>' não varia a não ser que você o mude explicitamente, e o operador \texttt{=} não é de <em>atribuição de valor</em> (como na \lC), mas de <em>referência</em>, e o <a href="https://pt.wikipedia.org/wiki/Coletor_de_lixo_(inform%C3%A1tica)">coletor de lixo</a> lida com a informação \texttt{42} ao término de seu tempo de vida.
+\else%
+\begin{frame}[fragile]%
+    %https://pythonhelp.wordpress.com/2013/02/20/variaveis-valores-e-referencias/
+    Python não utiliza ponteiros como tipos de dados, mas lida com referências de forma ``diferente''...%
+    \\pause\vfill%
+    Os objetos em \texttt{Python} são:
+    \begin{description}
+         \item[imutáveis:] \texttt{int}, \texttt{float}, \texttt{str}, <span class="arithmatex">\(\dots\)</span>
+         \item[mutáveis:] \texttt{lista}, <span class="arithmatex">\(\dots\)</span>
+     \end{description}
+\end{frame}</p>
+<p>\begin{frame}%
+    Toda variável em \texttt{Python} é uma referência para algum objeto da memória.
+    \\pause\vfill%
+    Nesta abordagem para lidar com a memória, o valor de nome `<em>a</em>' não varia a não ser que você o mude explicitamente\footnote&lt;2-&gt;{<em>Explícito é melhor que implícito.</em>}.
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \begin{tikzpicture}[start chain=going right, node distance=0pt, mem/.style={inMemory,text width=2em, minimum height=1.7em}]%
+            \node[mem,label={[address,above]0xB1}] (M0) {};%
+            \node[mem,label={[address,above]0xB5}] (M1) {42};%
+            \node[mem,label={[address,above]0xB9}] (M2) {<span class="arithmatex">\(\pi\)</span>};%
+            \node[mem,label={[address,above]0xBD}] (M3) {43};%</p>
+<div class="language-text highlight"><pre><span></span><code>        \node[ptr,below of=M0,yshift=-3em] (a) {\textbf{x}};%
+        \draw[ptr] (a) -| (M1.south);%
+        \node[ptr,below of=a,yshift=-2em] (b) {\textbf{y}};%
+        \draw[ptr] (b) -| (M2.south);%
+        \node[ptr,below of=b,yshift=-2em] (c) {\textbf{z}};%
+        \draw[ptr] (c) -| (M3.south);%
+    \end{tikzpicture}%
+    \caption{\texttt{x, y, z = 42, $\pi$, 43}}
+\end{subfigure}
+\hspace{4em}%
+\begin{subfigure}[b]{0.3\textwidth}
+    \begin{tikzpicture}[start chain=going right, node distance=0pt, mem/.style={inMemory,text width=2em, minimum height=1.7em}]%
+        \node[mem,label={[address,above]0xB1}] (M0) {};%
+        \node[mem,label={[address,above]0xB5}] (M1) {};%
+        \node[mem,label={[address,above]0xB9}] (M2) {$\pi$};%
+        \node[mem,label={[address,above]0xBD}] (M3) {43};%
+
+        \node[ptr,below of=M0,yshift=-3em] (a) {\textbf{x}};%
+        \draw[ptr] (a) -| (M2.south);%
+        \node[ptr,below of=a,yshift=-2em] (b) {\textbf{y}};%
+        \draw[ptr] (b) -| (M3.south);%
+        \node[ptr,below of=b,yshift=-2em] (c) {\textbf{z}};%
+        \draw[ptr] (c) -| (M3.south);%
+    \end{tikzpicture}%
+    \caption{\texttt{x, y = y, z}}
+\end{subfigure}
+</code></pre></div>
+<p>\end{figure}
+\else%
+\begin{frame}[fragile]%
+    %https://pythonhelp.wordpress.com/2013/02/20/variaveis-valores-e-referencias/
+    O operador \texttt{=} não é de <em>atribuição</em>, mas de <em>referência</em>.%
+    \vfill%
+    \begin{columns}
+        \column{.7\textwidth}%
+            \begin{tikzpicture}[start chain=going right, node distance=0pt, mem/.style={inMemory,text width=2em, minimum height=1.7em}]%
+                \node[mem,label={[address,above]0xB1}] (M0) {};%
+                \node[mem,label={[address,above]0xB5}] (M1) {\only&lt;2&gt;{42}};%
+                \node[mem,label={[address,above]0xB9}] (M2) {\only&lt;5-&gt;{<span class="arithmatex">\(\pi\)</span>}};%
+                \node[mem,label={[address,above]0xBD}] (M3) {\only&lt;3-&gt;{43}};%
+                \node[mem,label={[address,above]0xC0}] (M4) {};%</p>
+<div class="language-text highlight"><pre><span></span><code>            \node&lt;2-&gt;[ptr,below of=M0,yshift=-4em] (a) {\textbf{a}};%
+            \draw&lt;2&gt;[ptr] (a) -| (M1.south);%
+            \draw&lt;3-4&gt;[ptr] (a) -| (M3.south);%
+            \node&lt;4-&gt;[ptr,below of=a,yshift=-2em] (b) {\textbf{b}};%
+            \draw&lt;4-&gt;[ptr] (b) -| (M3.south);%
+            \draw&lt;5-&gt;[ptr] (a) -| (M2.south);%
+        \end{tikzpicture}%
+    \column{.2\textwidth}%
+        \pause
+</code></pre></div>
+<p>\begin{lstlisting}[style=CIC-Python]
+a = 42
+\end{lstlisting}%
+\pause\vspace<em -1.1em="-1.1em">{-1.1em}%
+\begin{lstlisting}[style=CIC-Python,firstnumber=2]
+a += 1
+\end{lstlisting}%
+\pause\vspace</em>%
+\begin{lstlisting}[style=CIC-Python,firstnumber=3]
+b = a
+\end{lstlisting}%
+\pause\vspace*{-1.1em}%
+\begin{lstlisting}[style=CIC-Python,firstnumber=4]
+a = 3.14
+\end{lstlisting}%
+    \end{columns}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Na \lP, o conteúdo de uma variável é acessado por seu <em>nome</em>, e não é permitida a manipulação direta da memória por um endereço. Isso tem uma série de vantagens (simplifica o uso e evita ) e desvantagens (desempenho). Internamente, o sistema acumula identificadores próprios para cada objeto enquanto durar o seu <em>tempo de vida</em> (veja \linkFile[../src/exemplos/05_EstruturasDeDados/03_Ponteiros]{00-identificador.py} e \linkFile[../src/exemplos/05_EstruturasDeDados/03_Ponteiros]{01-identificador.py}).
+\else%
+\begin{frame}[fragile]
+    \lstPython[linerange={9-13,15-23}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{00-identificador.py}%
+\end{frame}</p>
+<p>\begin{frame}[fragile]
+    \lstPython[linerange={9-14,25-32}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{01-identificador.py}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+A \lP~tem tipo <a href="https://pt.wikipedia.org/wiki/Tipo_de_dado#Tipo_est%C3%A1tico_e_din%C3%A2mico">dinâmico e forte</a>, portanto ao declarar um objeto se sabe, em tempo de execução, o tipo de dado referenciado e como ele é representado na memória.
+\else%
+\begin{frame}[fragile]%
+    Um tipo é <em>dinâmico e forte</em> (em tempo de execução, sabe-se o tipo de dado referenciado e como ele é representado na memória).
+    \\vfill%
+    \begin{columns}
+        \column{.5\textwidth}%
+            \begin{tikzpicture}[start chain=going right, node distance=0pt, mem/.style={inMemory,text width=2.5em, minimum height=1.7em}]%
+                \node[mem,label={[address,above]0xB1}] (M0) {42};%
+                \node[mem,label={[address,above]0xB5},text width=5em] (M1) {\only&lt;2-&gt;{Lovelace}};%
+                \node[ptr,below of=M0,xshift=-2em,yshift=-3em] (a) {\textbf{x}};%
+                \draw&lt;1&gt;[ptr] (a) -| (M0.south);%
+                \draw&lt;2-&gt;[ptr] (a) -| (M1.south);%
+            \end{tikzpicture}%
+        \column{.5\textwidth}%
+            \begin{lstlisting}[style=CIC-Python]
+x = 42
+\end{lstlisting}%
+            \vspace{-1.1em}\pause%
+            \begin{lstlisting}[style=CIC-Python,firstnumber=2]
+x = 'Lovelace'
+\end{lstlisting}%
+    \end{columns}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+No caso da passagem de informações a funções por argumentos, a \lP~define a variável local como <a href="https://stackoverflow.com/a/986145">referência ao valor passado</a> (similar a passar a referência para o valor armazenado). A diferença ocorre na questão de qual é o objeto dado, se é <em>mutável</em>, a função recebe uma referência para ele e pode alterá-lo (desde que a referência local não seja variada); se é <em>imutável</em>, a função não pode alterá-lo.</p>
+<p>A comunicação de dados entre [sub]algoritmos é feita pela passagem de argumentos e pelo valor de retorno, e a \lP possibilita o retorno de múltiplos valores.</p>
+<p>\noindent%
+\lstPython[linerange={9-9,18-24}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{05-bhaskara.py}%
+\else%
+\begin{frame}[fragile]%
+     É possível retornar de múltiplos valores.
+    \\vfill%
+    \lstPython[linerange={9-9,18-24}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{05-bhaskara.py}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Na \lP, funções também são objetos, e podem ser fornecidas como argumentos para outras funções de forma mais simplificada (comparada a \lC). Um exemplo simples disso é:</p>
+<p>\lstPython[linerange={9-19}]{exemplos/05_EstruturasDeDados/03_Ponteiros}{06-funcao.py}%</p>
+<p>Da mesma forma, pode-se abstrair o método de aproximação de raízes e passar a função do polinômio (\linkFile[../src/exercicios/05_EstruturasDeDados/03_Ponteiros/01-Newton-Raphson]{Newton-Raphson.py}).
+\else%
+\subsection{Funções como Argumentos de Funções}%
+\begin{frame}<handout:0>[fragile]%</p>
+<div class="language-text highlight"><pre><span></span><code>\lstPython[firstline=9]{exemplos/05_EstruturasDeDados/03_Ponteiros}{06-funcao.py}%
+</code></pre></div>
+<p>\end{frame}</p>
+<p>\begin{frame}<handout:0>[fragile]%
+    \vspace{-1em}%
+    \lstPython[linerange={83-83,94-102},morekeywords={valor_inicial,aproxima,erro},escapechar=]{exercicios/05_EstruturasDeDados/03_Ponteiros/01-Newton-Raphson}{Newton-Raphson.py}%
+\end{frame}
+\fi%</p>
+<p>% Os detalhes de ponteiros na \lP{ }não serão aprofundados aqui, mas vale a pena aprender sobre isso.</p>
+<p>%     <a href="https://pt.wikipedia.org/wiki/Estrat%C3%A9gia_de_avalia%C3%A7%C3%A3o#Chamada_por_compartilhamento">chamada por compartilhamento</a></p>
+<p>%     índice negativo
+%     https://docs.python.org/3/faq/programming.html#what-s-a-negative-index</p>
+<p>%     O comportamento de ``passagem por referência'' pode ser obtido de <a href="https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference">outras formas</a>.</p>
+<p>% \begin{frame}%</p>
+<p>% %%%%%%%%%%%%%%%%%%%
+% http://wiki.python.org.br/IntroPython</p>
+<p>% Tipos mutáveis e imutáveis</p>
+<p>% Alguns tipos no Python permitem que elementos que fazem parte de sua estrutura sejam modificados, como as listas e dicionários. Estes tipos são chamados mutáveis.</p>
+<p>% Exemplo:</p>
+<p>% Esconder número das linhas</p>
+<p>%    1 &gt;&gt;&gt; l = ['Nirvana', 'Rush', 'Bauhaus']
+%    2 &gt;&gt;&gt; l[1] = 'Who'
+%    3 &gt;&gt;&gt; l
+%    4 ['Nirvana', 'Who', 'Bauhaus']
+%    5 &gt;&gt;&gt;</p>
+<p>% Outros tipos não permitem isso, como tuplas e strings. Estes são chamados imutáveis.</p>
+<p>% \end{frame}%</p>
+<h2 id="strings">Strings</h2>
+<p>\subsection{Strings}%</p>
+<p>\ifIsArticle%
+Uma <em>palavra</em>/<em>frase</em> é um conjunto finito e ordenado de símbolos. Um <a href="https://pt.wikipedia.org/wiki/Cadeia_de_caracteres">*string</a>* é um vetor de caracteres, a ``melhor'' forma de comunicação com humanos.%</p>
+<p>\lstset{morekeywords={mostra_indices,mostra_n_chars,mostra_ate_char}}%
+\lstC[linerange={10-22}]{exemplos/05_EstruturasDeDados/04_Vetor}{04-string.c}%</p>
+<p>O código acima funciona muito bem, mas tem um comportamento interessante quando se digita uma frase menor que os 50 caracteres definidos. Entretanto, forçar a utilização de frases com tamanho fixo <a href="http://www.3minovacao.com.br/blog/os-irao-dominar-o-mundo">não é uma opção viável</a>. A solução de melhor custo/benefício é obter um vetor ``grande o suficiente'' para a tarefa em questão, de modo que haja um tamanho restringindo a aplicação (por exemplo, <a href="https://pt.wikipedia.org/wiki/Twitter">140 caracteres</a>), e utilizar uma marcação específica para indicar o término dos símbolos de interesse.%</p>
+<p>\noindent%
+\begin{minipage}[t]{.56\textwidth}%
+\lstC[linerange={10-22}]{exemplos/05_EstruturasDeDados/04_Vetor}{05-string.c}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{.44\textwidth}%
+\lstC[linerange={10-19}]{exemplos/05_EstruturasDeDados/04_Vetor}{06-string.c}%
+\end{minipage}%</p>
+<p><code><code>.'&lt;/code&gt; não é uma boa escolha de símbolo terminador (afinal, sempre aparece alguém dizendo ``*Hello World!*''), então escolheu-se o símbolo &lt;code&gt;</code>\textbackslash0'</code> (o primeiro caractere da <a href="https://pt.wikipedia.org/wiki/ASCII">tabela ASCII</a>) como terminador de um string para representação interna<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. Assumindo que <em>todo string segue este padrão</em>, pode-se ignorar o tamanho do vetor e simplesmente percorrê-lo até encontrar o caractere de término.%</p>
+<p>Algumas ideias interessantes para lidar com strings são: contagem do tamanho de uma palavra, de palavras em um texto, comparação de strings, transformação em letras maiúsculas/minúsculas, <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1253">criptografia</a>, etc..</p>
+<p>Considere o código abaixo, e veja se percebe o que está errado:
+\lstC[linerange={12-16}]{exemplos/05_EstruturasDeDados/04_Vetor}{08-memoria.c}%</p>
+<p><code>scanf</code>\ armazena os caracteres digitados no endereço indicado por \var{buffer}. Como a variável não foi inicializada, não é possível dizer qual é este endereço. Se \var{buffer} é o <a href="http://pt.wikipedia.org/wiki/Null_%28programa%C3%A7%C3%A3o%29">caractere nulo</a> (\var{NULL}), então <code>scanf</code>\ tentará armazenar os caracteres em um local proibido e a execução do programa será interrompida. Senão, \var{buffer}\ tem um número (que estava já armazenado na memória por algum motivo) que é interpretado como um endereço de memória onde <code>scanf</code>\ tentará armazenar os caracteres. Embora sintaticamente correto, esta é uma ação perigosa pois tal espaço não foi alocado para seu uso, então o programa estará trabalhando em um local que pode estar sendo usado por outro programa e, portanto, que poderia atrapalhar a execução do seu ou, pior ainda, o seu atrapalhar a execução dele (por exemplo, sobrescrevendo um pedaço do arquivo que contém a declaração do imposto de renda).</p>
+<p>Uma solução é definir \var{buffer}\ como um vetor (digamos, de tamanho 50). Mas esta solução é parcialmente correta, pois <code>scanf</code>\ continuará escrevendo na memória caso o usuário forneça mais caracteres que o vetor pode armazenar. É necessário, então, limitar a quantidade de caracteres que pode ser considerada:%</p>
+<p>\lstC[linerange={33-37}]{exemplos/05_EstruturasDeDados/04_Vetor}{08-memoria.c}%</p>
+<p>É importante considerar este tipo de <a href="http://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_defensiva">programação defensiva</a>, pois nunca se sabe o que o usuário vai fazer (nem <a href="http://www.lume.ufrgs.br/handle/10183/18550">como estas vulnerabilidades podem ser exploradas</a>).</p>
+<p>% \begin{lstlisting}
+% #include <string.h></p>
+<p>% void f(char *bar) {
+%   char c[12];
+%   strncpy(c, bar, strlen(bar));
+% }</p>
+<p>% int main(int argc, char **argv) {
+%   f(argv[1]);
+% }
+% \end{lstlisting}%
+%  Potencialmente muito perigoso
+\fi%</p>
+<h2 id="vetores">Vetores</h2>
+<p>\section{Vetores}</p>
+<p>\ifIsArticle%
+É fácil manipular um dado para resolver um problema:%
+\begin{lstlisting}
+z = min(x, y);
+\end{lstlisting}%</p>
+<p>Mas e <span class="arithmatex">\(n\)</span> problemas?
+\begin{lstlisting}
+z = min(x1, min(x2, min (x3, min(x4, min(x5, /<em> ... </em>/ min(xk, xn)/<em> ... </em>/)))));
+\end{lstlisting}%
+\else%
+\begin{frame}[fragile]%
+É fácil manipular um dado para resolver um problema:\\vfill%
+\begin{lstlisting}
+z = min(x, y);
+\end{lstlisting}%
+\vfill\pause
+Mas e \strikeText{2} \strikeText{3} <span class="arithmatex">\(n\)</span> problemas?\\vfill%
+\small%
+\begin{lstlisting}
+z = min(x1, min(x2, min(x3, /<em> ... </em>/ min(xk,xn)/<em> ... </em>/)));
+\end{lstlisting}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Não é factível <a href="http://vidadeprogramador.com.br/2014/05/12/treinando-o-alonso/">considerar escrever tanto código</a>, nem pensar nas dificuldades de eventuais alterações. Felizmente há uma solução mais eficiente. Suponha que você tenha um ponteiro com o endereço de um caractere na memória, e que saiba que os <span class="arithmatex">\(n\)</span> bytes imediatamente seguintes estão alocados para você armazenar outros caracteres. Você poderia identificá-los como <span class="arithmatex">\(\{c_0, c_1, \cdots, c_{n-1}\}\)</span> e lidar com estes <span class="arithmatex">\(n\)</span> elementos no código, ou, dado que sabe o endereço do primeiro, utilizar aritmética de ponteiros para acessar qualquer outro caractere em função do deslocamento em relação a posição inicial.</p>
+<p>\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}
+printf("c0 = %c\n", c0);
+printf("c1 = %c\n", c1);
+/<em> ... </em>/
+\end{lstlisting}%
+\vspace{-1.1em}%
+\begin{lstlisting}[firstnumber=1000]
+printf("c999 = %c\n", c999); /<em> n==1000 </em>/
+\end{lstlisting}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{.45\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+printf("c%d = %c\n", i, <em class="5em">(c+i));
+\end{lstlisting}%
+\end{minipage}%
+\vspace{1em}%
+\else%
+\begin{frame}[fragile]%
+    Mostrar 1000 caracteres não seria agradável...
+    \only&lt;2-&gt;{Mas suponha eles estão magicamente armazenados sequencialmente, começando em um endereço de memória que você conhece...}
+    \\vfill
+\hspace</em>\small%
+\begin{minipage}[t]{.45\textwidth}%
+\begin{lstlisting}
+printf("c0=%c\n", c0);
+printf("c1=%c\n", c1);
+printf("c2=%c\n", c2);
+printf("c3=%c\n", c3);
+/<em> ... </em>/
+\end{lstlisting}%
+\begin{lstlisting}[firstnumber=997]
+/<em> ... </em>/
+printf("c997=%c\n", c997);
+printf("c998=%c\n", c998);
+printf("c999=%c\n", c999);
+\end{lstlisting}%
+\end{minipage}%
+\pause\pause%
+\begin{minipage}[t]{.55\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+printf("c%d=%c\n", i, *(c+i));
+\end{lstlisting}%
+\end{minipage}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Um <a href="https://pt.wikipedia.org/wiki/Arranjo_%28computa%C3%A7%C3%A3o%29">vetor</a> (\texttt{array}) é um conjunto <a href="https://pt.wikipedia.org/wiki/Conjunto_finito">finito</a> e <a href="https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_%28%C3%A1lgebra_relacional%29">ordenado</a> (em relação a posição) de elementos homogêneos (do mesmo tipo). É um modo particular de organizar dados para facilitar o acesso e manipulação dos dados, caracterizado pelas operações sobre os dados, e não pelo tipo do dado (já que se baseia na aritmética de ponteiros).</p>
+<p>Desta forma, é possível ter um vetor de qualquer tipo de dado. Considerando <span class="arithmatex">\(n\)</span> caracteres, o computador aloca um bloco de memória de <span class="arithmatex">\(n\)</span> bytes (supondo que um <code>char</code> seja armazenado em 1 byte). Analogamente, supondo <span class="arithmatex">\(n\)</span> inteiros (de 4 bytes cada), serão alocados <span class="arithmatex">\(4n\)</span> bytes de memória (que equivalem a <span class="arithmatex">\(n\)</span> unidades [de memória] de inteiros).</p>
+<p>\begin{center}%
+    \tikzinput{memoria/vetor/array}%
+\end{center}%
+\else%
+\begin{frame}%
+    \begin{block}{Vetor (\texttt{array})}%
+        É um conjunto <em>finito</em> e <em>ordenado</em>\footnote[frame]{Em relação a posição.} de elementos <em>homogêneos</em>.
+    \end{block}%
+    \vfill\pause%
+    Quais elementos?%
+    \vfill\pause%
+    O vetor é um modo particular de organizar dados \pause para facilitar o acesso
+    e manipulação dos dados.
+    \vfill%
+    \begin{center}%
+        \tikzinput{memoria/vetor/array}%
+    \end{center}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Portanto, para lidar com um vetor basta saber duas coisas: o endereço do primeiro elemento e quantos são os elementos armazenados. Na \lC, fica fácil declarar um vetor:</p>
+<p>\begin{lstlisting}
+int   inteiros[1000];
+float reais[50];
+char  caracteres[8];
+\end{lstlisting}%</p>
+<p>Considerando o vetor de caracteres, o que acontece na execução é que o computador armazena o ponteiro para caracteres (<span class="arithmatex">\(c\)</span>) (em algum lugar da memória) e um espaço do tamanho desejado (<code>8*<a href="http://www.cprogressivo.net/2013/03/A-funcao-sizeof-e-blocos-vizinhos-de-memoria-em-C.html">sizeof</a>(char)</code>) em outro lugar. O acesso a cada elemento, dado o endereço do primeiro, é direto com aritmética de ponteiros ou com o operador <code>[\ \ ]</code>:</p>
+<p>\noindent%
+\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+    printf("c%d = %c\n", i, *(c+i));
+\end{lstlisting}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{.45\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+    printf("c%d = %c\n", i, c[i]);
+\end{lstlisting}%
+\end{minipage}%</p>
+<p>\begin{center}%
+\tikzinput{memoria/vetor/lovelace}%
+\end{center}%
+\else%
+\begin{frame}[fragile]%
+    Vetor em \texttt{C}: <em>endereço do primeiro elemento</em> e <em>quantidade de elementos</em>.
+    \vfill%
+\begin{lstlisting}
+int    inteiros[1000];
+float     reais[50];
+char caracteres[8];
+\end{lstlisting}%
+\vfill\pause%
+\begin{center}%
+    \scalebox{.8}{\tikzinput{memoria/vetor/lovelace}}%
+\end{center}%
+\vfill\pause%
+\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+printf("c%d=%c\n",i,*(c+i));
+\end{lstlisting}%
+\end{minipage}%
+\pause%
+\begin{minipage}[t]{.48\textwidth}%
+\begin{lstlisting}
+for(i = 0; i &lt; n; ++i)
+printf("c%d=%c\n",i,c[i]);
+\end{lstlisting}%
+\end{minipage}%
+\vfill\pause
+\begin{center}%
+RAM + indexação <span class="arithmatex">\(\Rightarrow\)</span> \alert{velocidade}%
+\end{center}%
+\end{frame}</p>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=8]{exercicios/05_EstruturasDeDados/04_Vetor}{00-salarios}%
+\end{frame}\]</div>
+<p>\titledImageFrame<handout:0>[height=17\baselineskip]{}{comics/VidaDeProgramador/FOR}%
+\fi%</p>
+<p>\ifIsArticle%
+A \lP~tem uma abordagem diferente, no contexto desta disciplina, usaremos <a href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_08.html">listas</a> como vetores[@Downey2002]. Embora a implementação seja distinta, o funcionamento é bastante similar.</p>
+<p>\begin{lstlisting}[style=CIC-Python]
+inteiros = [0, 1, 2, 3]
+reais = [0.0] * 10
+caracteres = ['L', 'o', 'v', 'e', 'l', 'a', 'c', 'e']
+\end{lstlisting}%
+\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}[style=CIC-Python]
+for i in range(len(inteiros)):
+print(inteiros[i])
+\end{lstlisting}%
+\end{minipage}%
+\pause\hfill%
+\begin{minipage}[t]{.4\textwidth}%
+\begin{lstlisting}[style=CIC-Python]
+for c in caracteres:
+print(c);
+\end{lstlisting}%
+\end{minipage}%
+\else%
+\begin{frame}[fragile]%
+    Em \texttt{Python}, o termo que descreve um conjunto de elementos é coleção, e a mais simples é a lista. O funcionamento é similar ao de um vetor em C, mas com uma série de facilidades.
+    \vfill%
+\begin{lstlisting}[style=CIC-Python]
+inteiros = [0, 1, 2, 3]
+reais = [0.0] * 10
+caracteres = ['L', 'o', 'v', 'e', 'l', 'a', 'c', 'e']
+\end{lstlisting}%
+\vfill\pause%
+\begin{minipage}[t]{.52\textwidth}%
+\begin{lstlisting}[style=CIC-Python]
+for i in range(len(inteiros)):
+print(inteiros[i])
+\end{lstlisting}%
+\end{minipage}%
+\pause\hfill%
+\begin{minipage}[t]{.4\textwidth}%
+\begin{lstlisting}[style=CIC-Python]
+for c in caracteres:
+print(c);
+\end{lstlisting}%
+\end{minipage}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+O <a href="http://xkcd.com/163/">acesso aos elementos</a> depende da posição deles em relação ao endereço de início. Dependendo da linguagem, o primeiro elemento tem <a href="http://exple.tive.org/blarg/2013/10/22/citation-needed/">índice 0</a> (como em C, Java, Python, e Lisp) ou 1 (Fortran, COBOL, e Lua), mas por uma questão de simplicidade e facilidade de uso, a numeração deveria começar em zero[@Dijkstra1982].</p>
+<p>O acesso correto aos elementos depende também do tamanho do vetor. Na \lC, os <span class="arithmatex">\(n\)</span> elementos do vetor estão localizados em um bloco contínuo de bytes (com deslocamento em <span class="arithmatex">\([0, n)\)</span>, mas a aritmética de ponteiros permite que se acesse outras posições [talvez inválidas] de memória. Por exemplo, considerando a figura, a expressão <code>*(c-1)</code> (equivalente a  <code>c[-1]</code>) é uma expressão sintaticamente correta, e resulta em endereço de memória válido (pois existe), mas é semanticamente incorreta pois acessa um bloco de memória que não foi alocado para o vetor em questão.</p>
+<p>\lstC[linerange={10-24}]{exemplos/05_EstruturasDeDados/04_Vetor}{00-vetor.c}%</p>
+<p>Na \lP, os <span class="arithmatex">\(n\)</span> elementos sus podem ser acessados pelo índice correto: <span class="arithmatex">\([0, n)\)</span>, mas - obviamente - não há aritmética de ponteiros. Entretanto, há certas variações que facilitam a vida. Por exemplo, o uso da função <a href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_08.html#comprimento-da-lista">\fn(len)</a> e o uso de índices negativos para acessar os elementos em ordem inversa. No caso,</p>
+<p>\begin{lstlisting}[style=CIC-Python]
+lista = [x for x in range(1, 10)]  # lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+<p>len(lista)        # 10
+lsita.append(10)  # lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</p>
+<p>lista[0]   # 1
+lista[-0]  # 1
+lista[-1]  # 10
+lista[1:3] # [2, 3]∈</p>
+<p>for i in range(1, len(lista) + 1):
+print(lista[-i], end=' ')  # Ordem inversa: 10 9 8 7 6 5 4 3 2 1
+\end{lstlisting}%
+\else%
+\begin{frame}%
+  Considerações para vetores:
+  \begin{itemize}%
+  \item <em>Muito cuidado com os índices utilizados</em>, use somente <span class="arithmatex">\(i\in[0,n)\)</span>.
+  \item Pode não ser preciso ocupar todas as posições do vetor, usar um vetor maior que o necessário muitas vezes facilita a vida...\pause%
+  \item Em \lC: <em>alocação estática de memória</em>.
+  \item Em \lP: <em>alocação ``dinâmica'' de memória</em>.
+  \end{itemize}%
+\end{frame}%</p>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=6]{exercicios/05_EstruturasDeDados/04_Vetor}{01-medias}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=8]{exercicios/05_EstruturasDeDados/04_Vetor}{02-intercalados}%
+\end{frame}\]</div>
+<div class="arithmatex">\[\begin{frame}&lt;handout:0&gt;[fragile]%
+    \lstREADME[lastline=6]{exercicios/05_EstruturasDeDados/04_Vetor}{03-funcoes}%
+\end{frame}\]</div>
+<p>\begin{frame}<handout:0>[fragile]%
+    \lstREADME[lastline=6]{exercicios/05_EstruturasDeDados/04_Vetor}{04-mais_funcoes}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+<a href="http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c">Vetores não são ponteiros</a>, mas na \lC~eles são <a href="http://c-faq.com/aryptr/aryptrequiv.html">praticamente equivalentes</a>, e a relação é tão forte que eles devem ser discutidos juntos<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. O vetor é conjunto contíguo de elementos homogêneos pré-alocados com posição e tamanho fixos, já o ponteiro é uma referência para um [tipo específico de] dado qualquer. Um ponteiro é uma variável, então <code>a = p</code> e <code>p++</code> são operações válidas; já um vetor não é uma variável, então <code>a = v</code> e <code>v++</code> <em>não</em> são válidas[@VanDerLinden1994].</p>
+<p>\lstC[linerange={10-24}]{exemplos/05_EstruturasDeDados/04_Vetor}{01-vetor.c}%</p>
+<p>\begin{center}%
+\tikzinput{memoria/vetor_ptr}%
+\end{center}%
+\else%
+\begin{frame}%
+    \framesubtitle{\LC}%
+    Vetores <em>não são ponteiros</em>.
+    \\vfill
+    \begin{center}%
+    \tikzinput{memoria/vetor_ptr}%
+    \end{center}%
+\end{frame}</p>
+<p>\begin{frame}<handout:0>[fragile]%
+    \lstC[linerange={10-24}]{exemplos/05_EstruturasDeDados/04_Vetor}{01-vetor.c}%
+\end{frame}
+\fi%</p>
+<p>\ifIsArticle%
+Na \lP, listas são objetos <em>mutáveis</em>, portanto uma função pode alterar os elementos de uma lista dada como argumento:
+\begin{lstlisting}[style=CIC-Python]
+def troca_primeiros(lista):
+lista[0], lista[1] = lista[1], lista[0]</p>
+<p>lista = [x for x in range(1, 10)]
+troca_primeiros(lista)
+lista  # [2, 1, 3, 4, 5, 6, 7, 8, 9]
+\end{lstlisting}%</p>
+<p>Na \lC, muito cuidado ao utilizá-los como argumento de funções - a situação de ``equivalência'' pode gerar uma série de problemas.</p>
+<p>\noindent%
+\begin{minipage}[t]{.5\textwidth}%
+\lstC[linerange={14-21}]{exemplos/05_EstruturasDeDados/04_Vetor}{apc_vetor.h}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{.5\textwidth}%
+\lstC[linerange={11-21}]{exemplos/05_EstruturasDeDados/04_Vetor}{02-vetor.c}%
+\end{minipage}%</p>
+<p>Certas aplicações interessantes de vetores exigem que seus elementos estejam <a href="https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_%28computa%C3%A7%C3%A3o%29">ordenados</a> (em relação ao conteúdo). Existem diversas formas de se fazer isso (consegue elaborar um algoritmo de ordenação?), cada uma com certas características. Por exemplo, para ordenar em ordem crescente, pode-se considerar o primeiro elemento e compará-lo com todos os demais, sempre que o primeiro for menor que o comparado, troca-se os conteúdos de posição. Desta forma, ao final de todas as comparações, o elemento na primeira posição será o menor de todos. Então basta repetir este procedimento para cada posição subsequente e, ao final da execução, tem-se o vetor ordenado.%</p>
+<p>\begin{lstlisting}[style=CIC-Python]
+for i in range(len(vetor) - 1):
+for j in range(i + 1, len(vetor)):
+    if(vetor[i] &gt; vetor[j])
+        vetor[i], vetor[j] = vetor[j], vetor[i]
+\end{lstlisting}%</p>
+<p>Este simples algoritmo pode ser facilmente adaptado para ordenar o vetor em ordem decrescente. Na verdade, é possível abstrair ainda mais este procedimento com uma função de comparação, que indica uma ordem entre dois elementos. Então, supondo uma função <code>em_ordem</code>\ que indica se os elementos estão ordenados, o algoritmo pode ser redefinido como:%</p>
+<p>\lstC[linerange={16-25}]{exemplos/05_EstruturasDeDados/04_Vetor}{03-vetor.c}%</p>
+<p>Assim o algoritmo abstrai a função de comparação, e pode ser usado para realizar ordenações diferentes:</p>
+<p>\lstC[linerange={13-14,26-27,33-33,37-37    ,40-42},morekeywords={ordena}]{exemplos/05_EstruturasDeDados/04_Vetor}{03-vetor.c}%</p>
+<p>Por fim, a \lC~tem ``declarações complicadas'' (seção 5.12 de \cite{Kernighan1989}), é melhor entender o funcionamento que [tentar] adivinhar o tipo. Por exemplo:</p>
+<p>\begin{lstlisting}[style=CIC-C]
+char <em><em>argv
+/</em> argv: ponteiro para ponteiro para char </em>/</p>
+<p>int (<em> tabdia)[13]
+/</em> tabdia: ponteiro para vetor[13] de int */</p>
+<p>int * tabdia[13]
+/<em> tabdia: vetor[13] de ponteiro para int </em>/</p>
+<p>void <em>comp()
+/</em> comp: função retornando ponteiro para void */</p>
+<p>void (<em> comp)()
+/</em> comp: ponteiro para função retornando void */</p>
+<p>char (<em>(</em>x())[])()
+/<em> x: função retornando ponteiro para vetor[] de ponteiro para função retornando char </em>/</p>
+<p>char (<em>(</em>x[3])<a href=""></a>)[5]
+/<em> x: vetor[3] de ponteiro para função retornando ponteiro para vetor[5] de char </em>/
+\end{lstlisting}%
+\fi%</p>
+<h2>Exercícios</h2>
+
+<details class="question">
+<summary>Considerando 4 bits para armazenar um número real como ponto fixo, determine qual a representação do valor <span class="arithmatex">\(1,25_{10}\)</span> como <span class="arithmatex">\(Q1.3\)</span>, <span class="arithmatex">\(Q2.2\)</span> e <span class="arithmatex">\(Q3.1\)</span>. </summary>
+<ul>
+<li><span class="arithmatex">\(Q1.3 \Rightarrow 1,25_{10} = 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} + 0\cdot2^{-3} = 1010_2\)</span></li>
+<li><span class="arithmatex">\(Q2.2 \Rightarrow 1,25_{10} = 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} = 0101_2\)</span></li>
+<li><span class="arithmatex">\(Q3.1\)</span> não é adequado para este valor. Tem-se duas possibilidades:<ul>
+<li><span class="arithmatex">\(1,25_{10} \approx 0\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2} = 0001_2 (=1,5_{10})\)</span></li>
+<li><span class="arithmatex">\(1,25_{10} \approx 0\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 0\cdot2^{-2} = 0010_2 (=1,0_{10})\)</span></li>
+</ul>
+</li>
+</ul>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>American National Standards Institute. American National Standard for Information Systems — Coded Character Sets — 7-Bit American National Standard Code for Information Interchange (7-Bit ASCII), ANSI X3.4-1986. Technical Report, American National Standards Institute, 1896. URL: <a href="http://sliderule.mraiow.com/w/images/7/73/ASCII.pdf">http://sliderule.mraiow.com/w/images/7/73/ASCII.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Brian W. Kernighan and Dennis M. Ritchie. <em>C: a linguagem de programação padrão ANSI</em>. Campus, Rio de Janeiro, 1989. ISBN 8570015860 9788570015860.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
