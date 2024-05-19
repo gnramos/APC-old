@@ -4,4 +4,4 @@ Repositório para organização e disponibilização do material referente à di
 
 ## Livro
 
-mkdocs gera os arquinvos no diretório `html`
+mkdocs gera os arquivos no branch `gh-pages` via Github Actions.
