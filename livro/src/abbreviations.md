@@ -1,0 +1,1 @@
+*[algoritmo]: Sequência de passos para realizar uma tarefa.

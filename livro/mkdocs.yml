@@ -1,0 +1,93 @@
+site_name: Algoritmos e Programação de Computadores
+site_author: Guilherme N. Ramos
+copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://gnramos.github.com/book">Livro APC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://gnramos.github.io">Guilherme N. Ramos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;display:inline-block;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></span></p>
+docs_dir: md
+theme:
+    name: material
+    language: pt
+    features:
+        - content.code.copy
+        - content.tabs.link
+        - navigation.instant
+        - search.highlight
+        - search.suggest
+        - toc.integrate
+    logo: assets/freebsb.svg
+    favicon: assets/freebsb.ico
+extra:
+    generator: false
+extra_css:
+    - assets/stylesheets/extra.css
+extra_javascript:
+    - assets/javascripts/mathjax.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+hooks:
+    - hooks.py
+markdown_extensions:
+    # - abbr
+    - admonition
+    - attr_list
+    - md_in_html
+    - footnotes
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.details
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets:
+        base_path: ["src"]
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+        alternate_style: true
+nav:
+    - Início: index.md
+    - Pensamento Computacional: pensamento_computacional.md
+    # - Computadores: computadores.md
+    # - Algoritmos: algoritmos.md
+    - Programação: programacao.md
+    - Linguagem de Programação: programacao/linguagem.md
+    # - Tipos de Dados: programacao/tipos_de_dados.md
+    # - Fluxo de Controle:
+    #     # - Sequencial: programacao/fluxo_de_controle/sequencial.md
+    #     # - Funções: programacao/fluxo_de_controle/funcoes.md
+    #     # - Condicional: programacao/fluxo_de_controle/condicional.md
+    # - Repetição: programacao/fluxo_de_controle/repeticao.md
+    #         - Recursividade: programacao/funcoes_recursivas.md
+    #     - Estrutura de Dados:
+    #         - Homogêneas: programacao/estruturas/homogeneas.md
+    #         - Heterogêneas: programacao/estruturas/heterogeneas.md
+    #     - Orientação a Objetos: programacao/oo.md
+    # - Estruturas de Dados:
+    #     - Tipos de Dados Abstratos: estruturas_de_dados/tads.md
+    #     - Gerenciamento de Memória: estruturas_de_dados/memoria.md
+    #     - Análise de Algoritmos:
+    #         - Complexidade de Algoritmos: estruturas_de_dados/analise.md
+    #         - Busca: estruturas_de_dados/busca.md
+    #         - Tabela de Dispersão: estruturas_de_dados/dispersao.md
+    #         - Ordenação: estruturas_de_dados/ordenacao.md
+    #     - Estruturas Lineares:
+    #         - Vetores: estruturas_de_dados/vetores.md
+    #         - Lista: estruturas_de_dados/lista.md
+    #         - Pilha: estruturas_de_dados/pilha.md
+    #         - Fila: estruturas_de_dados/fila.md
+    #         - Deque: estruturas_de_dados/deque.md
+    #     - Estruturas Não-lineares:
+    #         - Árvores:
+    #             - Árvore Genérica: estruturas_de_dados/arvore.md
+    #             - Árvore Binária: estruturas_de_dados/arvore_binaria.md
+    #             - Árvore Binária de Busca: estruturas_de_dados/arvore_binaria_busca.md
+    #         - Grafo: estruturas_de_dados/grafo.md
+    #         - Aplicações em Grafos: estruturas_de_dados/memoria.md
+plugins:
+    - search
+    - markdown-exec
+    - bibtex:
+        bib_file: bibliografia.bib
