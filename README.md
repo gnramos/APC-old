@@ -4,4 +4,4 @@ Repositório para organização e disponibilização do material referente à di
 
 ## Livro
 
-mkdocs gero os arquinos no diretório `html`
+mkdocs gera os arquinvos no diretório `html`
